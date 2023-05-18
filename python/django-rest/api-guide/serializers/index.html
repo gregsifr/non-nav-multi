@@ -1,0 +1,3848 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Serializers - Combined</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Combined</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Backstage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../backstage/FAQ/" class="dropdown-item">FAQ</a>
+</li>
+                                    
+<li>
+    <a href="../../../../backstage/publishing/" class="dropdown-item">Publishing</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Accessibility</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/accessibility/" class="dropdown-item">Backstage Accessibility</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/api/deprecations/" class="dropdown-item">Deprecations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/api/utility-apis/" class="dropdown-item">Utility APIs</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture decisions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/" class="dropdown-item">Architecture Decision Records (ADR)</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr000-template/" class="dropdown-item">ADR000: [TITLE]</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr001-add-adr-log/" class="dropdown-item">ADR001: Architecture Decision Record (ADR) log</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr002-default-catalog-file-format/" class="dropdown-item">ADR002: Default Software Catalog File Format</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr003-avoid-default-exports/" class="dropdown-item">ADR003: Avoid Default Exports and Prefer Named Exports</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr004-module-export-structure/" class="dropdown-item">ADR004: Module Export Structure</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr005-catalog-core-entities/" class="dropdown-item">ADR005: Catalog Core Entities</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr006-avoid-react-fc/" class="dropdown-item">ADR006: Avoid React.FC and React.SFC</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr007-use-msw-to-mock-service-requests/" class="dropdown-item">ADR007: Use MSW to mock http requests</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr008-default-catalog-file-name/" class="dropdown-item">ADR008: Default Catalog File Name</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr009-entity-references/" class="dropdown-item">ADR009: Entity References</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr010-luxon-date-library/" class="dropdown-item">ADR010: Use the Luxon Date Library</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr011-plugin-package-structure/" class="dropdown-item">ADR011: Plugin Package Structure</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr012-use-luxon-locale-and-date-presets/" class="dropdown-item">ADR012: Use Luxon.toLocaleString and date/time presets</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr013-use-node-fetch/" class="dropdown-item">ADR013: Proper use of HTTP fetching libraries</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Auth</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/" class="dropdown-item">Authentication in Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/add-auth-provider/" class="dropdown-item">Contributing New Providers</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/glossary/" class="dropdown-item">Glossary</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/identity-resolver/" class="dropdown-item">Sign-in Identities and Resolvers</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/oauth/" class="dropdown-item">OAuth and OpenID Connect</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/oidc/" class="dropdown-item">OIDC provider from scratch</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/service-to-service-auth/" class="dropdown-item">Service to Service Auth</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/troubleshooting/" class="dropdown-item">Troubleshooting Auth</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Atlassian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/atlassian/provider/" class="dropdown-item">Atlassian Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Auth0</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/auth0/provider/" class="dropdown-item">Auth0 Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Bitbucket</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/bitbucket/provider/" class="dropdown-item">Bitbucket Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketServer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/bitbucketServer/provider/" class="dropdown-item">Bitbucket Server Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cloudflare</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/cloudflare/access/" class="dropdown-item">Cloudflare Access Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Github</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/github/provider/" class="dropdown-item">GitHub Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitlab</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/gitlab/provider/" class="dropdown-item">GitLab Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Google</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/google/gcp-iap-auth/" class="dropdown-item">Google Identity-Aware Proxy Provider</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/google/provider/" class="dropdown-item">Google Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Microsoft</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/microsoft/azure-easyauth/" class="dropdown-item">Azure EasyAuth Provider</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/microsoft/provider/" class="dropdown-item">Microsoft Azure Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Oauth2 proxy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/oauth2-proxy/provider/" class="dropdown-item">OAuth 2 Proxy Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Okta</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/okta/provider/" class="dropdown-item">Okta Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Onelogin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/onelogin/provider/" class="dropdown-item">OneLogin Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Backend system</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/" class="dropdown-item">The Backend System</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/01-index/" class="dropdown-item">Backend System Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/02-backends/" class="dropdown-item">Backend Instances</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/03-services/" class="dropdown-item">Backend Services</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/04-plugins/" class="dropdown-item">Backend Plugins</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/05-extension-points/" class="dropdown-item">Backend Plugin Extension Points</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/06-modules/" class="dropdown-item">Plugin Modules</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/07-naming-patterns/" class="dropdown-item">Backend System Naming Patterns</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Building backends</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-backends/01-index/" class="dropdown-item">Building Backends</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-backends/08-migrating/" class="dropdown-item">Migrating your Backend to the New Backend System</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Building plugins and modules</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-plugins-and-modules/01-index/" class="dropdown-item">Building Backend Plugins and Modules</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-plugins-and-modules/02-testing/" class="dropdown-item">Testing Backend Plugins and Modules</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-plugins-and-modules/08-migrating/" class="dropdown-item">Migrating your Backend Plugin to the New Backend System</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Core services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/core-services/01-index/" class="dropdown-item">Core Backend Service APIs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Conf</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/conf/" class="dropdown-item">Static Configuration in Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/conf/defining/" class="dropdown-item">Defining Configuration for your Plugin</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/conf/reading/" class="dropdown-item">Reading Backstage Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/conf/writing/" class="dropdown-item">Writing Backstage Configuration Files</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployment</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/deployment/" class="dropdown-item">Deploying Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/deployment/docker/" class="dropdown-item">Building a Docker image</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/deployment/heroku/" class="dropdown-item">Deploying with Heroku</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/deployment/k8s/" class="dropdown-item">Deploying with Kubernetes</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/deployment/scaling/" class="dropdown-item">Scaling Backstage Deployments</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dls</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/dls/component-design-guidelines/" class="dropdown-item">Component Design Guidelines</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/dls/contributing-to-storybook/" class="dropdown-item">Contributing to Storybook</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/dls/design/" class="dropdown-item">Design</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/dls/figma/" class="dropdown-item">Figma</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Features</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kubernetes</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/" class="dropdown-item">Kubernetes</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/authentication/" class="dropdown-item">Kubernetes Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/configuration/" class="dropdown-item">Configuring Kubernetes integration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/proxy/" class="dropdown-item">Kubernetes Backend Proxy Endpoint</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/troubleshooting/" class="dropdown-item">Troubleshooting Kubernetes</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Search</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/search/" class="dropdown-item">Search Documentation</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/architecture/" class="dropdown-item">Search Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/concepts/" class="dropdown-item">Search Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/getting-started/" class="dropdown-item">Getting Started with Search</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/how-to-guides/" class="dropdown-item">Search How-To guides</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/search-engines/" class="dropdown-item">Search Engines</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software catalog</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/" class="dropdown-item">Backstage Software Catalog</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/api/" class="dropdown-item">API</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/catalog-customization/" class="dropdown-item">Catalog Customization</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/configuration/" class="dropdown-item">Catalog Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/descriptor-format/" class="dropdown-item">Descriptor Format of Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/extending-the-model/" class="dropdown-item">Extending the model</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/external-integrations/" class="dropdown-item">External integrations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/life-of-an-entity/" class="dropdown-item">The Life of an Entity</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/references/" class="dropdown-item">Entity References</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/system-model/" class="dropdown-item">System Model</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/well-known-annotations/" class="dropdown-item">Well-known Annotations on Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/well-known-relations/" class="dropdown-item">Well-known Relations between Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/well-known-statuses/" class="dropdown-item">Well-known Status fields of Catalog Entities</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software templates</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/" class="dropdown-item">Backstage Software Templates</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/adding-templates/" class="dropdown-item">Adding your own Templates</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/authorizing-parameters-steps-and-actions/" class="dropdown-item">Authorizing parameters, steps and actions</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/builtin-actions/" class="dropdown-item">Builtin actions</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/configuration/" class="dropdown-item">Software Template Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/input-examples/" class="dropdown-item">Input Examples</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/migrating-from-v1beta2-to-v1beta3/" class="dropdown-item">Migrating to v1beta3 templates</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/testing-scaffolder-alpha/" class="dropdown-item">Experimental: Testing out the alpha Scaffolder plugin</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/writing-custom-actions/" class="dropdown-item">Writing Custom Actions</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/writing-custom-field-extensions/" class="dropdown-item">Writing Custom Field Extensions</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/writing-custom-step-layouts/" class="dropdown-item">Writing custom step layouts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/writing-templates/" class="dropdown-item">Writing Templates</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Techdocs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/" class="dropdown-item">TechDocs Documentation</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/FAQ/" class="dropdown-item">TechDocs FAQ</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/addons/" class="dropdown-item">TechDocs Addons</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/architecture/" class="dropdown-item">TechDocs Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/cli/" class="dropdown-item">TechDocs CLI</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/concepts/" class="dropdown-item">Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/configuration/" class="dropdown-item">TechDocs Configuration Options</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/configuring-ci-cd/" class="dropdown-item">Configuring CI/CD to generate and publish TechDocs sites</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/creating-and-publishing/" class="dropdown-item">Creating and publishing your docs</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/how-to-guides/" class="dropdown-item">TechDocs How-To guides</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/troubleshooting/" class="dropdown-item">Troubleshooting TechDocs</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/using-cloud-storage/" class="dropdown-item">Using Cloud Storage for TechDocs generated files</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/app-custom-theme/" class="dropdown-item">Customize the look-and-feel of your App</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/concepts/" class="dropdown-item">Key Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/configuration/" class="dropdown-item">Getting Started, configuring Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/configure-app-with-plugins/" class="dropdown-item">Configuring App with plugins</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/contributors/" class="dropdown-item">Contributors</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/create-an-app/" class="dropdown-item">Create an App</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/getting-involved/" class="dropdown-item">Getting Involved</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/homepage/" class="dropdown-item">Backstage homepage - Setup and Customization</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/keeping-backstage-updated/" class="dropdown-item">Keeping Backstage Updated</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/project-structure/" class="dropdown-item">Backstage Project Structure</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Integrations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/" class="dropdown-item">Integrations</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Aws s3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/aws-s3/discovery/" class="dropdown-item">AWS S3 Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/aws-s3/locations/" class="dropdown-item">Amazon Web Services S3 Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Azure</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/azure/discovery/" class="dropdown-item">Azure DevOps Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/azure/locations/" class="dropdown-item">Azure DevOps Locations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/azure/org/" class="dropdown-item">Microsoft Azure Active Directory Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketCloud</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/bitbucketCloud/discovery/" class="dropdown-item">Bitbucket Cloud Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/bitbucketCloud/locations/" class="dropdown-item">Bitbucket Cloud Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketServer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/bitbucketServer/discovery/" class="dropdown-item">Bitbucket Server Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/bitbucketServer/locations/" class="dropdown-item">Bitbucket Server Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Datadog rum</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/datadog-rum/installation/" class="dropdown-item">Datadog RUM Installation</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gerrit</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/gerrit/discovery/" class="dropdown-item">Gerrit Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/gerrit/locations/" class="dropdown-item">Gerrit Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitea</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/gitea/locations/" class="dropdown-item">Gitea Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Github</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/github/discovery/" class="dropdown-item">GitHub Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/github/github-apps/" class="dropdown-item">GitHub Apps</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/github/locations/" class="dropdown-item">GitHub Locations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/github/org/" class="dropdown-item">GitHub Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitlab</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/gitlab/discovery/" class="dropdown-item">GitLab Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/gitlab/locations/" class="dropdown-item">GitLab Locations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/gitlab/org/" class="dropdown-item">GitLab Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Google cloud storage</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/google-cloud-storage/locations/" class="dropdown-item">Google Cloud Storage Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ldap</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/ldap/org/" class="dropdown-item">LDAP Organizational Data</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Local dev</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/local-dev/cli-build-system/" class="dropdown-item">Build System</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/local-dev/cli-commands/" class="dropdown-item">Commands</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/local-dev/cli-overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/local-dev/debugging/" class="dropdown-item">Debugging Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/local-dev/linking-local-packages/" class="dropdown-item">Linking in Local Packages</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Overview</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/overview/adopting/" class="dropdown-item">Strategies for adopting</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/architecture-overview/" class="dropdown-item">Architecture overview</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/background/" class="dropdown-item">The Spotify Story</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/glossary/" class="dropdown-item">Backstage Glossary</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/logos/" class="dropdown-item">Logos</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/roadmap/" class="dropdown-item">Roadmap</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/support/" class="dropdown-item">Support and community</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/threat-model/" class="dropdown-item">Backstage Threat Model</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/versioning-policy/" class="dropdown-item">Release & Versioning Policy</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/vision/" class="dropdown-item">Vision</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/what-is-backstage/" class="dropdown-item">What is Backstage?</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Permissions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/permissions/concepts/" class="dropdown-item">Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/custom-rules/" class="dropdown-item">Defining custom permission rules</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/frontend-integration/" class="dropdown-item">Frontend Integration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/writing-a-policy/" class="dropdown-item">Writing a permission policy</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Plugin authors</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/01-setup/" class="dropdown-item">1. Tutorial setup</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/02-adding-a-basic-permission-check/" class="dropdown-item">2. Adding a basic permission check</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/03-adding-a-resource-permission-check/" class="dropdown-item">3. Adding a resource permission check</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/04-authorizing-access-to-paginated-data/" class="dropdown-item">4. Authorizing access to paginated data</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/05-frontend-authorization/" class="dropdown-item">5. Frontend Components with Authorization</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/releases/v1.0.0/" class="dropdown-item">v1.0.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.1.0-changelog/" class="dropdown-item">Release v1.1.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.1.0/" class="dropdown-item">v1.1.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0-changelog/" class="dropdown-item">Release v1.10.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0-next.0-changelog/" class="dropdown-item">Release v1.10.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0-next.1-changelog/" class="dropdown-item">Release v1.10.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0-next.2-changelog/" class="dropdown-item">Release v1.10.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0/" class="dropdown-item">v1.10.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0-changelog/" class="dropdown-item">Release v1.11.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0-next.0-changelog/" class="dropdown-item">Release v1.11.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0-next.1-changelog/" class="dropdown-item">Release v1.11.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0-next.2-changelog/" class="dropdown-item">Release v1.11.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0/" class="dropdown-item">v1.11.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0-changelog/" class="dropdown-item">Release v1.12.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0-next.0-changelog/" class="dropdown-item">Release v1.12.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0-next.1-changelog/" class="dropdown-item">Release v1.12.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0-next.2-changelog/" class="dropdown-item">Release v1.12.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0/" class="dropdown-item">v1.12.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-changelog/" class="dropdown-item">Release v1.13.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-next.0-changelog/" class="dropdown-item">Release v1.13.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-next.1-changelog/" class="dropdown-item">Release v1.13.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-next.2-changelog/" class="dropdown-item">Release v1.13.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-next.3-changelog/" class="dropdown-item">Release v1.13.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0/" class="dropdown-item">v1.13.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0-changelog/" class="dropdown-item">Release v1.14.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0-next.0-changelog/" class="dropdown-item">Release v1.14.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0-next.1-changelog/" class="dropdown-item">Release v1.14.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0-next.2-changelog/" class="dropdown-item">Release v1.14.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0/" class="dropdown-item">v1.14.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-changelog/" class="dropdown-item">Release v1.2.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-next.0-changelog/" class="dropdown-item">Release v1.2.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-next.1-changelog/" class="dropdown-item">Release v1.2.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-next.2-changelog/" class="dropdown-item">Release v1.2.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-next.3-changelog/" class="dropdown-item">Release v1.2.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0/" class="dropdown-item">v1.2.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0-changelog/" class="dropdown-item">Release v1.3.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0-next.0-changelog/" class="dropdown-item">Release v1.3.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0-next.1-changelog/" class="dropdown-item">Release v1.3.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0-next.2-changelog/" class="dropdown-item">Release v1.3.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0/" class="dropdown-item">v1.3.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-changelog/" class="dropdown-item">Release v1.4.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-next.0-changelog/" class="dropdown-item">Release v1.4.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-next.1-changelog/" class="dropdown-item">Release v1.4.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-next.2-changelog/" class="dropdown-item">Release v1.4.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-next.3-changelog/" class="dropdown-item">Release v1.4.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0/" class="dropdown-item">v1.4.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-changelog/" class="dropdown-item">Release v1.5.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-next.0-changelog/" class="dropdown-item">Release v1.5.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-next.1-changelog/" class="dropdown-item">Release v1.5.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-next.2-changelog/" class="dropdown-item">Release v1.5.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-next.3-changelog/" class="dropdown-item">Release v1.5.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0/" class="dropdown-item">v1.5.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-changelog/" class="dropdown-item">Release v1.6.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-next.0-changelog/" class="dropdown-item">Release v1.6.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-next.1-changelog/" class="dropdown-item">Release v1.6.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-next.2-changelog/" class="dropdown-item">Release v1.6.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-next.3-changelog/" class="dropdown-item">Release v1.6.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0/" class="dropdown-item">v1.6.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0-changelog/" class="dropdown-item">Release v1.7.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0-next.0-changelog/" class="dropdown-item">Release v1.7.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0-next.1-changelog/" class="dropdown-item">Release v1.7.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0-next.2-changelog/" class="dropdown-item">Release v1.7.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0/" class="dropdown-item">v1.7.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0-changelog/" class="dropdown-item">Release v1.8.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0-next.0-changelog/" class="dropdown-item">Release v1.8.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0-next.1-changelog/" class="dropdown-item">Release v1.8.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0-next.2-changelog/" class="dropdown-item">Release v1.8.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0/" class="dropdown-item">v1.8.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-changelog/" class="dropdown-item">Release v1.9.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.0-changelog/" class="dropdown-item">Release v1.9.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.1-changelog/" class="dropdown-item">Release v1.9.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.2-changelog/" class="dropdown-item">Release v1.9.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.3-changelog/" class="dropdown-item">Release v1.9.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.4-changelog/" class="dropdown-item">Release v1.9.0-next.4</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0/" class="dropdown-item">v1.9.0</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorials</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/tutorials/backend-to-backend-auth/" class="dropdown-item">Backend-to-Backend Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/configuring-plugin-databases/" class="dropdown-item">Configuring Plugin Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/journey/" class="dropdown-item">Future developer journey</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/migrating-away-from-core/" class="dropdown-item">Migrating away from @backstage/core</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/package-role-migration/" class="dropdown-item">Package Role Migration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/quickstart-app-plugin/" class="dropdown-item">Adding Custom Plugin to Existing Monorepo App</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/react-router-stable-migration/" class="dropdown-item">React Router 6.0 Migration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/switching-sqlite-postgres/" class="dropdown-item">Switching Backstage from SQLite to PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/using-backstage-proxy-within-plugin/" class="dropdown-item">Using the Backstage Proxy from Within a Plugin</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/yarn-migration/" class="dropdown-item">Migration to Yarn 3</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Monorepo <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../monorepo/" class="dropdown-item">backstage/mkdocs-monorepo-plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/CHANGELOG/" class="dropdown-item">Changelog</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/CODE-OF-CONDUCT/" class="dropdown-item">Contributor Covenant Code of Conduct</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/CONTRIBUTING/" class="dropdown-item">Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/limitations/" class="dropdown-item">Caveats / Known Design Decisions</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/philosophy/" class="dropdown-item">Philosophy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Techdocs cli <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../techdocs-cli/" class="dropdown-item">TechDocs CLI</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Fastapi <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../fastapi/" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/alternatives/" class="dropdown-item">Alternatives, Inspiration and Comparisons</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/async/" class="dropdown-item">Concurrency and async / await</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/benchmarks/" class="dropdown-item">Benchmarks</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/contributing/" class="dropdown-item">Development - Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/external-links/" class="dropdown-item">External Links and Articles</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/fastapi-people/" class="dropdown-item">FastAPI People</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/features/" class="dropdown-item">Features</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/help-fastapi/" class="dropdown-item">Help FastAPI - Get Help</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/history-design-future/" class="dropdown-item">History, Design and Future</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/newsletter/" class="dropdown-item">FastAPI and friends newsletter</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/project-generation/" class="dropdown-item">Project Generation - Template</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/python-types/" class="dropdown-item">Python Types Intro</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/advanced/" class="dropdown-item">Advanced User Guide - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/additional-responses/" class="dropdown-item">Additional Responses in OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/additional-status-codes/" class="dropdown-item">Additional Status Codes</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/advanced-dependencies/" class="dropdown-item">Advanced Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/async-sql-databases/" class="dropdown-item">Async SQL (Relational) Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/async-tests/" class="dropdown-item">Async Tests</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/behind-a-proxy/" class="dropdown-item">Behind a Proxy</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/conditional-openapi/" class="dropdown-item">Conditional OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/custom-request-and-route/" class="dropdown-item">Custom Request and APIRoute class</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/custom-response/" class="dropdown-item">Custom Response - HTML, Stream, File, others</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/dataclasses/" class="dropdown-item">Using Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/events/" class="dropdown-item">Lifespan Events</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/extending-openapi/" class="dropdown-item">Extending OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/generate-clients/" class="dropdown-item">Generate Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/graphql/" class="dropdown-item">GraphQL</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/middleware/" class="dropdown-item">Advanced Middleware</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/nosql-databases/" class="dropdown-item">NoSQL (Distributed / Big Data) Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/openapi-callbacks/" class="dropdown-item">OpenAPI Callbacks</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/path-operation-advanced-configuration/" class="dropdown-item">Path Operation Advanced Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-change-status-code/" class="dropdown-item">Response - Change Status Code</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-cookies/" class="dropdown-item">Response Cookies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-directly/" class="dropdown-item">Return a Response Directly</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-headers/" class="dropdown-item">Response Headers</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/settings/" class="dropdown-item">Settings and Environment Variables</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/sql-databases-peewee/" class="dropdown-item">SQL (Relational) Databases with Peewee</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/sub-applications/" class="dropdown-item">Sub Applications - Mounts</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/templates/" class="dropdown-item">Templates</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-database/" class="dropdown-item">Testing a Database</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-dependencies/" class="dropdown-item">Testing Dependencies with Overrides</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-events/" class="dropdown-item">Testing Events: startup - shutdown</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-websockets/" class="dropdown-item">Testing WebSockets</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/using-request-directly/" class="dropdown-item">Using the Request Directly</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/websockets/" class="dropdown-item">WebSockets</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/wsgi/" class="dropdown-item">Including WSGI - Flask, Django, others</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/advanced/security/" class="dropdown-item">Advanced Security - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/security/http-basic-auth/" class="dropdown-item">HTTP Basic Auth</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/security/oauth2-scopes/" class="dropdown-item">OAuth2 scopes</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployment</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/deployment/" class="dropdown-item">Deployment - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/concepts/" class="dropdown-item">Deployments Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/deta/" class="dropdown-item">Deploy FastAPI on Deta Space</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/docker/" class="dropdown-item">FastAPI in Containers - Docker</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/https/" class="dropdown-item">About HTTPS</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/manually/" class="dropdown-item">Run a Server Manually - Uvicorn</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/server-workers/" class="dropdown-item">Server Workers - Gunicorn with Uvicorn</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/versions/" class="dropdown-item">About FastAPI versions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorial</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/tutorial/" class="dropdown-item">Tutorial - User Guide - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/background-tasks/" class="dropdown-item">Background Tasks</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/bigger-applications/" class="dropdown-item">Bigger Applications - Multiple Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-fields/" class="dropdown-item">Body - Fields</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-multiple-params/" class="dropdown-item">Body - Multiple Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-nested-models/" class="dropdown-item">Body - Nested Models</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-updates/" class="dropdown-item">Body - Updates</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body/" class="dropdown-item">Request Body</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/cookie-params/" class="dropdown-item">Cookie Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/cors/" class="dropdown-item">CORS (Cross-Origin Resource Sharing)</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/debugging/" class="dropdown-item">Debugging</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/encoder/" class="dropdown-item">JSON Compatible Encoder</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/extra-data-types/" class="dropdown-item">Extra Data Types</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/extra-models/" class="dropdown-item">Extra Models</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/first-steps/" class="dropdown-item">First Steps</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/handling-errors/" class="dropdown-item">Handling Errors</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/header-params/" class="dropdown-item">Header Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/metadata/" class="dropdown-item">Metadata and Docs URLs</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/middleware/" class="dropdown-item">Middleware</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/path-operation-configuration/" class="dropdown-item">Path Operation Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/path-params-numeric-validations/" class="dropdown-item">Path Parameters and Numeric Validations</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/path-params/" class="dropdown-item">Path Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/query-params-str-validations/" class="dropdown-item">Query Parameters and String Validations</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/query-params/" class="dropdown-item">Query Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/request-files/" class="dropdown-item">Request Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/request-forms-and-files/" class="dropdown-item">Request Forms and Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/request-forms/" class="dropdown-item">Form Data</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/response-model/" class="dropdown-item">Response Model - Return Type</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/response-status-code/" class="dropdown-item">Response Status Code</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/schema-extra-example/" class="dropdown-item">Declare Request Example Data</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/sql-databases/" class="dropdown-item">SQL (Relational) Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/static-files/" class="dropdown-item">Static Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/testing/" class="dropdown-item">Testing</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dependencies</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/" class="dropdown-item">Dependencies - First Steps</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/classes-as-dependencies/" class="dropdown-item">Classes as Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/dependencies-in-path-operation-decorators/" class="dropdown-item">Dependencies in path operation decorators</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/dependencies-with-yield/" class="dropdown-item">Dependencies with yield</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/global-dependencies/" class="dropdown-item">Global Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/sub-dependencies/" class="dropdown-item">Sub-dependencies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/" class="dropdown-item">Security Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/first-steps/" class="dropdown-item">Security - First Steps</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/get-current-user/" class="dropdown-item">Get Current User</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/oauth2-jwt/" class="dropdown-item">OAuth2 with Password (and hashing), Bearer with JWT tokens</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/simple-oauth2/" class="dropdown-item">Simple OAuth2 with Password and Bearer</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Monorepo multi docs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sample docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/" class="dropdown-item">Welcome to our Developer Platform</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/authentication/" class="dropdown-item">Authentication</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Components</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">A</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/a/" class="dropdown-item">Docs for A</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">B</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/b/" class="dropdown-item">Docs for B</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">C</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/c/" class="dropdown-item">Docs for C</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">D</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/d/" class="dropdown-item">Component D</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">E</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/d/e/" class="dropdown-item">Docs for E</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v1/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v1/reference/" class="dropdown-item">v1 API reference</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v2/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v2/migrating/" class="dropdown-item">Migration Guide to v2</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v2/reference/" class="dropdown-item">v2 API reference</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v3/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v3/migrating/" class="dropdown-item">Migration Guide to v3</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v3/reference/" class="dropdown-item">v3 API reference</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Django rest</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api guide</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../authentication/" class="dropdown-item">Authentication</a>
+</li>
+            
+<li>
+    <a href="../caching/" class="dropdown-item">Caching</a>
+</li>
+            
+<li>
+    <a href="../content-negotiation/" class="dropdown-item">Content negotiation</a>
+</li>
+            
+<li>
+    <a href="../exceptions/" class="dropdown-item">Exceptions</a>
+</li>
+            
+<li>
+    <a href="../fields/" class="dropdown-item">Serializer fields</a>
+</li>
+            
+<li>
+    <a href="../filtering/" class="dropdown-item">Filtering</a>
+</li>
+            
+<li>
+    <a href="../format-suffixes/" class="dropdown-item">Format suffixes</a>
+</li>
+            
+<li>
+    <a href="../generic-views/" class="dropdown-item">Generic views</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../pagination/" class="dropdown-item">Pagination</a>
+</li>
+            
+<li>
+    <a href="../parsers/" class="dropdown-item">Parsers</a>
+</li>
+            
+<li>
+    <a href="../permissions/" class="dropdown-item">Permissions</a>
+</li>
+            
+<li>
+    <a href="../relations/" class="dropdown-item">Serializer relations</a>
+</li>
+            
+<li>
+    <a href="../renderers/" class="dropdown-item">Renderers</a>
+</li>
+            
+<li>
+    <a href="../requests/" class="dropdown-item">Requests</a>
+</li>
+            
+<li>
+    <a href="../responses/" class="dropdown-item">Responses</a>
+</li>
+            
+<li>
+    <a href="../reverse/" class="dropdown-item">Returning URLs</a>
+</li>
+            
+<li>
+    <a href="../routers/" class="dropdown-item">Routers</a>
+</li>
+            
+<li>
+    <a href="../schemas/" class="dropdown-item">Schema</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Serializers</a>
+</li>
+            
+<li>
+    <a href="../settings/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../status-codes/" class="dropdown-item">Status Codes</a>
+</li>
+            
+<li>
+    <a href="../testing/" class="dropdown-item">Testing</a>
+</li>
+            
+<li>
+    <a href="../throttling/" class="dropdown-item">Throttling</a>
+</li>
+            
+<li>
+    <a href="../validators/" class="dropdown-item">Validators</a>
+</li>
+            
+<li>
+    <a href="../versioning/" class="dropdown-item">Versioning</a>
+</li>
+            
+<li>
+    <a href="../views/" class="dropdown-item">Class-based Views</a>
+</li>
+            
+<li>
+    <a href="../viewsets/" class="dropdown-item">ViewSets</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Community</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../community/3.0-announcement/" class="dropdown-item">Django REST framework 3.0</a>
+</li>
+            
+<li>
+    <a href="../../community/3.1-announcement/" class="dropdown-item">Django REST framework 3.1</a>
+</li>
+            
+<li>
+    <a href="../../community/3.10-announcement/" class="dropdown-item">3.10 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.11-announcement/" class="dropdown-item">3.11 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.12-announcement/" class="dropdown-item">3.12 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.13-announcement/" class="dropdown-item">3.13 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.14-announcement/" class="dropdown-item">3.14 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.2-announcement/" class="dropdown-item">Django REST framework 3.2</a>
+</li>
+            
+<li>
+    <a href="../../community/3.3-announcement/" class="dropdown-item">Django REST framework 3.3</a>
+</li>
+            
+<li>
+    <a href="../../community/3.4-announcement/" class="dropdown-item">3.4 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.5-announcement/" class="dropdown-item">3.5 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.6-announcement/" class="dropdown-item">3.6 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.7-announcement/" class="dropdown-item">3.7 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.8-announcement/" class="dropdown-item">3.8 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/3.9-announcement/" class="dropdown-item">3.9 announcement</a>
+</li>
+            
+<li>
+    <a href="../../community/contributing/" class="dropdown-item">Contributing to REST framework</a>
+</li>
+            
+<li>
+    <a href="../../community/funding/" class="dropdown-item">Funding</a>
+</li>
+            
+<li>
+    <a href="../../community/jobs/" class="dropdown-item">Jobs</a>
+</li>
+            
+<li>
+    <a href="../../community/kickstarter-announcement/" class="dropdown-item">Kickstarting Django REST framework 3</a>
+</li>
+            
+<li>
+    <a href="../../community/mozilla-grant/" class="dropdown-item">Mozilla Grant</a>
+</li>
+            
+<li>
+    <a href="../../community/project-management/" class="dropdown-item">Project management</a>
+</li>
+            
+<li>
+    <a href="../../community/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+<li>
+    <a href="../../community/third-party-packages/" class="dropdown-item">Third Party Packages</a>
+</li>
+            
+<li>
+    <a href="../../community/tutorials-and-resources/" class="dropdown-item">Tutorials and Resources</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Topics</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../topics/ajax-csrf-cors/" class="dropdown-item">Working with AJAX, CSRF & CORS</a>
+</li>
+            
+<li>
+    <a href="../../topics/browsable-api/" class="dropdown-item">The Browsable API</a>
+</li>
+            
+<li>
+    <a href="../../topics/browser-enhancements/" class="dropdown-item">Browser enhancements</a>
+</li>
+            
+<li>
+    <a href="../../topics/documenting-your-api/" class="dropdown-item">Documenting your API</a>
+</li>
+            
+<li>
+    <a href="../../topics/html-and-forms/" class="dropdown-item">HTML & Forms</a>
+</li>
+            
+<li>
+    <a href="../../topics/internationalization/" class="dropdown-item">Internationalization</a>
+</li>
+            
+<li>
+    <a href="../../topics/rest-hypermedia-hateoas/" class="dropdown-item">REST, Hypermedia & HATEOAS</a>
+</li>
+            
+<li>
+    <a href="../../topics/writable-nested-serializers/" class="dropdown-item">Writable nested serializers</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorial</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../tutorial/1-serialization/" class="dropdown-item">Tutorial 1: Serialization</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/2-requests-and-responses/" class="dropdown-item">Tutorial 2: Requests and Responses</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/3-class-based-views/" class="dropdown-item">Tutorial 3: Class-based Views</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/4-authentication-and-permissions/" class="dropdown-item">Tutorial 4: Authentication & Permissions</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/5-relationships-and-hyperlinked-apis/" class="dropdown-item">Tutorial 5: Relationships & Hyperlinked APIs</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/6-viewsets-and-routers/" class="dropdown-item">Tutorial 6: ViewSets & Routers</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/quickstart/" class="dropdown-item">Quickstart</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pydantic</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../pydantic/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/contributing/" class="dropdown-item">Contributing</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/install/" class="dropdown-item">Install</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/migration/" class="dropdown-item">Migration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../pydantic/api/alias_generators/" class="dropdown-item">Alias generators</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/color/" class="dropdown-item">Color</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/config/" class="dropdown-item">Config</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/dataclasses/" class="dropdown-item">Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/errors/" class="dropdown-item">Errors</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/fields/" class="dropdown-item">Fields</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/functional_serializers/" class="dropdown-item">Functional serializers</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/functional_validators/" class="dropdown-item">Functional validators</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/json_schema/" class="dropdown-item">Json schema</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/main/" class="dropdown-item">Main</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/mypy/" class="dropdown-item">Mypy</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/networks/" class="dropdown-item">Networks</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/pydantic_core_init/" class="dropdown-item">Pydantic core init</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/pydantic_core_schema/" class="dropdown-item">Pydantic core schema</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/type_adapter/" class="dropdown-item">Type adapter</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/types/" class="dropdown-item">Types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/validate_call/" class="dropdown-item">Validate call</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/api/version/" class="dropdown-item">Version</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Blog</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../pydantic/blog/pydantic-v2-alpha/" class="dropdown-item">Pydantic V2 Pre Release</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/blog/pydantic-v2/" class="dropdown-item">Pydantic V2 Plan</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Integrations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../pydantic/integrations/datamodel_code_generator/" class="dropdown-item">Code Generation with datamodel-code-generator</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/integrations/devtools/" class="dropdown-item">Devtools</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/integrations/hypothesis/" class="dropdown-item">Hypothesis</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/integrations/mypy/" class="dropdown-item">Mypy</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/integrations/pycharm/" class="dropdown-item">Pycharm</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/integrations/rich/" class="dropdown-item">Rich</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/integrations/visual_studio_code/" class="dropdown-item">Visual studio code</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Usage</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../pydantic/usage/computed_fields/" class="dropdown-item">Computed fields</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/conversion_table/" class="dropdown-item">Conversion table</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/dataclasses/" class="dropdown-item">Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/errors/" class="dropdown-item">Errors</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/exporting_models/" class="dropdown-item">Exporting models</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/model_config/" class="dropdown-item">Model config</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/models/" class="dropdown-item">Models</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/postponed_annotations/" class="dropdown-item">Postponed annotations</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/pydantic_settings/" class="dropdown-item">Settings Management</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/schema/" class="dropdown-item">Schema</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/validation_decorator/" class="dropdown-item">Validation decorator</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/validation_errors/" class="dropdown-item">Validation errors</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/validators/" class="dropdown-item">Validators</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Types</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../pydantic/usage/types/booleans/" class="dropdown-item">Booleans</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/bytesize/" class="dropdown-item">Bytes and ByteSize</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/callables/" class="dropdown-item">Callables</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/color_types/" class="dropdown-item">Color types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/custom/" class="dropdown-item">Custom</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/datetime/" class="dropdown-item">Datetime</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/dicts_mapping/" class="dropdown-item">Dicts and Mapping Types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/encoded/" class="dropdown-item">Encoded</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/enums/" class="dropdown-item">Enums</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/file_types/" class="dropdown-item">File types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/json/" class="dropdown-item">Json</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/list_types/" class="dropdown-item">List types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/number_types/" class="dropdown-item">Number types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/payment_cards/" class="dropdown-item">Payment cards</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/secrets/" class="dropdown-item">Secrets</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/sequence_iterable/" class="dropdown-item">Sequence iterable</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/set_types/" class="dropdown-item">Set types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/standard_types/" class="dropdown-item">Standard types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/string_types/" class="dropdown-item">String types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/types/" class="dropdown-item">Types</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/types_fields/" class="dropdown-item">Types fields</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/typevars/" class="dropdown-item">Typevars</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/unions/" class="dropdown-item">Unions</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/urls/" class="dropdown-item">Urls</a>
+</li>
+            
+<li>
+    <a href="../../../pydantic/usage/types/uuids/" class="dropdown-item">Uuids</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../schemas/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../settings/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/encode/django-rest-framework/edit/master/api-guide/serializers.md" class="nav-link">
+                                        Edit</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#serializers" class="nav-link">Serializers</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#declaring-serializers" class="nav-link">Declaring Serializers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#serializing-objects" class="nav-link">Serializing objects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deserializing-objects" class="nav-link">Deserializing objects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#saving-instances" class="nav-link">Saving instances</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#validation" class="nav-link">Validation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#accessing-the-initial-data-and-instance" class="nav-link">Accessing the initial data and instance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#partial-updates" class="nav-link">Partial updates</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dealing-with-nested-objects" class="nav-link">Dealing with nested objects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#writable-nested-representations" class="nav-link">Writable nested representations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dealing-with-multiple-objects" class="nav-link">Dealing with multiple objects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#including-extra-context" class="nav-link">Including extra context</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#modelserializer" class="nav-link">ModelSerializer</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#specifying-which-fields-to-include" class="nav-link">Specifying which fields to include</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#specifying-nested-serialization" class="nav-link">Specifying nested serialization</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#specifying-fields-explicitly" class="nav-link">Specifying fields explicitly</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#specifying-read-only-fields" class="nav-link">Specifying read only fields</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#additional-keyword-arguments" class="nav-link">Additional keyword arguments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#relational-fields" class="nav-link">Relational fields</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#customizing-field-mappings" class="nav-link">Customizing field mappings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#hyperlinkedmodelserializer" class="nav-link">HyperlinkedModelSerializer</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#absolute-and-relative-urls" class="nav-link">Absolute and relative URLs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#how-hyperlinked-views-are-determined" class="nav-link">How hyperlinked views are determined</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#changing-the-url-field-name" class="nav-link">Changing the URL field name</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#listserializer" class="nav-link">ListSerializer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#baseserializer" class="nav-link">BaseSerializer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#advanced-serializer-usage" class="nav-link">Advanced serializer usage</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#overriding-serialization-and-deserialization-behavior" class="nav-link">Overriding serialization and deserialization behavior</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#serializer-inheritance" class="nav-link">Serializer Inheritance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dynamically-modifying-fields" class="nav-link">Dynamically modifying fields</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#customizing-the-default-fields" class="nav-link">Customizing the default fields</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#third-party-packages" class="nav-link">Third party packages</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#django-rest-marshmallow" class="nav-link">Django REST marshmallow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#serpy" class="nav-link">Serpy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mongoenginemodelserializer" class="nav-link">MongoengineModelSerializer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#geofeaturemodelserializer" class="nav-link">GeoFeatureModelSerializer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hstoreserializer" class="nav-link">HStoreSerializer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dynamic-rest" class="nav-link">Dynamic REST</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dynamic-fields-mixin" class="nav-link">Dynamic Fields Mixin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#drf-flexfields" class="nav-link">DRF FlexFields</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#serializer-extensions" class="nav-link">Serializer Extensions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#html-json-forms" class="nav-link">HTML JSON Forms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#drf-base64" class="nav-link">DRF-Base64</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#queryfields" class="nav-link">QueryFields</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#drf-writable-nested" class="nav-link">DRF Writable Nested</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#drf-encrypt-content" class="nav-link">DRF Encrypt Content</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+<div class="source-links">
+
+    <span class="label label-primary">serializers.py</span>
+
+</div>
+
+
+<h1 id="serializers">Serializers</h1>
+<blockquote>
+<p>Expanding the usefulness of the serializers is something that we would
+like to address.  However, it's not a trivial problem, and it
+will take some serious design work.</p>
+<p>&mdash; Russell Keith-Magee, <a href="https://groups.google.com/d/topic/django-users/sVFaOfQi4wY/discussion">Django users group</a></p>
+</blockquote>
+<p>Serializers allow complex data such as querysets and model instances to be converted to native Python datatypes that can then be easily rendered into <code>JSON</code>, <code>XML</code> or other content types.  Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.</p>
+<p>The serializers in REST framework work very similarly to Django's <code>Form</code> and <code>ModelForm</code> classes. We provide a <code>Serializer</code> class which gives you a powerful, generic way to control the output of your responses, as well as a <code>ModelSerializer</code> class which provides a useful shortcut for creating serializers that deal with model instances and querysets.</p>
+<h2 id="declaring-serializers">Declaring Serializers</h2>
+<p>Let's start by creating a simple object we can use for example purposes:</p>
+<pre><code>from datetime import datetime
+
+class Comment:
+    def __init__(self, email, content, created=None):
+        self.email = email
+        self.content = content
+        self.created = created or datetime.now()
+
+comment = Comment(email='leila@example.com', content='foo bar')
+</code></pre>
+<p>We'll declare a serializer that we can use to serialize and deserialize data that corresponds to <code>Comment</code> objects.</p>
+<p>Declaring a serializer looks very similar to declaring a form:</p>
+<pre><code>from rest_framework import serializers
+
+class CommentSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    content = serializers.CharField(max_length=200)
+    created = serializers.DateTimeField()
+</code></pre>
+<h2 id="serializing-objects">Serializing objects</h2>
+<p>We can now use <code>CommentSerializer</code> to serialize a comment, or list of comments. Again, using the <code>Serializer</code> class looks a lot like using a <code>Form</code> class.</p>
+<pre><code>serializer = CommentSerializer(comment)
+serializer.data
+# {'email': 'leila@example.com', 'content': 'foo bar', 'created': '2016-01-27T15:17:10.375877'}
+</code></pre>
+<p>At this point we've translated the model instance into Python native datatypes.  To finalise the serialization process we render the data into <code>json</code>.</p>
+<pre><code>from rest_framework.renderers import JSONRenderer
+
+json = JSONRenderer().render(serializer.data)
+json
+# b'{"email":"leila@example.com","content":"foo bar","created":"2016-01-27T15:17:10.375877"}'
+</code></pre>
+<h2 id="deserializing-objects">Deserializing objects</h2>
+<p>Deserialization is similar. First we parse a stream into Python native datatypes...</p>
+<pre><code>import io
+from rest_framework.parsers import JSONParser
+
+stream = io.BytesIO(json)
+data = JSONParser().parse(stream)
+</code></pre>
+<p>...then we restore those native datatypes into a dictionary of validated data.</p>
+<pre><code>serializer = CommentSerializer(data=data)
+serializer.is_valid()
+# True
+serializer.validated_data
+# {'content': 'foo bar', 'email': 'leila@example.com', 'created': datetime.datetime(2012, 08, 22, 16, 20, 09, 822243)}
+</code></pre>
+<h2 id="saving-instances">Saving instances</h2>
+<p>If we want to be able to return complete object instances based on the validated data we need to implement one or both of the <code>.create()</code> and <code>.update()</code> methods. For example:</p>
+<pre><code>class CommentSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    content = serializers.CharField(max_length=200)
+    created = serializers.DateTimeField()
+
+    def create(self, validated_data):
+        return Comment(**validated_data)
+
+    def update(self, instance, validated_data):
+        instance.email = validated_data.get('email', instance.email)
+        instance.content = validated_data.get('content', instance.content)
+        instance.created = validated_data.get('created', instance.created)
+        return instance
+</code></pre>
+<p>If your object instances correspond to Django models you'll also want to ensure that these methods save the object to the database. For example, if <code>Comment</code> was a Django model, the methods might look like this:</p>
+<pre><code>    def create(self, validated_data):
+        return Comment.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        instance.email = validated_data.get('email', instance.email)
+        instance.content = validated_data.get('content', instance.content)
+        instance.created = validated_data.get('created', instance.created)
+        instance.save()
+        return instance
+</code></pre>
+<p>Now when deserializing data, we can call <code>.save()</code> to return an object instance, based on the validated data.</p>
+<pre><code>comment = serializer.save()
+</code></pre>
+<p>Calling <code>.save()</code> will either create a new instance, or update an existing instance, depending on if an existing instance was passed when instantiating the serializer class:</p>
+<pre><code># .save() will create a new instance.
+serializer = CommentSerializer(data=data)
+
+# .save() will update the existing `comment` instance.
+serializer = CommentSerializer(comment, data=data)
+</code></pre>
+<p>Both the <code>.create()</code> and <code>.update()</code> methods are optional. You can implement either none, one, or both of them, depending on the use-case for your serializer class.</p>
+<h4 id="passing-additional-attributes-to-save">Passing additional attributes to <code>.save()</code></h4>
+<p>Sometimes you'll want your view code to be able to inject additional data at the point of saving the instance. This additional data might include information like the current user, the current time, or anything else that is not part of the request data.</p>
+<p>You can do so by including additional keyword arguments when calling <code>.save()</code>. For example:</p>
+<pre><code>serializer.save(owner=request.user)
+</code></pre>
+<p>Any additional keyword arguments will be included in the <code>validated_data</code> argument when <code>.create()</code> or <code>.update()</code> are called.</p>
+<h4 id="overriding-save-directly">Overriding <code>.save()</code> directly.</h4>
+<p>In some cases the <code>.create()</code> and <code>.update()</code> method names may not be meaningful. For example, in a contact form we may not be creating new instances, but instead sending an email or other message.</p>
+<p>In these cases you might instead choose to override <code>.save()</code> directly, as being more readable and meaningful.</p>
+<p>For example:</p>
+<pre><code>class ContactForm(serializers.Serializer):
+    email = serializers.EmailField()
+    message = serializers.CharField()
+
+    def save(self):
+        email = self.validated_data['email']
+        message = self.validated_data['message']
+        send_email(from=email, message=message)
+</code></pre>
+<p>Note that in the case above we're now having to access the serializer <code>.validated_data</code> property directly.</p>
+<h2 id="validation">Validation</h2>
+<p>When deserializing data, you always need to call <code>is_valid()</code> before attempting to access the validated data, or save an object instance. If any validation errors occur, the <code>.errors</code> property will contain a dictionary representing the resulting error messages.  For example:</p>
+<pre><code>serializer = CommentSerializer(data={'email': 'foobar', 'content': 'baz'})
+serializer.is_valid()
+# False
+serializer.errors
+# {'email': ['Enter a valid e-mail address.'], 'created': ['This field is required.']}
+</code></pre>
+<p>Each key in the dictionary will be the field name, and the values will be lists of strings of any error messages corresponding to that field.  The <code>non_field_errors</code> key may also be present, and will list any general validation errors. The name of the <code>non_field_errors</code> key may be customized using the <code>NON_FIELD_ERRORS_KEY</code> REST framework setting.</p>
+<p>When deserializing a list of items, errors will be returned as a list of dictionaries representing each of the deserialized items.</p>
+<h4 id="raising-an-exception-on-invalid-data">Raising an exception on invalid data</h4>
+<p>The <code>.is_valid()</code> method takes an optional <code>raise_exception</code> flag that will cause it to raise a <code>serializers.ValidationError</code> exception if there are validation errors.</p>
+<p>These exceptions are automatically dealt with by the default exception handler that REST framework provides, and will return <code>HTTP 400 Bad Request</code> responses by default.</p>
+<pre><code># Return a 400 response if the data was invalid.
+serializer.is_valid(raise_exception=True)
+</code></pre>
+<h4 id="field-level-validation">Field-level validation</h4>
+<p>You can specify custom field-level validation by adding <code>.validate_&lt;field_name&gt;</code> methods to your <code>Serializer</code> subclass.  These are similar to the <code>.clean_&lt;field_name&gt;</code> methods on Django forms.</p>
+<p>These methods take a single argument, which is the field value that requires validation.</p>
+<p>Your <code>validate_&lt;field_name&gt;</code> methods should return the validated value or raise a <code>serializers.ValidationError</code>.  For example:</p>
+<pre><code>from rest_framework import serializers
+
+class BlogPostSerializer(serializers.Serializer):
+    title = serializers.CharField(max_length=100)
+    content = serializers.CharField()
+
+    def validate_title(self, value):
+        """
+        Check that the blog post is about Django.
+        """
+        if 'django' not in value.lower():
+            raise serializers.ValidationError("Blog post is not about Django")
+        return value
+</code></pre>
+<hr />
+<p><strong>Note:</strong> If your <code>&lt;field_name&gt;</code> is declared on your serializer with the parameter <code>required=False</code> then this validation step will not take place if the field is not included.</p>
+<hr />
+<h4 id="object-level-validation">Object-level validation</h4>
+<p>To do any other validation that requires access to multiple fields, add a method called <code>.validate()</code> to your <code>Serializer</code> subclass.  This method takes a single argument, which is a dictionary of field values.  It should raise a <code>serializers.ValidationError</code> if necessary, or just return the validated values.  For example:</p>
+<pre><code>from rest_framework import serializers
+
+class EventSerializer(serializers.Serializer):
+    description = serializers.CharField(max_length=100)
+    start = serializers.DateTimeField()
+    finish = serializers.DateTimeField()
+
+    def validate(self, data):
+        """
+        Check that start is before finish.
+        """
+        if data['start'] &gt; data['finish']:
+            raise serializers.ValidationError("finish must occur after start")
+        return data
+</code></pre>
+<h4 id="validators">Validators</h4>
+<p>Individual fields on a serializer can include validators, by declaring them on the field instance, for example:</p>
+<pre><code>def multiple_of_ten(value):
+    if value % 10 != 0:
+        raise serializers.ValidationError('Not a multiple of ten')
+
+class GameRecord(serializers.Serializer):
+    score = serializers.IntegerField(validators=[multiple_of_ten])
+    ...
+</code></pre>
+<p>Serializer classes can also include reusable validators that are applied to the complete set of field data. These validators are included by declaring them on an inner <code>Meta</code> class, like so:</p>
+<pre><code>class EventSerializer(serializers.Serializer):
+    name = serializers.CharField()
+    room_number = serializers.IntegerField(choices=[101, 102, 103, 201])
+    date = serializers.DateField()
+
+    class Meta:
+        # Each room only has one event per day.
+        validators = [
+            UniqueTogetherValidator(
+                queryset=Event.objects.all(),
+                fields=['room_number', 'date']
+            )
+        ]
+</code></pre>
+<p>For more information see the <a href="../validators/">validators documentation</a>.</p>
+<h2 id="accessing-the-initial-data-and-instance">Accessing the initial data and instance</h2>
+<p>When passing an initial object or queryset to a serializer instance, the object will be made available as <code>.instance</code>. If no initial object is passed then the <code>.instance</code> attribute will be <code>None</code>.</p>
+<p>When passing data to a serializer instance, the unmodified data will be made available as <code>.initial_data</code>. If the <code>data</code> keyword argument is not passed then the <code>.initial_data</code> attribute will not exist.</p>
+<h2 id="partial-updates">Partial updates</h2>
+<p>By default, serializers must be passed values for all required fields or they will raise validation errors. You can use the <code>partial</code> argument in order to allow partial updates.</p>
+<pre><code># Update `comment` with partial data
+serializer = CommentSerializer(comment, data={'content': 'foo bar'}, partial=True)
+</code></pre>
+<h2 id="dealing-with-nested-objects">Dealing with nested objects</h2>
+<p>The previous examples are fine for dealing with objects that only have simple datatypes, but sometimes we also need to be able to represent more complex objects, where some of the attributes of an object might not be simple datatypes such as strings, dates or integers.</p>
+<p>The <code>Serializer</code> class is itself a type of <code>Field</code>, and can be used to represent relationships where one object type is nested inside another.</p>
+<pre><code>class UserSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    username = serializers.CharField(max_length=100)
+
+class CommentSerializer(serializers.Serializer):
+    user = UserSerializer()
+    content = serializers.CharField(max_length=200)
+    created = serializers.DateTimeField()
+</code></pre>
+<p>If a nested representation may optionally accept the <code>None</code> value you should pass the <code>required=False</code> flag to the nested serializer.</p>
+<pre><code>class CommentSerializer(serializers.Serializer):
+    user = UserSerializer(required=False)  # May be an anonymous user.
+    content = serializers.CharField(max_length=200)
+    created = serializers.DateTimeField()
+</code></pre>
+<p>Similarly if a nested representation should be a list of items, you should pass the <code>many=True</code> flag to the nested serializer.</p>
+<pre><code>class CommentSerializer(serializers.Serializer):
+    user = UserSerializer(required=False)
+    edits = EditItemSerializer(many=True)  # A nested list of 'edit' items.
+    content = serializers.CharField(max_length=200)
+    created = serializers.DateTimeField()
+</code></pre>
+<h2 id="writable-nested-representations">Writable nested representations</h2>
+<p>When dealing with nested representations that support deserializing the data, any errors with nested objects will be nested under the field name of the nested object.</p>
+<pre><code>serializer = CommentSerializer(data={'user': {'email': 'foobar', 'username': 'doe'}, 'content': 'baz'})
+serializer.is_valid()
+# False
+serializer.errors
+# {'user': {'email': ['Enter a valid e-mail address.']}, 'created': ['This field is required.']}
+</code></pre>
+<p>Similarly, the <code>.validated_data</code> property will include nested data structures.</p>
+<h4 id="writing-create-methods-for-nested-representations">Writing <code>.create()</code> methods for nested representations</h4>
+<p>If you're supporting writable nested representations you'll need to write <code>.create()</code> or <code>.update()</code> methods that handle saving multiple objects.</p>
+<p>The following example demonstrates how you might handle creating a user with a nested profile object.</p>
+<pre><code>class UserSerializer(serializers.ModelSerializer):
+    profile = ProfileSerializer()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'profile']
+
+    def create(self, validated_data):
+        profile_data = validated_data.pop('profile')
+        user = User.objects.create(**validated_data)
+        Profile.objects.create(user=user, **profile_data)
+        return user
+</code></pre>
+<h4 id="writing-update-methods-for-nested-representations">Writing <code>.update()</code> methods for nested representations</h4>
+<p>For updates you'll want to think carefully about how to handle updates to relationships. For example if the data for the relationship is <code>None</code>, or not provided, which of the following should occur?</p>
+<ul>
+<li>Set the relationship to <code>NULL</code> in the database.</li>
+<li>Delete the associated instance.</li>
+<li>Ignore the data and leave the instance as it is.</li>
+<li>Raise a validation error.</li>
+</ul>
+<p>Here's an example for an <code>.update()</code> method on our previous <code>UserSerializer</code> class.</p>
+<pre><code>    def update(self, instance, validated_data):
+        profile_data = validated_data.pop('profile')
+        # Unless the application properly enforces that this field is
+        # always set, the following could raise a `DoesNotExist`, which
+        # would need to be handled.
+        profile = instance.profile
+
+        instance.username = validated_data.get('username', instance.username)
+        instance.email = validated_data.get('email', instance.email)
+        instance.save()
+
+        profile.is_premium_member = profile_data.get(
+            'is_premium_member',
+            profile.is_premium_member
+        )
+        profile.has_support_contract = profile_data.get(
+            'has_support_contract',
+            profile.has_support_contract
+         )
+        profile.save()
+
+        return instance
+</code></pre>
+<p>Because the behavior of nested creates and updates can be ambiguous, and may require complex dependencies between related models, REST framework 3 requires you to always write these methods explicitly. The default <code>ModelSerializer</code> <code>.create()</code> and <code>.update()</code> methods do not include support for writable nested representations.</p>
+<p>There are however, third-party packages available such as <a href="./#drf-writable-nested">DRF Writable Nested</a> that support automatic writable nested representations.</p>
+<h4 id="handling-saving-related-instances-in-model-manager-classes">Handling saving related instances in model manager classes</h4>
+<p>An alternative to saving multiple related instances in the serializer is to write custom model manager classes that handle creating the correct instances.</p>
+<p>For example, suppose we wanted to ensure that <code>User</code> instances and <code>Profile</code> instances are always created together as a pair. We might write a custom manager class that looks something like this:</p>
+<pre><code>class UserManager(models.Manager):
+    ...
+
+    def create(self, username, email, is_premium_member=False, has_support_contract=False):
+        user = User(username=username, email=email)
+        user.save()
+        profile = Profile(
+            user=user,
+            is_premium_member=is_premium_member,
+            has_support_contract=has_support_contract
+        )
+        profile.save()
+        return user
+</code></pre>
+<p>This manager class now more nicely encapsulates that user instances and profile instances are always created at the same time. Our <code>.create()</code> method on the serializer class can now be re-written to use the new manager method.</p>
+<pre><code>def create(self, validated_data):
+    return User.objects.create(
+        username=validated_data['username'],
+        email=validated_data['email'],
+        is_premium_member=validated_data['profile']['is_premium_member'],
+        has_support_contract=validated_data['profile']['has_support_contract']
+    )
+</code></pre>
+<p>For more details on this approach see the Django documentation on <a href="https://docs.djangoproject.com/en/stable/topics/db/managers/">model managers</a>, and <a href="https://www.dabapps.com/blog/django-models-and-encapsulation/">this blogpost on using model and manager classes</a>.</p>
+<h2 id="dealing-with-multiple-objects">Dealing with multiple objects</h2>
+<p>The <code>Serializer</code> class can also handle serializing or deserializing lists of objects.</p>
+<h4 id="serializing-multiple-objects">Serializing multiple objects</h4>
+<p>To serialize a queryset or list of objects instead of a single object instance, you should pass the <code>many=True</code> flag when instantiating the serializer.  You can then pass a queryset or list of objects to be serialized.</p>
+<pre><code>queryset = Book.objects.all()
+serializer = BookSerializer(queryset, many=True)
+serializer.data
+# [
+#     {'id': 0, 'title': 'The electric kool-aid acid test', 'author': 'Tom Wolfe'},
+#     {'id': 1, 'title': 'If this is a man', 'author': 'Primo Levi'},
+#     {'id': 2, 'title': 'The wind-up bird chronicle', 'author': 'Haruki Murakami'}
+# ]
+</code></pre>
+<h4 id="deserializing-multiple-objects">Deserializing multiple objects</h4>
+<p>The default behavior for deserializing multiple objects is to support multiple object creation, but not support multiple object updates. For more information on how to support or customize either of these cases, see the <a href="#listserializer">ListSerializer</a> documentation below.</p>
+<h2 id="including-extra-context">Including extra context</h2>
+<p>There are some cases where you need to provide extra context to the serializer in addition to the object being serialized.  One common case is if you're using a serializer that includes hyperlinked relations, which requires the serializer to have access to the current request so that it can properly generate fully qualified URLs.</p>
+<p>You can provide arbitrary additional context by passing a <code>context</code> argument when instantiating the serializer.  For example:</p>
+<pre><code>serializer = AccountSerializer(account, context={'request': request})
+serializer.data
+# {'id': 6, 'owner': 'denvercoder9', 'created': datetime.datetime(2013, 2, 12, 09, 44, 56, 678870), 'details': 'http://example.com/accounts/6/details'}
+</code></pre>
+<p>The context dictionary can be used within any serializer field logic, such as a custom <code>.to_representation()</code> method, by accessing the <code>self.context</code> attribute.</p>
+<hr />
+<h1 id="modelserializer">ModelSerializer</h1>
+<p>Often you'll want serializer classes that map closely to Django model definitions.</p>
+<p>The <code>ModelSerializer</code> class provides a shortcut that lets you automatically create a <code>Serializer</code> class with fields that correspond to the Model fields.</p>
+<p><strong>The <code>ModelSerializer</code> class is the same as a regular <code>Serializer</code> class, except that</strong>:</p>
+<ul>
+<li>It will automatically generate a set of fields for you, based on the model.</li>
+<li>It will automatically generate validators for the serializer, such as unique_together validators.</li>
+<li>It includes simple default implementations of <code>.create()</code> and <code>.update()</code>.</li>
+</ul>
+<p>Declaring a <code>ModelSerializer</code> looks like this:</p>
+<pre><code>class AccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        fields = ['id', 'account_name', 'users', 'created']
+</code></pre>
+<p>By default, all the model fields on the class will be mapped to a corresponding serializer fields.</p>
+<p>Any relationships such as foreign keys on the model will be mapped to <code>PrimaryKeyRelatedField</code>. Reverse relationships are not included by default unless explicitly included as specified in the <a href="../relations/">serializer relations</a> documentation.</p>
+<h4 id="inspecting-a-modelserializer">Inspecting a <code>ModelSerializer</code></h4>
+<p>Serializer classes generate helpful verbose representation strings, that allow you to fully inspect the state of their fields. This is particularly useful when working with <code>ModelSerializers</code> where you want to determine what set of fields and validators are being automatically created for you.</p>
+<p>To do so, open the Django shell, using <code>python manage.py shell</code>, then import the serializer class, instantiate it, and print the object representation…</p>
+<pre><code>&gt;&gt;&gt; from myapp.serializers import AccountSerializer
+&gt;&gt;&gt; serializer = AccountSerializer()
+&gt;&gt;&gt; print(repr(serializer))
+AccountSerializer():
+    id = IntegerField(label='ID', read_only=True)
+    name = CharField(allow_blank=True, max_length=100, required=False)
+    owner = PrimaryKeyRelatedField(queryset=User.objects.all())
+</code></pre>
+<h2 id="specifying-which-fields-to-include">Specifying which fields to include</h2>
+<p>If you only want a subset of the default fields to be used in a model serializer, you can do so using <code>fields</code> or <code>exclude</code> options, just as you would with a <code>ModelForm</code>. It is strongly recommended that you explicitly set all fields that should be serialized using the <code>fields</code> attribute. This will make it less likely to result in unintentionally exposing data when your models change.</p>
+<p>For example:</p>
+<pre><code>class AccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        fields = ['id', 'account_name', 'users', 'created']
+</code></pre>
+<p>You can also set the <code>fields</code> attribute to the special value <code>'__all__'</code> to indicate that all fields in the model should be used.</p>
+<p>For example:</p>
+<pre><code>class AccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        fields = '__all__'
+</code></pre>
+<p>You can set the <code>exclude</code> attribute to a list of fields to be excluded from the serializer.</p>
+<p>For example:</p>
+<pre><code>class AccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        exclude = ['users']
+</code></pre>
+<p>In the example above, if the <code>Account</code> model had 3 fields <code>account_name</code>, <code>users</code>, and <code>created</code>, this will result in the fields <code>account_name</code> and <code>created</code> to be serialized.</p>
+<p>The names in the <code>fields</code> and <code>exclude</code> attributes will normally map to model fields on the model class.</p>
+<p>Alternatively names in the <code>fields</code> options can map to properties or methods which take no arguments that exist on the model class.</p>
+<p>Since version 3.3.0, it is <strong>mandatory</strong> to provide one of the attributes <code>fields</code> or <code>exclude</code>.</p>
+<h2 id="specifying-nested-serialization">Specifying nested serialization</h2>
+<p>The default <code>ModelSerializer</code> uses primary keys for relationships, but you can also easily generate nested representations using the <code>depth</code> option:</p>
+<pre><code>class AccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        fields = ['id', 'account_name', 'users', 'created']
+        depth = 1
+</code></pre>
+<p>The <code>depth</code> option should be set to an integer value that indicates the depth of relationships that should be traversed before reverting to a flat representation.</p>
+<p>If you want to customize the way the serialization is done you'll need to define the field yourself.</p>
+<h2 id="specifying-fields-explicitly">Specifying fields explicitly</h2>
+<p>You can add extra fields to a <code>ModelSerializer</code> or override the default fields by declaring fields on the class, just as you would for a <code>Serializer</code> class.</p>
+<pre><code>class AccountSerializer(serializers.ModelSerializer):
+    url = serializers.CharField(source='get_absolute_url', read_only=True)
+    groups = serializers.PrimaryKeyRelatedField(many=True)
+
+    class Meta:
+        model = Account
+        fields = ['url', 'groups']
+</code></pre>
+<p>Extra fields can correspond to any property or callable on the model.</p>
+<h2 id="specifying-read-only-fields">Specifying read only fields</h2>
+<p>You may wish to specify multiple fields as read-only. Instead of adding each field explicitly with the <code>read_only=True</code> attribute, you may use the shortcut Meta option, <code>read_only_fields</code>.</p>
+<p>This option should be a list or tuple of field names, and is declared as follows:</p>
+<pre><code>class AccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        fields = ['id', 'account_name', 'users', 'created']
+        read_only_fields = ['account_name']
+</code></pre>
+<p>Model fields which have <code>editable=False</code> set, and <code>AutoField</code> fields will be set to read-only by default, and do not need to be added to the <code>read_only_fields</code> option.</p>
+<hr />
+<p><strong>Note</strong>: There is a special-case where a read-only field is part of a <code>unique_together</code> constraint at the model level. In this case the field is required by the serializer class in order to validate the constraint, but should also not be editable by the user.</p>
+<p>The right way to deal with this is to specify the field explicitly on the serializer, providing both the <code>read_only=True</code> and <code>default=…</code> keyword arguments.</p>
+<p>One example of this is a read-only relation to the currently authenticated <code>User</code> which is <code>unique_together</code> with another identifier. In this case you would declare the user field like so:</p>
+<pre><code>user = serializers.PrimaryKeyRelatedField(read_only=True, default=serializers.CurrentUserDefault())
+</code></pre>
+<p>Please review the <a href="/api-guide/validators/">Validators Documentation</a> for details on the <a href="/api-guide/validators/#uniquetogethervalidator">UniqueTogetherValidator</a> and <a href="/api-guide/validators/#currentuserdefault">CurrentUserDefault</a> classes.</p>
+<hr />
+<h2 id="additional-keyword-arguments">Additional keyword arguments</h2>
+<p>There is also a shortcut allowing you to specify arbitrary additional keyword arguments on fields, using the <code>extra_kwargs</code> option. As in the case of <code>read_only_fields</code>, this means you do not need to explicitly declare the field on the serializer.</p>
+<p>This option is a dictionary, mapping field names to a dictionary of keyword arguments. For example:</p>
+<pre><code>class CreateUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['email', 'username', 'password']
+        extra_kwargs = {'password': {'write_only': True}}
+
+    def create(self, validated_data):
+        user = User(
+            email=validated_data['email'],
+            username=validated_data['username']
+        )
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
+</code></pre>
+<p>Please keep in mind that, if the field has already been explicitly declared on the serializer class, then the <code>extra_kwargs</code> option will be ignored.</p>
+<h2 id="relational-fields">Relational fields</h2>
+<p>When serializing model instances, there are a number of different ways you might choose to represent relationships.  The default representation for <code>ModelSerializer</code> is to use the primary keys of the related instances.</p>
+<p>Alternative representations include serializing using hyperlinks, serializing complete nested representations, or serializing with a custom representation.</p>
+<p>For full details see the <a href="../relations/">serializer relations</a> documentation.</p>
+<h2 id="customizing-field-mappings">Customizing field mappings</h2>
+<p>The ModelSerializer class also exposes an API that you can override in order to alter how serializer fields are automatically determined when instantiating the serializer.</p>
+<p>Normally if a <code>ModelSerializer</code> does not generate the fields you need by default then you should either add them to the class explicitly, or simply use a regular <code>Serializer</code> class instead. However in some cases you may want to create a new base class that defines how the serializer fields are created for any given model.</p>
+<h3 id="serializer_field_mapping"><code>serializer_field_mapping</code></h3>
+<p>A mapping of Django model fields to REST framework serializer fields. You can override this mapping to alter the default serializer fields that should be used for each model field.</p>
+<h3 id="serializer_related_field"><code>serializer_related_field</code></h3>
+<p>This property should be the serializer field class, that is used for relational fields by default.</p>
+<p>For <code>ModelSerializer</code> this defaults to <code>serializers.PrimaryKeyRelatedField</code>.</p>
+<p>For <code>HyperlinkedModelSerializer</code> this defaults to <code>serializers.HyperlinkedRelatedField</code>.</p>
+<h3 id="serializer_url_field"><code>serializer_url_field</code></h3>
+<p>The serializer field class that should be used for any <code>url</code> field on the serializer.</p>
+<p>Defaults to <code>serializers.HyperlinkedIdentityField</code></p>
+<h3 id="serializer_choice_field"><code>serializer_choice_field</code></h3>
+<p>The serializer field class that should be used for any choice fields on the serializer.</p>
+<p>Defaults to <code>serializers.ChoiceField</code></p>
+<h3 id="the-field_class-and-field_kwargs-api">The field_class and field_kwargs API</h3>
+<p>The following methods are called to determine the class and keyword arguments for each field that should be automatically included on the serializer. Each of these methods should return a two tuple of <code>(field_class, field_kwargs)</code>.</p>
+<h3 id="build_standard_fieldself-field_name-model_field"><code>build_standard_field(self, field_name, model_field)</code></h3>
+<p>Called to generate a serializer field that maps to a standard model field.</p>
+<p>The default implementation returns a serializer class based on the <code>serializer_field_mapping</code> attribute.</p>
+<h3 id="build_relational_fieldself-field_name-relation_info"><code>build_relational_field(self, field_name, relation_info)</code></h3>
+<p>Called to generate a serializer field that maps to a relational model field.</p>
+<p>The default implementation returns a serializer class based on the <code>serializer_related_field</code> attribute.</p>
+<p>The <code>relation_info</code> argument is a named tuple, that contains <code>model_field</code>, <code>related_model</code>, <code>to_many</code> and <code>has_through_model</code> properties.</p>
+<h3 id="build_nested_fieldself-field_name-relation_info-nested_depth"><code>build_nested_field(self, field_name, relation_info, nested_depth)</code></h3>
+<p>Called to generate a serializer field that maps to a relational model field, when the <code>depth</code> option has been set.</p>
+<p>The default implementation dynamically creates a nested serializer class based on either <code>ModelSerializer</code> or <code>HyperlinkedModelSerializer</code>.</p>
+<p>The <code>nested_depth</code> will be the value of the <code>depth</code> option, minus one.</p>
+<p>The <code>relation_info</code> argument is a named tuple, that contains <code>model_field</code>, <code>related_model</code>, <code>to_many</code> and <code>has_through_model</code> properties.</p>
+<h3 id="build_property_fieldself-field_name-model_class"><code>build_property_field(self, field_name, model_class)</code></h3>
+<p>Called to generate a serializer field that maps to a property or zero-argument method on the model class.</p>
+<p>The default implementation returns a <code>ReadOnlyField</code> class.</p>
+<h3 id="build_url_fieldself-field_name-model_class"><code>build_url_field(self, field_name, model_class)</code></h3>
+<p>Called to generate a serializer field for the serializer's own <code>url</code> field. The default implementation returns a <code>HyperlinkedIdentityField</code> class.</p>
+<h3 id="build_unknown_fieldself-field_name-model_class"><code>build_unknown_field(self, field_name, model_class)</code></h3>
+<p>Called when the field name did not map to any model field or model property.
+The default implementation raises an error, although subclasses may customize this behavior.</p>
+<hr />
+<h1 id="hyperlinkedmodelserializer">HyperlinkedModelSerializer</h1>
+<p>The <code>HyperlinkedModelSerializer</code> class is similar to the <code>ModelSerializer</code> class except that it uses hyperlinks to represent relationships, rather than primary keys.</p>
+<p>By default the serializer will include a <code>url</code> field instead of a primary key field.</p>
+<p>The url field will be represented using a <code>HyperlinkedIdentityField</code> serializer field, and any relationships on the model will be represented using a <code>HyperlinkedRelatedField</code> serializer field.</p>
+<p>You can explicitly include the primary key by adding it to the <code>fields</code> option, for example:</p>
+<pre><code>class AccountSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Account
+        fields = ['url', 'id', 'account_name', 'users', 'created']
+</code></pre>
+<h2 id="absolute-and-relative-urls">Absolute and relative URLs</h2>
+<p>When instantiating a <code>HyperlinkedModelSerializer</code> you must include the current
+<code>request</code> in the serializer context, for example:</p>
+<pre><code>serializer = AccountSerializer(queryset, context={'request': request})
+</code></pre>
+<p>Doing so will ensure that the hyperlinks can include an appropriate hostname,
+so that the resulting representation uses fully qualified URLs, such as:</p>
+<pre><code>http://api.example.com/accounts/1/
+</code></pre>
+<p>Rather than relative URLs, such as:</p>
+<pre><code>/accounts/1/
+</code></pre>
+<p>If you <em>do</em> want to use relative URLs, you should explicitly pass <code>{'request': None}</code>
+in the serializer context.</p>
+<h2 id="how-hyperlinked-views-are-determined">How hyperlinked views are determined</h2>
+<p>There needs to be a way of determining which views should be used for hyperlinking to model instances.</p>
+<p>By default hyperlinks are expected to correspond to a view name that matches the style <code>'{model_name}-detail'</code>, and looks up the instance by a <code>pk</code> keyword argument.</p>
+<p>You can override a URL field view name and lookup field by using either, or both of, the <code>view_name</code> and <code>lookup_field</code> options in the <code>extra_kwargs</code> setting, like so:</p>
+<pre><code>class AccountSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Account
+        fields = ['account_url', 'account_name', 'users', 'created']
+        extra_kwargs = {
+            'url': {'view_name': 'accounts', 'lookup_field': 'account_name'},
+            'users': {'lookup_field': 'username'}
+        }
+</code></pre>
+<p>Alternatively you can set the fields on the serializer explicitly. For example:</p>
+<pre><code>class AccountSerializer(serializers.HyperlinkedModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name='accounts',
+        lookup_field='slug'
+    )
+    users = serializers.HyperlinkedRelatedField(
+        view_name='user-detail',
+        lookup_field='username',
+        many=True,
+        read_only=True
+    )
+
+    class Meta:
+        model = Account
+        fields = ['url', 'account_name', 'users', 'created']
+</code></pre>
+<hr />
+<p><strong>Tip</strong>: Properly matching together hyperlinked representations and your URL conf can sometimes be a bit fiddly. Printing the <code>repr</code> of a <code>HyperlinkedModelSerializer</code> instance is a particularly useful way to inspect exactly which view names and lookup fields the relationships are expected to map too.</p>
+<hr />
+<h2 id="changing-the-url-field-name">Changing the URL field name</h2>
+<p>The name of the URL field defaults to 'url'.  You can override this globally, by using the <code>URL_FIELD_NAME</code> setting.</p>
+<hr />
+<h1 id="listserializer">ListSerializer</h1>
+<p>The <code>ListSerializer</code> class provides the behavior for serializing and validating multiple objects at once. You won't <em>typically</em> need to use <code>ListSerializer</code> directly, but should instead simply pass <code>many=True</code> when instantiating a serializer.</p>
+<p>When a serializer is instantiated and <code>many=True</code> is passed, a <code>ListSerializer</code> instance will be created. The serializer class then becomes a child of the parent <code>ListSerializer</code></p>
+<p>The following argument can also be passed to a <code>ListSerializer</code> field or a serializer that is passed <code>many=True</code>:</p>
+<h3 id="allow_empty"><code>allow_empty</code></h3>
+<p>This is <code>True</code> by default, but can be set to <code>False</code> if you want to disallow empty lists as valid input.</p>
+<h3 id="max_length"><code>max_length</code></h3>
+<p>This is <code>None</code> by default, but can be set to a positive integer if you want to validate that the list contains no more than this number of elements.</p>
+<h3 id="min_length"><code>min_length</code></h3>
+<p>This is <code>None</code> by default, but can be set to a positive integer if you want to validate that the list contains no fewer than this number of elements.</p>
+<h3 id="customizing-listserializer-behavior">Customizing <code>ListSerializer</code> behavior</h3>
+<p>There <em>are</em> a few use cases when you might want to customize the <code>ListSerializer</code> behavior. For example:</p>
+<ul>
+<li>You want to provide particular validation of the lists, such as checking that one element does not conflict with another element in a list.</li>
+<li>You want to customize the create or update behavior of multiple objects.</li>
+</ul>
+<p>For these cases you can modify the class that is used when <code>many=True</code> is passed, by using the <code>list_serializer_class</code> option on the serializer <code>Meta</code> class.</p>
+<p>For example:</p>
+<pre><code>class CustomListSerializer(serializers.ListSerializer):
+    ...
+
+class CustomSerializer(serializers.Serializer):
+    ...
+    class Meta:
+        list_serializer_class = CustomListSerializer
+</code></pre>
+<h4 id="customizing-multiple-create">Customizing multiple create</h4>
+<p>The default implementation for multiple object creation is to simply call <code>.create()</code> for each item in the list. If you want to customize this behavior, you'll need to customize the <code>.create()</code> method on <code>ListSerializer</code> class that is used when <code>many=True</code> is passed.</p>
+<p>For example:</p>
+<pre><code>class BookListSerializer(serializers.ListSerializer):
+    def create(self, validated_data):
+        books = [Book(**item) for item in validated_data]
+        return Book.objects.bulk_create(books)
+
+class BookSerializer(serializers.Serializer):
+    ...
+    class Meta:
+        list_serializer_class = BookListSerializer
+</code></pre>
+<h4 id="customizing-multiple-update">Customizing multiple update</h4>
+<p>By default the <code>ListSerializer</code> class does not support multiple updates. This is because the behavior that should be expected for insertions and deletions is ambiguous.</p>
+<p>To support multiple updates you'll need to do so explicitly. When writing your multiple update code make sure to keep the following in mind:</p>
+<ul>
+<li>How do you determine which instance should be updated for each item in the list of data?</li>
+<li>How should insertions be handled? Are they invalid, or do they create new objects?</li>
+<li>How should removals be handled? Do they imply object deletion, or removing a relationship? Should they be silently ignored, or are they invalid?</li>
+<li>How should ordering be handled? Does changing the position of two items imply any state change or is it ignored?</li>
+</ul>
+<p>You will need to add an explicit <code>id</code> field to the instance serializer. The default implicitly-generated <code>id</code> field is marked as <code>read_only</code>. This causes it to be removed on updates. Once you declare it explicitly, it will be available in the list serializer's <code>update</code> method.</p>
+<p>Here's an example of how you might choose to implement multiple updates:</p>
+<pre><code>class BookListSerializer(serializers.ListSerializer):
+    def update(self, instance, validated_data):
+        # Maps for id-&gt;instance and id-&gt;data item.
+        book_mapping = {book.id: book for book in instance}
+        data_mapping = {item['id']: item for item in validated_data}
+
+        # Perform creations and updates.
+        ret = []
+        for book_id, data in data_mapping.items():
+            book = book_mapping.get(book_id, None)
+            if book is None:
+                ret.append(self.child.create(data))
+            else:
+                ret.append(self.child.update(book, data))
+
+        # Perform deletions.
+        for book_id, book in book_mapping.items():
+            if book_id not in data_mapping:
+                book.delete()
+
+        return ret
+
+class BookSerializer(serializers.Serializer):
+    # We need to identify elements in the list using their primary key,
+    # so use a writable field here, rather than the default which would be read-only.
+    id = serializers.IntegerField()
+    ...
+
+    class Meta:
+        list_serializer_class = BookListSerializer
+</code></pre>
+<p>It is possible that a third party package may be included alongside the 3.1 release that provides some automatic support for multiple update operations, similar to the <code>allow_add_remove</code> behavior that was present in REST framework 2.</p>
+<h4 id="customizing-listserializer-initialization">Customizing ListSerializer initialization</h4>
+<p>When a serializer with <code>many=True</code> is instantiated, we need to determine which arguments and keyword arguments should be passed to the <code>.__init__()</code> method for both the child <code>Serializer</code> class, and for the parent <code>ListSerializer</code> class.</p>
+<p>The default implementation is to pass all arguments to both classes, except for <code>validators</code>, and any custom keyword arguments, both of which are assumed to be intended for the child serializer class.</p>
+<p>Occasionally you might need to explicitly specify how the child and parent classes should be instantiated when <code>many=True</code> is passed. You can do so by using the <code>many_init</code> class method.</p>
+<pre><code>    @classmethod
+    def many_init(cls, *args, **kwargs):
+        # Instantiate the child serializer.
+        kwargs['child'] = cls()
+        # Instantiate the parent list serializer.
+        return CustomListSerializer(*args, **kwargs)
+</code></pre>
+<hr />
+<h1 id="baseserializer">BaseSerializer</h1>
+<p><code>BaseSerializer</code> class that can be used to easily support alternative serialization and deserialization styles.</p>
+<p>This class implements the same basic API as the <code>Serializer</code> class:</p>
+<ul>
+<li><code>.data</code> - Returns the outgoing primitive representation.</li>
+<li><code>.is_valid()</code> - Deserializes and validates incoming data.</li>
+<li><code>.validated_data</code> - Returns the validated incoming data.</li>
+<li><code>.errors</code> - Returns any errors during validation.</li>
+<li><code>.save()</code> - Persists the validated data into an object instance.</li>
+</ul>
+<p>There are four methods that can be overridden, depending on what functionality you want the serializer class to support:</p>
+<ul>
+<li><code>.to_representation()</code> - Override this to support serialization, for read operations.</li>
+<li><code>.to_internal_value()</code> - Override this to support deserialization, for write operations.</li>
+<li><code>.create()</code> and <code>.update()</code> - Override either or both of these to support saving instances.</li>
+</ul>
+<p>Because this class provides the same interface as the <code>Serializer</code> class, you can use it with the existing generic class-based views exactly as you would for a regular <code>Serializer</code> or <code>ModelSerializer</code>.</p>
+<p>The only difference you'll notice when doing so is the <code>BaseSerializer</code> classes will not generate HTML forms in the browsable API. This is because the data they return does not include all the field information that would allow each field to be rendered into a suitable HTML input.</p>
+<h4 id="read-only-baseserializer-classes">Read-only <code>BaseSerializer</code> classes</h4>
+<p>To implement a read-only serializer using the <code>BaseSerializer</code> class, we just need to override the <code>.to_representation()</code> method. Let's take a look at an example using a simple Django model:</p>
+<pre><code>class HighScore(models.Model):
+    created = models.DateTimeField(auto_now_add=True)
+    player_name = models.CharField(max_length=10)
+    score = models.IntegerField()
+</code></pre>
+<p>It's simple to create a read-only serializer for converting <code>HighScore</code> instances into primitive data types.</p>
+<pre><code>class HighScoreSerializer(serializers.BaseSerializer):
+    def to_representation(self, instance):
+        return {
+            'score': instance.score,
+            'player_name': instance.player_name
+        }
+</code></pre>
+<p>We can now use this class to serialize single <code>HighScore</code> instances:</p>
+<pre><code>@api_view(['GET'])
+def high_score(request, pk):
+    instance = HighScore.objects.get(pk=pk)
+    serializer = HighScoreSerializer(instance)
+    return Response(serializer.data)
+</code></pre>
+<p>Or use it to serialize multiple instances:</p>
+<pre><code>@api_view(['GET'])
+def all_high_scores(request):
+    queryset = HighScore.objects.order_by('-score')
+    serializer = HighScoreSerializer(queryset, many=True)
+    return Response(serializer.data)
+</code></pre>
+<h4 id="read-write-baseserializer-classes">Read-write <code>BaseSerializer</code> classes</h4>
+<p>To create a read-write serializer we first need to implement a <code>.to_internal_value()</code> method. This method returns the validated values that will be used to construct the object instance, and may raise a <code>serializers.ValidationError</code> if the supplied data is in an incorrect format.</p>
+<p>Once you've implemented <code>.to_internal_value()</code>, the basic validation API will be available on the serializer, and you will be able to use <code>.is_valid()</code>, <code>.validated_data</code> and <code>.errors</code>.</p>
+<p>If you want to also support <code>.save()</code> you'll need to also implement either or both of the <code>.create()</code> and <code>.update()</code> methods.</p>
+<p>Here's a complete example of our previous <code>HighScoreSerializer</code>, that's been updated to support both read and write operations.</p>
+<pre><code>class HighScoreSerializer(serializers.BaseSerializer):
+    def to_internal_value(self, data):
+        score = data.get('score')
+        player_name = data.get('player_name')
+
+        # Perform the data validation.
+        if not score:
+            raise serializers.ValidationError({
+                'score': 'This field is required.'
+            })
+        if not player_name:
+            raise serializers.ValidationError({
+                'player_name': 'This field is required.'
+            })
+        if len(player_name) &gt; 10:
+            raise serializers.ValidationError({
+                'player_name': 'May not be more than 10 characters.'
+            })
+
+        # Return the validated values. This will be available as
+        # the `.validated_data` property.
+        return {
+            'score': int(score),
+            'player_name': player_name
+        }
+
+    def to_representation(self, instance):
+        return {
+            'score': instance.score,
+            'player_name': instance.player_name
+        }
+
+    def create(self, validated_data):
+        return HighScore.objects.create(**validated_data)
+</code></pre>
+<h4 id="creating-new-base-classes">Creating new base classes</h4>
+<p>The <code>BaseSerializer</code> class is also useful if you want to implement new generic serializer classes for dealing with particular serialization styles, or for integrating with alternative storage backends.</p>
+<p>The following class is an example of a generic serializer that can handle coercing arbitrary complex objects into primitive representations.</p>
+<pre><code>class ObjectSerializer(serializers.BaseSerializer):
+    """
+    A read-only serializer that coerces arbitrary complex objects
+    into primitive representations.
+    """
+    def to_representation(self, instance):
+        output = {}
+        for attribute_name in dir(instance):
+            attribute = getattr(instance, attribute_name)
+            if attribute_name.startswith('_'):
+                # Ignore private attributes.
+                pass
+            elif hasattr(attribute, '__call__'):
+                # Ignore methods and other callables.
+                pass
+            elif isinstance(attribute, (str, int, bool, float, type(None))):
+                # Primitive types can be passed through unmodified.
+                output[attribute_name] = attribute
+            elif isinstance(attribute, list):
+                # Recursively deal with items in lists.
+                output[attribute_name] = [
+                    self.to_representation(item) for item in attribute
+                ]
+            elif isinstance(attribute, dict):
+                # Recursively deal with items in dictionaries.
+                output[attribute_name] = {
+                    str(key): self.to_representation(value)
+                    for key, value in attribute.items()
+                }
+            else:
+                # Force anything else to its string representation.
+                output[attribute_name] = str(attribute)
+        return output
+</code></pre>
+<hr />
+<h1 id="advanced-serializer-usage">Advanced serializer usage</h1>
+<h2 id="overriding-serialization-and-deserialization-behavior">Overriding serialization and deserialization behavior</h2>
+<p>If you need to alter the serialization or deserialization behavior of a serializer class, you can do so by overriding the <code>.to_representation()</code> or <code>.to_internal_value()</code> methods.</p>
+<p>Some reasons this might be useful include...</p>
+<ul>
+<li>Adding new behavior for new serializer base classes.</li>
+<li>Modifying the behavior slightly for an existing class.</li>
+<li>Improving serialization performance for a frequently accessed API endpoint that returns lots of data.</li>
+</ul>
+<p>The signatures for these methods are as follows:</p>
+<h4 id="to_representationself-instance"><code>to_representation(self, instance)</code></h4>
+<p>Takes the object instance that requires serialization, and should return a primitive representation. Typically this means returning a structure of built-in Python datatypes. The exact types that can be handled will depend on the render classes you have configured for your API.</p>
+<p>May be overridden in order to modify the representation style. For example:</p>
+<pre><code>def to_representation(self, instance):
+    """Convert `username` to lowercase."""
+    ret = super().to_representation(instance)
+    ret['username'] = ret['username'].lower()
+    return ret
+</code></pre>
+<h4 id="to_internal_valueself-data"><code>to_internal_value(self, data)</code></h4>
+<p>Takes the unvalidated incoming data as input and should return the validated data that will be made available as <code>serializer.validated_data</code>. The return value will also be passed to the <code>.create()</code> or <code>.update()</code> methods if <code>.save()</code> is called on the serializer class.</p>
+<p>If any of the validation fails, then the method should raise a <code>serializers.ValidationError(errors)</code>. The <code>errors</code> argument should be a dictionary mapping field names (or <code>settings.NON_FIELD_ERRORS_KEY</code>) to a list of error messages. If you don't need to alter deserialization behavior and instead want to provide object-level validation, it's recommended that you instead override the <a href="#object-level-validation"><code>.validate()</code></a> method.</p>
+<p>The <code>data</code> argument passed to this method will normally be the value of <code>request.data</code>, so the datatype it provides will depend on the parser classes you have configured for your API.</p>
+<h2 id="serializer-inheritance">Serializer Inheritance</h2>
+<p>Similar to Django forms, you can extend and reuse serializers through inheritance. This allows you to declare a common set of fields or methods on a parent class that can then be used in a number of serializers. For example,</p>
+<pre><code>class MyBaseSerializer(Serializer):
+    my_field = serializers.CharField()
+
+    def validate_my_field(self, value):
+        ...
+
+class MySerializer(MyBaseSerializer):
+    ...
+</code></pre>
+<p>Like Django's <code>Model</code> and <code>ModelForm</code> classes, the inner <code>Meta</code> class on serializers does not implicitly inherit from it's parents' inner <code>Meta</code> classes. If you want the <code>Meta</code> class to inherit from a parent class you must do so explicitly. For example:</p>
+<pre><code>class AccountSerializer(MyBaseSerializer):
+    class Meta(MyBaseSerializer.Meta):
+        model = Account
+</code></pre>
+<p>Typically we would recommend <em>not</em> using inheritance on inner Meta classes, but instead declaring all options explicitly.</p>
+<p>Additionally, the following caveats apply to serializer inheritance:</p>
+<ul>
+<li>Normal Python name resolution rules apply. If you have multiple base classes that declare a <code>Meta</code> inner class, only the first one will be used. This means the child’s <code>Meta</code>, if it exists, otherwise the <code>Meta</code> of the first parent, etc.</li>
+<li>
+<p>It’s possible to declaratively remove a <code>Field</code> inherited from a parent class by setting the name to be <code>None</code> on the subclass.</p>
+<pre><code>class MyBaseSerializer(ModelSerializer):
+    my_field = serializers.CharField()
+
+class MySerializer(MyBaseSerializer):
+    my_field = None
+</code></pre>
+<p>However, you can only use this technique to opt out from a field defined declaratively by a parent class; it won’t prevent the <code>ModelSerializer</code> from generating a default field. To opt-out from default fields, see <a href="#specifying-which-fields-to-include">Specifying which fields to include</a>.</p>
+</li>
+</ul>
+<h2 id="dynamically-modifying-fields">Dynamically modifying fields</h2>
+<p>Once a serializer has been initialized, the dictionary of fields that are set on the serializer may be accessed using the <code>.fields</code> attribute.  Accessing and modifying this attribute allows you to dynamically modify the serializer.</p>
+<p>Modifying the <code>fields</code> argument directly allows you to do interesting things such as changing the arguments on serializer fields at runtime, rather than at the point of declaring the serializer.</p>
+<h3 id="example">Example</h3>
+<p>For example, if you wanted to be able to set which fields should be used by a serializer at the point of initializing it, you could create a serializer class like so:</p>
+<pre><code>class DynamicFieldsModelSerializer(serializers.ModelSerializer):
+    """
+    A ModelSerializer that takes an additional `fields` argument that
+    controls which fields should be displayed.
+    """
+
+    def __init__(self, *args, **kwargs):
+        # Don't pass the 'fields' arg up to the superclass
+        fields = kwargs.pop('fields', None)
+
+        # Instantiate the superclass normally
+        super().__init__(*args, **kwargs)
+
+        if fields is not None:
+            # Drop any fields that are not specified in the `fields` argument.
+            allowed = set(fields)
+            existing = set(self.fields)
+            for field_name in existing - allowed:
+                self.fields.pop(field_name)
+</code></pre>
+<p>This would then allow you to do the following:</p>
+<pre><code>&gt;&gt;&gt; class UserSerializer(DynamicFieldsModelSerializer):
+&gt;&gt;&gt;     class Meta:
+&gt;&gt;&gt;         model = User
+&gt;&gt;&gt;         fields = ['id', 'username', 'email']
+&gt;&gt;&gt;
+&gt;&gt;&gt; print(UserSerializer(user))
+{'id': 2, 'username': 'jonwatts', 'email': 'jon@example.com'}
+&gt;&gt;&gt;
+&gt;&gt;&gt; print(UserSerializer(user, fields=('id', 'email')))
+{'id': 2, 'email': 'jon@example.com'}
+</code></pre>
+<h2 id="customizing-the-default-fields">Customizing the default fields</h2>
+<p>REST framework 2 provided an API to allow developers to override how a <code>ModelSerializer</code> class would automatically generate the default set of fields.</p>
+<p>This API included the <code>.get_field()</code>, <code>.get_pk_field()</code> and other methods.</p>
+<p>Because the serializers have been fundamentally redesigned with 3.0 this API no longer exists. You can still modify the fields that get created but you'll need to refer to the source code, and be aware that if the changes you make are against private bits of API then they may be subject to change.</p>
+<hr />
+<h1 id="third-party-packages">Third party packages</h1>
+<p>The following third party packages are also available.</p>
+<h2 id="django-rest-marshmallow">Django REST marshmallow</h2>
+<p>The <a href="https://marshmallow-code.github.io/django-rest-marshmallow/">django-rest-marshmallow</a> package provides an alternative implementation for serializers, using the python <a href="https://marshmallow.readthedocs.io/en/latest/">marshmallow</a> library. It exposes the same API as the REST framework serializers, and can be used as a drop-in replacement in some use-cases.</p>
+<h2 id="serpy">Serpy</h2>
+<p>The <a href="https://github.com/clarkduvall/serpy">serpy</a> package is an alternative implementation for serializers that is built for speed. <a href="https://github.com/clarkduvall/serpy">Serpy</a> serializes complex datatypes to simple native types. The native types can be easily converted to JSON or any other format needed.</p>
+<h2 id="mongoenginemodelserializer">MongoengineModelSerializer</h2>
+<p>The <a href="https://github.com/umutbozkurt/django-rest-framework-mongoengine">django-rest-framework-mongoengine</a> package provides a <code>MongoEngineModelSerializer</code> serializer class that supports using MongoDB as the storage layer for Django REST framework.</p>
+<h2 id="geofeaturemodelserializer">GeoFeatureModelSerializer</h2>
+<p>The <a href="https://github.com/djangonauts/django-rest-framework-gis">django-rest-framework-gis</a> package provides a <code>GeoFeatureModelSerializer</code> serializer class that supports GeoJSON both for read and write operations.</p>
+<h2 id="hstoreserializer">HStoreSerializer</h2>
+<p>The <a href="https://github.com/djangonauts/django-rest-framework-hstore">django-rest-framework-hstore</a> package provides an <code>HStoreSerializer</code> to support <a href="https://github.com/djangonauts/django-hstore">django-hstore</a> <code>DictionaryField</code> model field and its <code>schema-mode</code> feature.</p>
+<h2 id="dynamic-rest">Dynamic REST</h2>
+<p>The <a href="https://github.com/AltSchool/dynamic-rest">dynamic-rest</a> package extends the ModelSerializer and ModelViewSet interfaces, adding API query parameters for filtering, sorting, and including / excluding all fields and relationships defined by your serializers.</p>
+<h2 id="dynamic-fields-mixin">Dynamic Fields Mixin</h2>
+<p>The <a href="https://github.com/dbrgn/drf-dynamic-fields">drf-dynamic-fields</a> package provides a mixin to dynamically limit the fields per serializer to a subset specified by an URL parameter.</p>
+<h2 id="drf-flexfields">DRF FlexFields</h2>
+<p>The <a href="https://github.com/rsinger86/drf-flex-fields">drf-flex-fields</a> package extends the ModelSerializer and ModelViewSet to provide commonly used functionality for dynamically setting fields and expanding primitive fields to nested models, both from URL parameters and your serializer class definitions.</p>
+<h2 id="serializer-extensions">Serializer Extensions</h2>
+<p>The <a href="https://github.com/evenicoulddoit/django-rest-framework-serializer-extensions">django-rest-framework-serializer-extensions</a>
+package provides a collection of tools to DRY up your serializers, by allowing
+fields to be defined on a per-view/request basis. Fields can be whitelisted,
+blacklisted and child serializers can be optionally expanded.</p>
+<h2 id="html-json-forms">HTML JSON Forms</h2>
+<p>The <a href="https://github.com/wq/html-json-forms">html-json-forms</a> package provides an algorithm and serializer for processing <code>&lt;form&gt;</code> submissions per the (inactive) <a href="https://www.w3.org/TR/html-json-forms/">HTML JSON Form specification</a>.  The serializer facilitates processing of arbitrarily nested JSON structures within HTML.  For example, <code>&lt;input name="items[0][id]" value="5"&gt;</code> will be interpreted as <code>{"items": [{"id": "5"}]}</code>.</p>
+<h2 id="drf-base64">DRF-Base64</h2>
+<p><a href="https://bitbucket.org/levit_scs/drf_base64">DRF-Base64</a> provides a set of field and model serializers that handles the upload of base64-encoded files.</p>
+<h2 id="queryfields">QueryFields</h2>
+<p><a href="https://djangorestframework-queryfields.readthedocs.io/">djangorestframework-queryfields</a> allows API clients to specify which fields will be sent in the response via inclusion/exclusion query parameters.</p>
+<h2 id="drf-writable-nested">DRF Writable Nested</h2>
+<p>The <a href="https://github.com/beda-software/drf-writable-nested">drf-writable-nested</a> package provides writable nested model serializer which allows to create/update models with nested related data.</p>
+<h2 id="drf-encrypt-content">DRF Encrypt Content</h2>
+<p>The <a href="https://github.com/oguzhancelikarslan/drf-encrypt-content">drf-encrypt-content</a> package helps you encrypt your data, serialized through ModelSerializer. It also contains some helper functions. Which helps you to encrypt your data.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

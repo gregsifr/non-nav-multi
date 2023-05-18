@@ -1,0 +1,3115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>SQL (Relational) Databases with Peewee - Combined</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Combined</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Backstage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../backstage/FAQ/" class="dropdown-item">FAQ</a>
+</li>
+                                    
+<li>
+    <a href="../../../backstage/publishing/" class="dropdown-item">Publishing</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Accessibility</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/accessibility/" class="dropdown-item">Backstage Accessibility</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/api/deprecations/" class="dropdown-item">Deprecations</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/api/utility-apis/" class="dropdown-item">Utility APIs</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture decisions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/" class="dropdown-item">Architecture Decision Records (ADR)</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr000-template/" class="dropdown-item">ADR000: [TITLE]</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr001-add-adr-log/" class="dropdown-item">ADR001: Architecture Decision Record (ADR) log</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr002-default-catalog-file-format/" class="dropdown-item">ADR002: Default Software Catalog File Format</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr003-avoid-default-exports/" class="dropdown-item">ADR003: Avoid Default Exports and Prefer Named Exports</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr004-module-export-structure/" class="dropdown-item">ADR004: Module Export Structure</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr005-catalog-core-entities/" class="dropdown-item">ADR005: Catalog Core Entities</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr006-avoid-react-fc/" class="dropdown-item">ADR006: Avoid React.FC and React.SFC</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr007-use-msw-to-mock-service-requests/" class="dropdown-item">ADR007: Use MSW to mock http requests</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr008-default-catalog-file-name/" class="dropdown-item">ADR008: Default Catalog File Name</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr009-entity-references/" class="dropdown-item">ADR009: Entity References</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr010-luxon-date-library/" class="dropdown-item">ADR010: Use the Luxon Date Library</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr011-plugin-package-structure/" class="dropdown-item">ADR011: Plugin Package Structure</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr012-use-luxon-locale-and-date-presets/" class="dropdown-item">ADR012: Use Luxon.toLocaleString and date/time presets</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/architecture-decisions/adr013-use-node-fetch/" class="dropdown-item">ADR013: Proper use of HTTP fetching libraries</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Auth</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/" class="dropdown-item">Authentication in Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/auth/add-auth-provider/" class="dropdown-item">Contributing New Providers</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/auth/glossary/" class="dropdown-item">Glossary</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/auth/identity-resolver/" class="dropdown-item">Sign-in Identities and Resolvers</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/auth/oauth/" class="dropdown-item">OAuth and OpenID Connect</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/auth/oidc/" class="dropdown-item">OIDC provider from scratch</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/auth/service-to-service-auth/" class="dropdown-item">Service to Service Auth</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/auth/troubleshooting/" class="dropdown-item">Troubleshooting Auth</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Atlassian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/atlassian/provider/" class="dropdown-item">Atlassian Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Auth0</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/auth0/provider/" class="dropdown-item">Auth0 Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Bitbucket</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/bitbucket/provider/" class="dropdown-item">Bitbucket Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketServer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/bitbucketServer/provider/" class="dropdown-item">Bitbucket Server Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cloudflare</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/cloudflare/access/" class="dropdown-item">Cloudflare Access Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Github</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/github/provider/" class="dropdown-item">GitHub Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitlab</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/gitlab/provider/" class="dropdown-item">GitLab Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Google</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/google/gcp-iap-auth/" class="dropdown-item">Google Identity-Aware Proxy Provider</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/auth/google/provider/" class="dropdown-item">Google Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Microsoft</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/microsoft/azure-easyauth/" class="dropdown-item">Azure EasyAuth Provider</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/auth/microsoft/provider/" class="dropdown-item">Microsoft Azure Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Oauth2 proxy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/oauth2-proxy/provider/" class="dropdown-item">OAuth 2 Proxy Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Okta</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/okta/provider/" class="dropdown-item">Okta Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Onelogin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/auth/onelogin/provider/" class="dropdown-item">OneLogin Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Backend system</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/backend-system/" class="dropdown-item">The Backend System</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/backend-system/architecture/01-index/" class="dropdown-item">Backend System Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/backend-system/architecture/02-backends/" class="dropdown-item">Backend Instances</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/backend-system/architecture/03-services/" class="dropdown-item">Backend Services</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/backend-system/architecture/04-plugins/" class="dropdown-item">Backend Plugins</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/backend-system/architecture/05-extension-points/" class="dropdown-item">Backend Plugin Extension Points</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/backend-system/architecture/06-modules/" class="dropdown-item">Plugin Modules</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/backend-system/architecture/07-naming-patterns/" class="dropdown-item">Backend System Naming Patterns</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Building backends</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/backend-system/building-backends/01-index/" class="dropdown-item">Building Backends</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/backend-system/building-backends/08-migrating/" class="dropdown-item">Migrating your Backend to the New Backend System</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Building plugins and modules</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/backend-system/building-plugins-and-modules/01-index/" class="dropdown-item">Building Backend Plugins and Modules</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/backend-system/building-plugins-and-modules/02-testing/" class="dropdown-item">Testing Backend Plugins and Modules</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/backend-system/building-plugins-and-modules/08-migrating/" class="dropdown-item">Migrating your Backend Plugin to the New Backend System</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Core services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/backend-system/core-services/01-index/" class="dropdown-item">Core Backend Service APIs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Conf</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/conf/" class="dropdown-item">Static Configuration in Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/conf/defining/" class="dropdown-item">Defining Configuration for your Plugin</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/conf/reading/" class="dropdown-item">Reading Backstage Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/conf/writing/" class="dropdown-item">Writing Backstage Configuration Files</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployment</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/deployment/" class="dropdown-item">Deploying Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/deployment/docker/" class="dropdown-item">Building a Docker image</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/deployment/heroku/" class="dropdown-item">Deploying with Heroku</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/deployment/k8s/" class="dropdown-item">Deploying with Kubernetes</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/deployment/scaling/" class="dropdown-item">Scaling Backstage Deployments</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dls</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/dls/component-design-guidelines/" class="dropdown-item">Component Design Guidelines</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/dls/contributing-to-storybook/" class="dropdown-item">Contributing to Storybook</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/dls/design/" class="dropdown-item">Design</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/dls/figma/" class="dropdown-item">Figma</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Features</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kubernetes</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/features/kubernetes/" class="dropdown-item">Kubernetes</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/kubernetes/authentication/" class="dropdown-item">Kubernetes Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/kubernetes/configuration/" class="dropdown-item">Configuring Kubernetes integration</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/kubernetes/installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/kubernetes/proxy/" class="dropdown-item">Kubernetes Backend Proxy Endpoint</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/kubernetes/troubleshooting/" class="dropdown-item">Troubleshooting Kubernetes</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Search</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/features/search/" class="dropdown-item">Search Documentation</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/search/architecture/" class="dropdown-item">Search Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/search/concepts/" class="dropdown-item">Search Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/search/getting-started/" class="dropdown-item">Getting Started with Search</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/search/how-to-guides/" class="dropdown-item">Search How-To guides</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/search/search-engines/" class="dropdown-item">Search Engines</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software catalog</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/" class="dropdown-item">Backstage Software Catalog</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/api/" class="dropdown-item">API</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/catalog-customization/" class="dropdown-item">Catalog Customization</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/configuration/" class="dropdown-item">Catalog Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/descriptor-format/" class="dropdown-item">Descriptor Format of Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/extending-the-model/" class="dropdown-item">Extending the model</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/external-integrations/" class="dropdown-item">External integrations</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/life-of-an-entity/" class="dropdown-item">The Life of an Entity</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/references/" class="dropdown-item">Entity References</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/system-model/" class="dropdown-item">System Model</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/well-known-annotations/" class="dropdown-item">Well-known Annotations on Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/well-known-relations/" class="dropdown-item">Well-known Relations between Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-catalog/well-known-statuses/" class="dropdown-item">Well-known Status fields of Catalog Entities</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software templates</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/features/software-templates/" class="dropdown-item">Backstage Software Templates</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/adding-templates/" class="dropdown-item">Adding your own Templates</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/authorizing-parameters-steps-and-actions/" class="dropdown-item">Authorizing parameters, steps and actions</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/builtin-actions/" class="dropdown-item">Builtin actions</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/configuration/" class="dropdown-item">Software Template Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/input-examples/" class="dropdown-item">Input Examples</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/migrating-from-v1beta2-to-v1beta3/" class="dropdown-item">Migrating to v1beta3 templates</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/testing-scaffolder-alpha/" class="dropdown-item">Experimental: Testing out the alpha Scaffolder plugin</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/writing-custom-actions/" class="dropdown-item">Writing Custom Actions</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/writing-custom-field-extensions/" class="dropdown-item">Writing Custom Field Extensions</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/writing-custom-step-layouts/" class="dropdown-item">Writing custom step layouts</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/software-templates/writing-templates/" class="dropdown-item">Writing Templates</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Techdocs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/features/techdocs/" class="dropdown-item">TechDocs Documentation</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/FAQ/" class="dropdown-item">TechDocs FAQ</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/addons/" class="dropdown-item">TechDocs Addons</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/architecture/" class="dropdown-item">TechDocs Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/cli/" class="dropdown-item">TechDocs CLI</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/concepts/" class="dropdown-item">Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/configuration/" class="dropdown-item">TechDocs Configuration Options</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/configuring-ci-cd/" class="dropdown-item">Configuring CI/CD to generate and publish TechDocs sites</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/creating-and-publishing/" class="dropdown-item">Creating and publishing your docs</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/how-to-guides/" class="dropdown-item">TechDocs How-To guides</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/troubleshooting/" class="dropdown-item">Troubleshooting TechDocs</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/features/techdocs/using-cloud-storage/" class="dropdown-item">Using Cloud Storage for TechDocs generated files</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/app-custom-theme/" class="dropdown-item">Customize the look-and-feel of your App</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/concepts/" class="dropdown-item">Key Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/configuration/" class="dropdown-item">Getting Started, configuring Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/configure-app-with-plugins/" class="dropdown-item">Configuring App with plugins</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/contributors/" class="dropdown-item">Contributors</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/create-an-app/" class="dropdown-item">Create an App</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/getting-involved/" class="dropdown-item">Getting Involved</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/homepage/" class="dropdown-item">Backstage homepage - Setup and Customization</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/keeping-backstage-updated/" class="dropdown-item">Keeping Backstage Updated</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/getting-started/project-structure/" class="dropdown-item">Backstage Project Structure</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Integrations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/" class="dropdown-item">Integrations</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Aws s3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/aws-s3/discovery/" class="dropdown-item">AWS S3 Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/aws-s3/locations/" class="dropdown-item">Amazon Web Services S3 Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Azure</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/azure/discovery/" class="dropdown-item">Azure DevOps Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/azure/locations/" class="dropdown-item">Azure DevOps Locations</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/azure/org/" class="dropdown-item">Microsoft Azure Active Directory Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketCloud</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/bitbucketCloud/discovery/" class="dropdown-item">Bitbucket Cloud Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/bitbucketCloud/locations/" class="dropdown-item">Bitbucket Cloud Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketServer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/bitbucketServer/discovery/" class="dropdown-item">Bitbucket Server Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/bitbucketServer/locations/" class="dropdown-item">Bitbucket Server Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Datadog rum</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/datadog-rum/installation/" class="dropdown-item">Datadog RUM Installation</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gerrit</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/gerrit/discovery/" class="dropdown-item">Gerrit Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/gerrit/locations/" class="dropdown-item">Gerrit Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitea</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/gitea/locations/" class="dropdown-item">Gitea Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Github</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/github/discovery/" class="dropdown-item">GitHub Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/github/github-apps/" class="dropdown-item">GitHub Apps</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/github/locations/" class="dropdown-item">GitHub Locations</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/github/org/" class="dropdown-item">GitHub Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitlab</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/gitlab/discovery/" class="dropdown-item">GitLab Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/gitlab/locations/" class="dropdown-item">GitLab Locations</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/integrations/gitlab/org/" class="dropdown-item">GitLab Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Google cloud storage</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/google-cloud-storage/locations/" class="dropdown-item">Google Cloud Storage Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ldap</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/integrations/ldap/org/" class="dropdown-item">LDAP Organizational Data</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Local dev</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/local-dev/cli-build-system/" class="dropdown-item">Build System</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/local-dev/cli-commands/" class="dropdown-item">Commands</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/local-dev/cli-overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/local-dev/debugging/" class="dropdown-item">Debugging Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/local-dev/linking-local-packages/" class="dropdown-item">Linking in Local Packages</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Overview</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/overview/adopting/" class="dropdown-item">Strategies for adopting</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/architecture-overview/" class="dropdown-item">Architecture overview</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/background/" class="dropdown-item">The Spotify Story</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/glossary/" class="dropdown-item">Backstage Glossary</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/logos/" class="dropdown-item">Logos</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/roadmap/" class="dropdown-item">Roadmap</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/support/" class="dropdown-item">Support and community</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/threat-model/" class="dropdown-item">Backstage Threat Model</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/versioning-policy/" class="dropdown-item">Release & Versioning Policy</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/vision/" class="dropdown-item">Vision</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/overview/what-is-backstage/" class="dropdown-item">What is Backstage?</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Permissions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/permissions/concepts/" class="dropdown-item">Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/permissions/custom-rules/" class="dropdown-item">Defining custom permission rules</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/permissions/frontend-integration/" class="dropdown-item">Frontend Integration</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/permissions/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/permissions/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/permissions/writing-a-policy/" class="dropdown-item">Writing a permission policy</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Plugin authors</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/permissions/plugin-authors/01-setup/" class="dropdown-item">1. Tutorial setup</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/permissions/plugin-authors/02-adding-a-basic-permission-check/" class="dropdown-item">2. Adding a basic permission check</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/permissions/plugin-authors/03-adding-a-resource-permission-check/" class="dropdown-item">3. Adding a resource permission check</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/permissions/plugin-authors/04-authorizing-access-to-paginated-data/" class="dropdown-item">4. Authorizing access to paginated data</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/permissions/plugin-authors/05-frontend-authorization/" class="dropdown-item">5. Frontend Components with Authorization</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/releases/v1.0.0/" class="dropdown-item">v1.0.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.1.0-changelog/" class="dropdown-item">Release v1.1.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.1.0/" class="dropdown-item">v1.1.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.10.0-changelog/" class="dropdown-item">Release v1.10.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.10.0-next.0-changelog/" class="dropdown-item">Release v1.10.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.10.0-next.1-changelog/" class="dropdown-item">Release v1.10.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.10.0-next.2-changelog/" class="dropdown-item">Release v1.10.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.10.0/" class="dropdown-item">v1.10.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.11.0-changelog/" class="dropdown-item">Release v1.11.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.11.0-next.0-changelog/" class="dropdown-item">Release v1.11.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.11.0-next.1-changelog/" class="dropdown-item">Release v1.11.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.11.0-next.2-changelog/" class="dropdown-item">Release v1.11.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.11.0/" class="dropdown-item">v1.11.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.12.0-changelog/" class="dropdown-item">Release v1.12.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.12.0-next.0-changelog/" class="dropdown-item">Release v1.12.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.12.0-next.1-changelog/" class="dropdown-item">Release v1.12.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.12.0-next.2-changelog/" class="dropdown-item">Release v1.12.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.12.0/" class="dropdown-item">v1.12.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.13.0-changelog/" class="dropdown-item">Release v1.13.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.13.0-next.0-changelog/" class="dropdown-item">Release v1.13.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.13.0-next.1-changelog/" class="dropdown-item">Release v1.13.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.13.0-next.2-changelog/" class="dropdown-item">Release v1.13.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.13.0-next.3-changelog/" class="dropdown-item">Release v1.13.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.13.0/" class="dropdown-item">v1.13.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.14.0-changelog/" class="dropdown-item">Release v1.14.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.14.0-next.0-changelog/" class="dropdown-item">Release v1.14.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.14.0-next.1-changelog/" class="dropdown-item">Release v1.14.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.14.0-next.2-changelog/" class="dropdown-item">Release v1.14.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.14.0/" class="dropdown-item">v1.14.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.2.0-changelog/" class="dropdown-item">Release v1.2.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.2.0-next.0-changelog/" class="dropdown-item">Release v1.2.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.2.0-next.1-changelog/" class="dropdown-item">Release v1.2.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.2.0-next.2-changelog/" class="dropdown-item">Release v1.2.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.2.0-next.3-changelog/" class="dropdown-item">Release v1.2.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.2.0/" class="dropdown-item">v1.2.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.3.0-changelog/" class="dropdown-item">Release v1.3.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.3.0-next.0-changelog/" class="dropdown-item">Release v1.3.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.3.0-next.1-changelog/" class="dropdown-item">Release v1.3.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.3.0-next.2-changelog/" class="dropdown-item">Release v1.3.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.3.0/" class="dropdown-item">v1.3.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.4.0-changelog/" class="dropdown-item">Release v1.4.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.4.0-next.0-changelog/" class="dropdown-item">Release v1.4.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.4.0-next.1-changelog/" class="dropdown-item">Release v1.4.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.4.0-next.2-changelog/" class="dropdown-item">Release v1.4.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.4.0-next.3-changelog/" class="dropdown-item">Release v1.4.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.4.0/" class="dropdown-item">v1.4.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.5.0-changelog/" class="dropdown-item">Release v1.5.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.5.0-next.0-changelog/" class="dropdown-item">Release v1.5.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.5.0-next.1-changelog/" class="dropdown-item">Release v1.5.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.5.0-next.2-changelog/" class="dropdown-item">Release v1.5.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.5.0-next.3-changelog/" class="dropdown-item">Release v1.5.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.5.0/" class="dropdown-item">v1.5.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.6.0-changelog/" class="dropdown-item">Release v1.6.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.6.0-next.0-changelog/" class="dropdown-item">Release v1.6.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.6.0-next.1-changelog/" class="dropdown-item">Release v1.6.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.6.0-next.2-changelog/" class="dropdown-item">Release v1.6.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.6.0-next.3-changelog/" class="dropdown-item">Release v1.6.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.6.0/" class="dropdown-item">v1.6.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.7.0-changelog/" class="dropdown-item">Release v1.7.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.7.0-next.0-changelog/" class="dropdown-item">Release v1.7.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.7.0-next.1-changelog/" class="dropdown-item">Release v1.7.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.7.0-next.2-changelog/" class="dropdown-item">Release v1.7.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.7.0/" class="dropdown-item">v1.7.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.8.0-changelog/" class="dropdown-item">Release v1.8.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.8.0-next.0-changelog/" class="dropdown-item">Release v1.8.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.8.0-next.1-changelog/" class="dropdown-item">Release v1.8.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.8.0-next.2-changelog/" class="dropdown-item">Release v1.8.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.8.0/" class="dropdown-item">v1.8.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.9.0-changelog/" class="dropdown-item">Release v1.9.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.9.0-next.0-changelog/" class="dropdown-item">Release v1.9.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.9.0-next.1-changelog/" class="dropdown-item">Release v1.9.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.9.0-next.2-changelog/" class="dropdown-item">Release v1.9.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.9.0-next.3-changelog/" class="dropdown-item">Release v1.9.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.9.0-next.4-changelog/" class="dropdown-item">Release v1.9.0-next.4</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/releases/v1.9.0/" class="dropdown-item">v1.9.0</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorials</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backstage/tutorials/backend-to-backend-auth/" class="dropdown-item">Backend-to-Backend Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/tutorials/configuring-plugin-databases/" class="dropdown-item">Configuring Plugin Databases</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/tutorials/journey/" class="dropdown-item">Future developer journey</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/tutorials/migrating-away-from-core/" class="dropdown-item">Migrating away from @backstage/core</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/tutorials/package-role-migration/" class="dropdown-item">Package Role Migration</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/tutorials/quickstart-app-plugin/" class="dropdown-item">Adding Custom Plugin to Existing Monorepo App</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/tutorials/react-router-stable-migration/" class="dropdown-item">React Router 6.0 Migration</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/tutorials/switching-sqlite-postgres/" class="dropdown-item">Switching Backstage from SQLite to PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/tutorials/using-backstage-proxy-within-plugin/" class="dropdown-item">Using the Backstage Proxy from Within a Plugin</a>
+</li>
+            
+<li>
+    <a href="../../../backstage/tutorials/yarn-migration/" class="dropdown-item">Migration to Yarn 3</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Monorepo <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../monorepo/" class="dropdown-item">backstage/mkdocs-monorepo-plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../monorepo/CHANGELOG/" class="dropdown-item">Changelog</a>
+</li>
+                                    
+<li>
+    <a href="../../../monorepo/CODE-OF-CONDUCT/" class="dropdown-item">Contributor Covenant Code of Conduct</a>
+</li>
+                                    
+<li>
+    <a href="../../../monorepo/CONTRIBUTING/" class="dropdown-item">Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../../monorepo/limitations/" class="dropdown-item">Caveats / Known Design Decisions</a>
+</li>
+                                    
+<li>
+    <a href="../../../monorepo/philosophy/" class="dropdown-item">Philosophy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Techdocs cli <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../techdocs-cli/" class="dropdown-item">TechDocs CLI</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Fastapi <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../../alternatives/" class="dropdown-item">Alternatives, Inspiration and Comparisons</a>
+</li>
+                                    
+<li>
+    <a href="../../async/" class="dropdown-item">Concurrency and async / await</a>
+</li>
+                                    
+<li>
+    <a href="../../benchmarks/" class="dropdown-item">Benchmarks</a>
+</li>
+                                    
+<li>
+    <a href="../../contributing/" class="dropdown-item">Development - Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../external-links/" class="dropdown-item">External Links and Articles</a>
+</li>
+                                    
+<li>
+    <a href="../../fastapi-people/" class="dropdown-item">FastAPI People</a>
+</li>
+                                    
+<li>
+    <a href="../../features/" class="dropdown-item">Features</a>
+</li>
+                                    
+<li>
+    <a href="../../help-fastapi/" class="dropdown-item">Help FastAPI - Get Help</a>
+</li>
+                                    
+<li>
+    <a href="../../history-design-future/" class="dropdown-item">History, Design and Future</a>
+</li>
+                                    
+<li>
+    <a href="../../newsletter/" class="dropdown-item">FastAPI and friends newsletter</a>
+</li>
+                                    
+<li>
+    <a href="../../project-generation/" class="dropdown-item">Project Generation - Template</a>
+</li>
+                                    
+<li>
+    <a href="../../python-types/" class="dropdown-item">Python Types Intro</a>
+</li>
+                                    
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Advanced User Guide - Intro</a>
+</li>
+            
+<li>
+    <a href="../additional-responses/" class="dropdown-item">Additional Responses in OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../additional-status-codes/" class="dropdown-item">Additional Status Codes</a>
+</li>
+            
+<li>
+    <a href="../advanced-dependencies/" class="dropdown-item">Advanced Dependencies</a>
+</li>
+            
+<li>
+    <a href="../async-sql-databases/" class="dropdown-item">Async SQL (Relational) Databases</a>
+</li>
+            
+<li>
+    <a href="../async-tests/" class="dropdown-item">Async Tests</a>
+</li>
+            
+<li>
+    <a href="../behind-a-proxy/" class="dropdown-item">Behind a Proxy</a>
+</li>
+            
+<li>
+    <a href="../conditional-openapi/" class="dropdown-item">Conditional OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../custom-request-and-route/" class="dropdown-item">Custom Request and APIRoute class</a>
+</li>
+            
+<li>
+    <a href="../custom-response/" class="dropdown-item">Custom Response - HTML, Stream, File, others</a>
+</li>
+            
+<li>
+    <a href="../dataclasses/" class="dropdown-item">Using Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../events/" class="dropdown-item">Lifespan Events</a>
+</li>
+            
+<li>
+    <a href="../extending-openapi/" class="dropdown-item">Extending OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../generate-clients/" class="dropdown-item">Generate Clients</a>
+</li>
+            
+<li>
+    <a href="../graphql/" class="dropdown-item">GraphQL</a>
+</li>
+            
+<li>
+    <a href="../middleware/" class="dropdown-item">Advanced Middleware</a>
+</li>
+            
+<li>
+    <a href="../nosql-databases/" class="dropdown-item">NoSQL (Distributed / Big Data) Databases</a>
+</li>
+            
+<li>
+    <a href="../openapi-callbacks/" class="dropdown-item">OpenAPI Callbacks</a>
+</li>
+            
+<li>
+    <a href="../path-operation-advanced-configuration/" class="dropdown-item">Path Operation Advanced Configuration</a>
+</li>
+            
+<li>
+    <a href="../response-change-status-code/" class="dropdown-item">Response - Change Status Code</a>
+</li>
+            
+<li>
+    <a href="../response-cookies/" class="dropdown-item">Response Cookies</a>
+</li>
+            
+<li>
+    <a href="../response-directly/" class="dropdown-item">Return a Response Directly</a>
+</li>
+            
+<li>
+    <a href="../response-headers/" class="dropdown-item">Response Headers</a>
+</li>
+            
+<li>
+    <a href="../settings/" class="dropdown-item">Settings and Environment Variables</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">SQL (Relational) Databases with Peewee</a>
+</li>
+            
+<li>
+    <a href="../sub-applications/" class="dropdown-item">Sub Applications - Mounts</a>
+</li>
+            
+<li>
+    <a href="../templates/" class="dropdown-item">Templates</a>
+</li>
+            
+<li>
+    <a href="../testing-database/" class="dropdown-item">Testing a Database</a>
+</li>
+            
+<li>
+    <a href="../testing-dependencies/" class="dropdown-item">Testing Dependencies with Overrides</a>
+</li>
+            
+<li>
+    <a href="../testing-events/" class="dropdown-item">Testing Events: startup - shutdown</a>
+</li>
+            
+<li>
+    <a href="../testing-websockets/" class="dropdown-item">Testing WebSockets</a>
+</li>
+            
+<li>
+    <a href="../using-request-directly/" class="dropdown-item">Using the Request Directly</a>
+</li>
+            
+<li>
+    <a href="../websockets/" class="dropdown-item">WebSockets</a>
+</li>
+            
+<li>
+    <a href="../wsgi/" class="dropdown-item">Including WSGI - Flask, Django, others</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../security/" class="dropdown-item">Advanced Security - Intro</a>
+</li>
+            
+<li>
+    <a href="../security/http-basic-auth/" class="dropdown-item">HTTP Basic Auth</a>
+</li>
+            
+<li>
+    <a href="../security/oauth2-scopes/" class="dropdown-item">OAuth2 scopes</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployment</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../deployment/" class="dropdown-item">Deployment - Intro</a>
+</li>
+            
+<li>
+    <a href="../../deployment/concepts/" class="dropdown-item">Deployments Concepts</a>
+</li>
+            
+<li>
+    <a href="../../deployment/deta/" class="dropdown-item">Deploy FastAPI on Deta Space</a>
+</li>
+            
+<li>
+    <a href="../../deployment/docker/" class="dropdown-item">FastAPI in Containers - Docker</a>
+</li>
+            
+<li>
+    <a href="../../deployment/https/" class="dropdown-item">About HTTPS</a>
+</li>
+            
+<li>
+    <a href="../../deployment/manually/" class="dropdown-item">Run a Server Manually - Uvicorn</a>
+</li>
+            
+<li>
+    <a href="../../deployment/server-workers/" class="dropdown-item">Server Workers - Gunicorn with Uvicorn</a>
+</li>
+            
+<li>
+    <a href="../../deployment/versions/" class="dropdown-item">About FastAPI versions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorial</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../tutorial/" class="dropdown-item">Tutorial - User Guide - Intro</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/background-tasks/" class="dropdown-item">Background Tasks</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/bigger-applications/" class="dropdown-item">Bigger Applications - Multiple Files</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/body-fields/" class="dropdown-item">Body - Fields</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/body-multiple-params/" class="dropdown-item">Body - Multiple Parameters</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/body-nested-models/" class="dropdown-item">Body - Nested Models</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/body-updates/" class="dropdown-item">Body - Updates</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/body/" class="dropdown-item">Request Body</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/cookie-params/" class="dropdown-item">Cookie Parameters</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/cors/" class="dropdown-item">CORS (Cross-Origin Resource Sharing)</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/debugging/" class="dropdown-item">Debugging</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/encoder/" class="dropdown-item">JSON Compatible Encoder</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/extra-data-types/" class="dropdown-item">Extra Data Types</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/extra-models/" class="dropdown-item">Extra Models</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/first-steps/" class="dropdown-item">First Steps</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/handling-errors/" class="dropdown-item">Handling Errors</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/header-params/" class="dropdown-item">Header Parameters</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/metadata/" class="dropdown-item">Metadata and Docs URLs</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/middleware/" class="dropdown-item">Middleware</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/path-operation-configuration/" class="dropdown-item">Path Operation Configuration</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/path-params-numeric-validations/" class="dropdown-item">Path Parameters and Numeric Validations</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/path-params/" class="dropdown-item">Path Parameters</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/query-params-str-validations/" class="dropdown-item">Query Parameters and String Validations</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/query-params/" class="dropdown-item">Query Parameters</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/request-files/" class="dropdown-item">Request Files</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/request-forms-and-files/" class="dropdown-item">Request Forms and Files</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/request-forms/" class="dropdown-item">Form Data</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/response-model/" class="dropdown-item">Response Model - Return Type</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/response-status-code/" class="dropdown-item">Response Status Code</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/schema-extra-example/" class="dropdown-item">Declare Request Example Data</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/sql-databases/" class="dropdown-item">SQL (Relational) Databases</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/static-files/" class="dropdown-item">Static Files</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/testing/" class="dropdown-item">Testing</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dependencies</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../tutorial/dependencies/" class="dropdown-item">Dependencies - First Steps</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/dependencies/classes-as-dependencies/" class="dropdown-item">Classes as Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/dependencies/dependencies-in-path-operation-decorators/" class="dropdown-item">Dependencies in path operation decorators</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/dependencies/dependencies-with-yield/" class="dropdown-item">Dependencies with yield</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/dependencies/global-dependencies/" class="dropdown-item">Global Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/dependencies/sub-dependencies/" class="dropdown-item">Sub-dependencies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../tutorial/security/" class="dropdown-item">Security Intro</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/security/first-steps/" class="dropdown-item">Security - First Steps</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/security/get-current-user/" class="dropdown-item">Get Current User</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/security/oauth2-jwt/" class="dropdown-item">OAuth2 with Password (and hashing), Bearer with JWT tokens</a>
+</li>
+            
+<li>
+    <a href="../../tutorial/security/simple-oauth2/" class="dropdown-item">Simple OAuth2 with Password and Bearer</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Monorepo multi docs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sample docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/" class="dropdown-item">Welcome to our Developer Platform</a>
+</li>
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/authentication/" class="dropdown-item">Authentication</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Components</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">A</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/components/a/" class="dropdown-item">Docs for A</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">B</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/components/b/" class="dropdown-item">Docs for B</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">C</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/components/c/" class="dropdown-item">Docs for C</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">D</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/components/d/" class="dropdown-item">Component D</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">E</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/components/d/e/" class="dropdown-item">Docs for E</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/v1/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/v1/reference/" class="dropdown-item">v1 API reference</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/v2/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/v2/migrating/" class="dropdown-item">Migration Guide to v2</a>
+</li>
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/v2/reference/" class="dropdown-item">v2 API reference</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/v3/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/v3/migrating/" class="dropdown-item">Migration Guide to v3</a>
+</li>
+            
+<li>
+    <a href="../../../monorepo-multi-docs/sample-docs/v3/reference/" class="dropdown-item">v3 API reference</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Django rest</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/django-rest/" class="dropdown-item">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api guide</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/authentication/" class="dropdown-item">Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/caching/" class="dropdown-item">Caching</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/content-negotiation/" class="dropdown-item">Content negotiation</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/exceptions/" class="dropdown-item">Exceptions</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/fields/" class="dropdown-item">Serializer fields</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/filtering/" class="dropdown-item">Filtering</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/format-suffixes/" class="dropdown-item">Format suffixes</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/generic-views/" class="dropdown-item">Generic views</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/pagination/" class="dropdown-item">Pagination</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/parsers/" class="dropdown-item">Parsers</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/permissions/" class="dropdown-item">Permissions</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/relations/" class="dropdown-item">Serializer relations</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/renderers/" class="dropdown-item">Renderers</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/requests/" class="dropdown-item">Requests</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/responses/" class="dropdown-item">Responses</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/reverse/" class="dropdown-item">Returning URLs</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/routers/" class="dropdown-item">Routers</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/schemas/" class="dropdown-item">Schema</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/serializers/" class="dropdown-item">Serializers</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/settings/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/status-codes/" class="dropdown-item">Status Codes</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/testing/" class="dropdown-item">Testing</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/throttling/" class="dropdown-item">Throttling</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/validators/" class="dropdown-item">Validators</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/versioning/" class="dropdown-item">Versioning</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/views/" class="dropdown-item">Class-based Views</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/api-guide/viewsets/" class="dropdown-item">ViewSets</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Community</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/django-rest/community/3.0-announcement/" class="dropdown-item">Django REST framework 3.0</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.1-announcement/" class="dropdown-item">Django REST framework 3.1</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.10-announcement/" class="dropdown-item">3.10 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.11-announcement/" class="dropdown-item">3.11 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.12-announcement/" class="dropdown-item">3.12 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.13-announcement/" class="dropdown-item">3.13 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.14-announcement/" class="dropdown-item">3.14 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.2-announcement/" class="dropdown-item">Django REST framework 3.2</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.3-announcement/" class="dropdown-item">Django REST framework 3.3</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.4-announcement/" class="dropdown-item">3.4 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.5-announcement/" class="dropdown-item">3.5 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.6-announcement/" class="dropdown-item">3.6 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.7-announcement/" class="dropdown-item">3.7 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.8-announcement/" class="dropdown-item">3.8 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/3.9-announcement/" class="dropdown-item">3.9 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/contributing/" class="dropdown-item">Contributing to REST framework</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/funding/" class="dropdown-item">Funding</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/jobs/" class="dropdown-item">Jobs</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/kickstarter-announcement/" class="dropdown-item">Kickstarting Django REST framework 3</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/mozilla-grant/" class="dropdown-item">Mozilla Grant</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/project-management/" class="dropdown-item">Project management</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/third-party-packages/" class="dropdown-item">Third Party Packages</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/community/tutorials-and-resources/" class="dropdown-item">Tutorials and Resources</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Topics</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/django-rest/topics/ajax-csrf-cors/" class="dropdown-item">Working with AJAX, CSRF & CORS</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/topics/browsable-api/" class="dropdown-item">The Browsable API</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/topics/browser-enhancements/" class="dropdown-item">Browser enhancements</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/topics/documenting-your-api/" class="dropdown-item">Documenting your API</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/topics/html-and-forms/" class="dropdown-item">HTML & Forms</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/topics/internationalization/" class="dropdown-item">Internationalization</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/topics/rest-hypermedia-hateoas/" class="dropdown-item">REST, Hypermedia & HATEOAS</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/topics/writable-nested-serializers/" class="dropdown-item">Writable nested serializers</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorial</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/django-rest/tutorial/1-serialization/" class="dropdown-item">Tutorial 1: Serialization</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/tutorial/2-requests-and-responses/" class="dropdown-item">Tutorial 2: Requests and Responses</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/tutorial/3-class-based-views/" class="dropdown-item">Tutorial 3: Class-based Views</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/tutorial/4-authentication-and-permissions/" class="dropdown-item">Tutorial 4: Authentication & Permissions</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/tutorial/5-relationships-and-hyperlinked-apis/" class="dropdown-item">Tutorial 5: Relationships & Hyperlinked APIs</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/tutorial/6-viewsets-and-routers/" class="dropdown-item">Tutorial 6: ViewSets & Routers</a>
+</li>
+            
+<li>
+    <a href="../../../python/django-rest/tutorial/quickstart/" class="dropdown-item">Quickstart</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pydantic</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/pydantic/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/contributing/" class="dropdown-item">Contributing</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/install/" class="dropdown-item">Install</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/migration/" class="dropdown-item">Migration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/pydantic/api/alias_generators/" class="dropdown-item">Alias generators</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/color/" class="dropdown-item">Color</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/config/" class="dropdown-item">Config</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/dataclasses/" class="dropdown-item">Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/errors/" class="dropdown-item">Errors</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/fields/" class="dropdown-item">Fields</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/functional_serializers/" class="dropdown-item">Functional serializers</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/functional_validators/" class="dropdown-item">Functional validators</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/json_schema/" class="dropdown-item">Json schema</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/main/" class="dropdown-item">Main</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/mypy/" class="dropdown-item">Mypy</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/networks/" class="dropdown-item">Networks</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/pydantic_core_init/" class="dropdown-item">Pydantic core init</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/pydantic_core_schema/" class="dropdown-item">Pydantic core schema</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/type_adapter/" class="dropdown-item">Type adapter</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/types/" class="dropdown-item">Types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/validate_call/" class="dropdown-item">Validate call</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/api/version/" class="dropdown-item">Version</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Blog</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/pydantic/blog/pydantic-v2-alpha/" class="dropdown-item">Pydantic V2 Pre Release</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/blog/pydantic-v2/" class="dropdown-item">Pydantic V2 Plan</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Integrations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/pydantic/integrations/datamodel_code_generator/" class="dropdown-item">Code Generation with datamodel-code-generator</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/integrations/devtools/" class="dropdown-item">Devtools</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/integrations/hypothesis/" class="dropdown-item">Hypothesis</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/integrations/mypy/" class="dropdown-item">Mypy</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/integrations/pycharm/" class="dropdown-item">Pycharm</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/integrations/rich/" class="dropdown-item">Rich</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/integrations/visual_studio_code/" class="dropdown-item">Visual studio code</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Usage</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/pydantic/usage/computed_fields/" class="dropdown-item">Computed fields</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/conversion_table/" class="dropdown-item">Conversion table</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/dataclasses/" class="dropdown-item">Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/errors/" class="dropdown-item">Errors</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/exporting_models/" class="dropdown-item">Exporting models</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/model_config/" class="dropdown-item">Model config</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/models/" class="dropdown-item">Models</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/postponed_annotations/" class="dropdown-item">Postponed annotations</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/pydantic_settings/" class="dropdown-item">Settings Management</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/schema/" class="dropdown-item">Schema</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/validation_decorator/" class="dropdown-item">Validation decorator</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/validation_errors/" class="dropdown-item">Validation errors</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/validators/" class="dropdown-item">Validators</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Types</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/booleans/" class="dropdown-item">Booleans</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/bytesize/" class="dropdown-item">Bytes and ByteSize</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/callables/" class="dropdown-item">Callables</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/color_types/" class="dropdown-item">Color types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/custom/" class="dropdown-item">Custom</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/datetime/" class="dropdown-item">Datetime</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/dicts_mapping/" class="dropdown-item">Dicts and Mapping Types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/encoded/" class="dropdown-item">Encoded</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/enums/" class="dropdown-item">Enums</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/file_types/" class="dropdown-item">File types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/json/" class="dropdown-item">Json</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/list_types/" class="dropdown-item">List types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/number_types/" class="dropdown-item">Number types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/payment_cards/" class="dropdown-item">Payment cards</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/secrets/" class="dropdown-item">Secrets</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/sequence_iterable/" class="dropdown-item">Sequence iterable</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/set_types/" class="dropdown-item">Set types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/standard_types/" class="dropdown-item">Standard types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/string_types/" class="dropdown-item">String types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/types/" class="dropdown-item">Types</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/types_fields/" class="dropdown-item">Types fields</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/typevars/" class="dropdown-item">Typevars</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/unions/" class="dropdown-item">Unions</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/urls/" class="dropdown-item">Urls</a>
+</li>
+            
+<li>
+    <a href="../../../python/pydantic/usage/types/uuids/" class="dropdown-item">Uuids</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../settings/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../sub-applications/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/tiangolo/fastapi/edit/master/advanced/sql-databases-peewee.md" class="nav-link">
+                                        Edit</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sql-relational-databases-with-peewee" class="nav-link">SQL (Relational) Databases with Peewee</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#peewee-for-async" class="nav-link">Peewee for async</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#the-same-app" class="nav-link">The same app</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#file-structure" class="nav-link">File structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-the-peewee-parts" class="nav-link">Create the Peewee parts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-the-database-models" class="nav-link">Create the database models</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-the-pydantic-models" class="nav-link">Create the Pydantic models</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#crud-utils" class="nav-link">CRUD utils</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#main-fastapi-app" class="nav-link">Main FastAPI app</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#testing-peewee-with-async" class="nav-link">Testing Peewee with async</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#review-all-the-files" class="nav-link">Review all the files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#technical-details" class="nav-link">Technical Details</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="sql-relational-databases-with-peewee">SQL (Relational) Databases with Peewee</h1>
+<p>!!! warning
+    If you are just starting, the tutorial <a href="../../tutorial/sql-databases/">SQL (Relational) Databases</a>{.internal-link target=_blank} that uses SQLAlchemy should be enough.</p>
+<pre><code>Feel free to skip this.
+</code></pre>
+<p>If you are starting a project from scratch, you are probably better off with SQLAlchemy ORM (<a href="../../tutorial/sql-databases/">SQL (Relational) Databases</a>{.internal-link target=_blank}), or any other async ORM.</p>
+<p>If you already have a code base that uses <a href="https://docs.peewee-orm.com/en/latest/" class="external-link" target="_blank">Peewee ORM</a>, you can check here how to use it with <strong>FastAPI</strong>.</p>
+<p>!!! warning "Python 3.7+ required"
+    You will need Python 3.7 or above to safely use Peewee with FastAPI.</p>
+<h2 id="peewee-for-async">Peewee for async</h2>
+<p>Peewee was not designed for async frameworks, or with them in mind.</p>
+<p>Peewee has some heavy assumptions about its defaults and about how it should be used.</p>
+<p>If you are developing an application with an older non-async framework, and can work with all its defaults, <strong>it can be a great tool</strong>.</p>
+<p>But if you need to change some of the defaults, support more than one predefined database, work with an async framework (like FastAPI), etc, you will need to add quite some complex extra code to override those defaults.</p>
+<p>Nevertheless, it's possible to do it, and here you'll see exactly what code you have to add to be able to use Peewee with FastAPI.</p>
+<p>!!! note "Technical Details"
+    You can read more about Peewee's stand about async in Python <a href="https://docs.peewee-orm.com/en/latest/peewee/database.html#async-with-gevent" class="external-link" target="_blank">in the docs</a>, <a href="https://github.com/coleifer/peewee/issues/263#issuecomment-517347032" class="external-link" target="_blank">an issue</a>, <a href="https://github.com/coleifer/peewee/pull/2072#issuecomment-563215132" class="external-link" target="_blank">a PR</a>.</p>
+<h2 id="the-same-app">The same app</h2>
+<p>We are going to create the same application as in the SQLAlchemy tutorial (<a href="../../tutorial/sql-databases/">SQL (Relational) Databases</a>{.internal-link target=_blank}).</p>
+<p>Most of the code is actually the same.</p>
+<p>So, we are going to focus only on the differences.</p>
+<h2 id="file-structure">File structure</h2>
+<p>Let's say you have a directory named <code>my_super_project</code> that contains a sub-directory called <code>sql_app</code> with a structure like this:</p>
+<pre><code>.
+└── sql_app
+    ├── __init__.py
+    ├── crud.py
+    ├── database.py
+    ├── main.py
+    └── schemas.py
+</code></pre>
+<p>This is almost the same structure as we had for the SQLAlchemy tutorial.</p>
+<p>Now let's see what each file/module does.</p>
+<h2 id="create-the-peewee-parts">Create the Peewee parts</h2>
+<p>Let's refer to the file <code>sql_app/database.py</code>.</p>
+<h3 id="the-standard-peewee-code">The standard Peewee code</h3>
+<p>Let's first check all the normal Peewee code, create a Peewee database:</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/database.py!}
+</code></pre>
+<p>!!! tip
+    Have in mind that if you wanted to use a different database, like PostgreSQL, you couldn't just change the string. You would need to use a different Peewee database class.</p>
+<h4 id="note">Note</h4>
+<p>The argument:</p>
+<pre><code class="language-Python">check_same_thread=False
+</code></pre>
+<p>is equivalent to the one in the SQLAlchemy tutorial:</p>
+<pre><code class="language-Python">connect_args={&quot;check_same_thread&quot;: False}
+</code></pre>
+<p>...it is needed only for <code>SQLite</code>.</p>
+<p>!!! info "Technical Details"</p>
+<pre><code>Exactly the same technical details as in [SQL (Relational) Databases](../tutorial/sql-databases.md#note){.internal-link target=_blank} apply.
+</code></pre>
+<h3 id="make-peewee-async-compatible-peeweeconnectionstate">Make Peewee async-compatible <code>PeeweeConnectionState</code></h3>
+<p>The main issue with Peewee and FastAPI is that Peewee relies heavily on <a href="https://docs.python.org/3/library/threading.html#thread-local-data" class="external-link" target="_blank">Python's <code>threading.local</code></a>, and it doesn't have a direct way to override it or let you handle connections/sessions directly (as is done in the SQLAlchemy tutorial).</p>
+<p>And <code>threading.local</code> is not compatible with the new async features of modern Python.</p>
+<p>!!! note "Technical Details"
+    <code>threading.local</code> is used to have a "magic" variable that has a different value for each thread.</p>
+<pre><code>This was useful in older frameworks designed to have one single thread per request, no more, no less.
+
+Using this, each request would have its own database connection/session, which is the actual final goal.
+
+But FastAPI, using the new async features, could handle more than one request on the same thread. And at the same time, for a single request, it could run multiple things in different threads (in a threadpool), depending on if you use `async def` or normal `def`. This is what gives all the performance improvements to FastAPI.
+</code></pre>
+<p>But Python 3.7 and above provide a more advanced alternative to <code>threading.local</code>, that can also be used in the places where <code>threading.local</code> would be used, but is compatible with the new async features.</p>
+<p>We are going to use that. It's called <a href="https://docs.python.org/3/library/contextvars.html" class="external-link" target="_blank"><code>contextvars</code></a>.</p>
+<p>We are going to override the internal parts of Peewee that use <code>threading.local</code> and replace them with <code>contextvars</code>, with the corresponding updates.</p>
+<p>This might seem a bit complex (and it actually is), you don't really need to completely understand how it works to use it.</p>
+<p>We will create a <code>PeeweeConnectionState</code>:</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/database.py!}
+</code></pre>
+<p>This class inherits from a special internal class used by Peewee.</p>
+<p>It has all the logic to make Peewee use <code>contextvars</code> instead of <code>threading.local</code>.</p>
+<p><code>contextvars</code> works a bit differently than <code>threading.local</code>. But the rest of Peewee's internal code assumes that this class works with <code>threading.local</code>.</p>
+<p>So, we need to do some extra tricks to make it work as if it was just using <code>threading.local</code>. The <code>__init__</code>, <code>__setattr__</code>, and <code>__getattr__</code> implement all the required tricks for this to be used by Peewee without knowing that it is now compatible with FastAPI.</p>
+<p>!!! tip
+    This will just make Peewee behave correctly when used with FastAPI. Not randomly opening or closing connections that are being used, creating errors, etc.</p>
+<pre><code>But it doesn't give Peewee async super-powers. You should still use normal `def` functions and not `async def`.
+</code></pre>
+<h3 id="use-the-custom-peeweeconnectionstate-class">Use the custom <code>PeeweeConnectionState</code> class</h3>
+<p>Now, overwrite the <code>._state</code> internal attribute in the Peewee database <code>db</code> object using the new <code>PeeweeConnectionState</code>:</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/database.py!}
+</code></pre>
+<p>!!! tip
+    Make sure you overwrite <code>db._state</code> <em>after</em> creating <code>db</code>.</p>
+<p>!!! tip
+    You would do the same for any other Peewee database, including <code>PostgresqlDatabase</code>, <code>MySQLDatabase</code>, etc.</p>
+<h2 id="create-the-database-models">Create the database models</h2>
+<p>Let's now see the file <code>sql_app/models.py</code>.</p>
+<h3 id="create-peewee-models-for-our-data">Create Peewee models for our data</h3>
+<p>Now create the Peewee models (classes) for <code>User</code> and <code>Item</code>.</p>
+<p>This is the same you would do if you followed the Peewee tutorial and updated the models to have the same data as in the SQLAlchemy tutorial.</p>
+<p>!!! tip
+    Peewee also uses the term "<strong>model</strong>" to refer to these classes and instances that interact with the database.</p>
+<pre><code>But Pydantic also uses the term "**model**" to refer to something different, the data validation, conversion, and documentation classes and instances.
+</code></pre>
+<p>Import <code>db</code> from <code>database</code> (the file <code>database.py</code> from above) and use it here.</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/models.py!}
+</code></pre>
+<p>!!! tip
+    Peewee creates several magic attributes.</p>
+<pre><code>It will automatically add an `id` attribute as an integer to be the primary key.
+
+It will chose the name of the tables based on the class names.
+
+For the `Item`, it will create an attribute `owner_id` with the integer ID of the `User`. But we don't declare it anywhere.
+</code></pre>
+<h2 id="create-the-pydantic-models">Create the Pydantic models</h2>
+<p>Now let's check the file <code>sql_app/schemas.py</code>.</p>
+<p>!!! tip
+    To avoid confusion between the Peewee <em>models</em> and the Pydantic <em>models</em>, we will have the file <code>models.py</code> with the Peewee models, and the file <code>schemas.py</code> with the Pydantic models.</p>
+<pre><code>These Pydantic models define more or less a "schema" (a valid data shape).
+
+So this will help us avoiding confusion while using both.
+</code></pre>
+<h3 id="create-the-pydantic-models-schemas">Create the Pydantic <em>models</em> / schemas</h3>
+<p>Create all the same Pydantic models as in the SQLAlchemy tutorial:</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/schemas.py!}
+</code></pre>
+<p>!!! tip
+    Here we are creating the models with an <code>id</code>.</p>
+<pre><code>We didn't explicitly specify an `id` attribute in the Peewee models, but Peewee adds one automatically.
+
+We are also adding the magic `owner_id` attribute to `Item`.
+</code></pre>
+<h3 id="create-a-peeweegetterdict-for-the-pydantic-models-schemas">Create a <code>PeeweeGetterDict</code> for the Pydantic <em>models</em> / schemas</h3>
+<p>When you access a relationship in a Peewee object, like in <code>some_user.items</code>, Peewee doesn't provide a <code>list</code> of <code>Item</code>.</p>
+<p>It provides a special custom object of class <code>ModelSelect</code>.</p>
+<p>It's possible to create a <code>list</code> of its items with <code>list(some_user.items)</code>.</p>
+<p>But the object itself is not a <code>list</code>. And it's also not an actual Python <a href="https://docs.python.org/3/glossary.html#term-generator" class="external-link" target="_blank">generator</a>. Because of this, Pydantic doesn't know by default how to convert it to a <code>list</code> of Pydantic <em>models</em> / schemas.</p>
+<p>But recent versions of Pydantic allow providing a custom class that inherits from <code>pydantic.utils.GetterDict</code>, to provide the functionality used when using the <code>orm_mode = True</code> to retrieve the values for ORM model attributes.</p>
+<p>We are going to create a custom <code>PeeweeGetterDict</code> class and use it in all the same Pydantic <em>models</em> / schemas that use <code>orm_mode</code>:</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/schemas.py!}
+</code></pre>
+<p>Here we are checking if the attribute that is being accessed (e.g. <code>.items</code> in <code>some_user.items</code>) is an instance of <code>peewee.ModelSelect</code>.</p>
+<p>And if that's the case, just return a <code>list</code> with it.</p>
+<p>And then we use it in the Pydantic <em>models</em> / schemas that use <code>orm_mode = True</code>, with the configuration variable <code>getter_dict = PeeweeGetterDict</code>.</p>
+<p>!!! tip
+    We only need to create one <code>PeeweeGetterDict</code> class, and we can use it in all the Pydantic <em>models</em> / schemas.</p>
+<h2 id="crud-utils">CRUD utils</h2>
+<p>Now let's see the file <code>sql_app/crud.py</code>.</p>
+<h3 id="create-all-the-crud-utils">Create all the CRUD utils</h3>
+<p>Create all the same CRUD utils as in the SQLAlchemy tutorial, all the code is very similar:</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/crud.py!}
+</code></pre>
+<p>There are some differences with the code for the SQLAlchemy tutorial.</p>
+<p>We don't pass a <code>db</code> attribute around. Instead we use the models directly. This is because the <code>db</code> object is a global object, that includes all the connection logic. That's why we had to do all the <code>contextvars</code> updates above.</p>
+<p>Aso, when returning several objects, like in <code>get_users</code>, we directly call <code>list</code>, like in:</p>
+<pre><code class="language-Python">list(models.User.select())
+</code></pre>
+<p>This is for the same reason that we had to create a custom <code>PeeweeGetterDict</code>. But by returning something that is already a <code>list</code> instead of the <code>peewee.ModelSelect</code> the <code>response_model</code> in the <em>path operation</em> with <code>List[models.User]</code> (that we'll see later) will work correctly.</p>
+<h2 id="main-fastapi-app">Main <strong>FastAPI</strong> app</h2>
+<p>And now in the file <code>sql_app/main.py</code> let's integrate and use all the other parts we created before.</p>
+<h3 id="create-the-database-tables">Create the database tables</h3>
+<p>In a very simplistic way create the database tables:</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/main.py!}
+</code></pre>
+<h3 id="create-a-dependency">Create a dependency</h3>
+<p>Create a dependency that will connect the database right at the beginning of a request and disconnect it at the end:</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/main.py!}
+</code></pre>
+<p>Here we have an empty <code>yield</code> because we are actually not using the database object directly.</p>
+<p>It is connecting to the database and storing the connection data in an internal variable that is independent for each request (using the <code>contextvars</code> tricks from above).</p>
+<p>Because the database connection is potentially I/O blocking, this dependency is created with a normal <code>def</code> function.</p>
+<p>And then, in each <em>path operation function</em> that needs to access the database we add it as a dependency.</p>
+<p>But we are not using the value given by this dependency (it actually doesn't give any value, as it has an empty <code>yield</code>). So, we don't add it to the <em>path operation function</em> but to the <em>path operation decorator</em> in the <code>dependencies</code> parameter:</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/main.py!}
+</code></pre>
+<h3 id="context-variable-sub-dependency">Context variable sub-dependency</h3>
+<p>For all the <code>contextvars</code> parts to work, we need to make sure we have an independent value in the <code>ContextVar</code> for each request that uses the database, and that value will be used as the database state (connection, transactions, etc) for the whole request.</p>
+<p>For that, we need to create another <code>async</code> dependency <code>reset_db_state()</code> that is used as a sub-dependency in <code>get_db()</code>. It will set the value for the context variable (with just a default <code>dict</code>) that will be used as the database state for the whole request. And then the dependency <code>get_db()</code> will store in it the database state (connection, transactions, etc).</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/main.py!}
+</code></pre>
+<p>For the <strong>next request</strong>, as we will reset that context variable again in the <code>async</code> dependency <code>reset_db_state()</code> and then create a new connection in the <code>get_db()</code> dependency, that new request will have its own database state (connection, transactions, etc).</p>
+<p>!!! tip
+    As FastAPI is an async framework, one request could start being processed, and before finishing, another request could be received and start processing as well, and it all could be processed in the same thread.</p>
+<pre><code>But context variables are aware of these async features, so, a Peewee database state set in the `async` dependency `reset_db_state()` will keep its own data throughout the entire request.
+
+And at the same time, the other concurrent request will have its own database state that will be independent for the whole request.
+</code></pre>
+<h4 id="peewee-proxy">Peewee Proxy</h4>
+<p>If you are using a <a href="https://docs.peewee-orm.com/en/latest/peewee/database.html#dynamically-defining-a-database" class="external-link" target="_blank">Peewee Proxy</a>, the actual database is at <code>db.obj</code>.</p>
+<p>So, you would reset it with:</p>
+<pre><code class="language-Python">async def reset_db_state():
+    database.db.obj._state._state.set(db_state_default.copy())
+    database.db.obj._state.reset()
+</code></pre>
+<h3 id="create-your-fastapi-path-operations">Create your <strong>FastAPI</strong> <em>path operations</em></h3>
+<p>Now, finally, here's the standard <strong>FastAPI</strong> <em>path operations</em> code.</p>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/main.py!}
+</code></pre>
+<h3 id="about-def-vs-async-def">About <code>def</code> vs <code>async def</code></h3>
+<p>The same as with SQLAlchemy, we are not doing something like:</p>
+<pre><code class="language-Python">user = await models.User.select().first()
+</code></pre>
+<p>...but instead we are using:</p>
+<pre><code class="language-Python">user = models.User.select().first()
+</code></pre>
+<p>So, again, we should declare the <em>path operation functions</em> and the dependency without <code>async def</code>, just with a normal <code>def</code>, as:</p>
+<pre><code class="language-Python"># Something goes here
+def read_users(skip: int = 0, limit: int = 100):
+    # Something goes here
+</code></pre>
+<h2 id="testing-peewee-with-async">Testing Peewee with async</h2>
+<p>This example includes an extra <em>path operation</em> that simulates a long processing request with <code>time.sleep(sleep_time)</code>.</p>
+<p>It will have the database connection open at the beginning and will just wait some seconds before replying back. And each new request will wait one second less.</p>
+<p>This will easily let you test that your app with Peewee and FastAPI is behaving correctly with all the stuff about threads.</p>
+<p>If you want to check how Peewee would break your app if used without modification, go the the <code>sql_app/database.py</code> file and comment the line:</p>
+<pre><code class="language-Python"># db._state = PeeweeConnectionState()
+</code></pre>
+<p>And in the file <code>sql_app/main.py</code> file, comment the body of the <code>async</code> dependency <code>reset_db_state()</code> and replace it with a <code>pass</code>:</p>
+<pre><code class="language-Python">async def reset_db_state():
+#     database.db._state._state.set(db_state_default.copy())
+#     database.db._state.reset()
+    pass
+</code></pre>
+<p>Then run your app with Uvicorn:</p>
+<div class="termy">
+
+
+<pre><code class="language-console">$ uvicorn sql_app.main:app --reload
+
+&lt;span style=&quot;color: green;&quot;&gt;INFO&lt;/span&gt;:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+</code></pre>
+
+
+</div>
+
+<p>Open your browser at <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a>  and create a couple of users.</p>
+<p>Then open 10 tabs at <a href="http://127.0.0.1:8000/docs#/default/read_slow_users_slowusers__get" class="external-link" target="_blank">http://127.0.0.1:8000/docs#/default/read_slow_users_slowusers__get</a> at the same time.</p>
+<p>Go to the <em>path operation</em> "Get <code>/slowusers/</code>" in all of the tabs. Use the "Try it out" button and execute the request in each tab, one right after the other.</p>
+<p>The tabs will wait for a bit and then some of them will show <code>Internal Server Error</code>.</p>
+<h3 id="what-happens">What happens</h3>
+<p>The first tab will make your app create a connection to the database and wait for some seconds before replying back and closing the database connection.</p>
+<p>Then, for the request in the next tab, your app will wait for one second less, and so on.</p>
+<p>This means that it will end up finishing some of the last tabs' requests earlier than some of the previous ones.</p>
+<p>Then one the last requests that wait less seconds will try to open a database connection, but as one of those previous requests for the other tabs will probably be handled in the same thread as the first one, it will have the same database connection that is already open, and Peewee will throw an error and you will see it in the terminal, and the response will have an <code>Internal Server Error</code>.</p>
+<p>This will probably happen for more than one of those tabs.</p>
+<p>If you had multiple clients talking to your app exactly at the same time, this is what could happen.</p>
+<p>And as your app starts to handle more and more clients at the same time, the waiting time in a single request needs to be shorter and shorter to trigger the error.</p>
+<h3 id="fix-peewee-with-fastapi">Fix Peewee with FastAPI</h3>
+<p>Now go back to the file <code>sql_app/database.py</code>, and uncomment the line:</p>
+<pre><code class="language-Python">db._state = PeeweeConnectionState()
+</code></pre>
+<p>And in the file <code>sql_app/main.py</code> file, uncomment the body of the <code>async</code> dependency <code>reset_db_state()</code>:</p>
+<pre><code class="language-Python">async def reset_db_state():
+    database.db._state._state.set(db_state_default.copy())
+    database.db._state.reset()
+</code></pre>
+<p>Terminate your running app and start it again.</p>
+<p>Repeat the same process with the 10 tabs. This time all of them will wait and you will get all the results without errors.</p>
+<p>...You fixed it!</p>
+<h2 id="review-all-the-files">Review all the files</h2>
+<p>Remember you should have a directory named <code>my_super_project</code> (or however you want) that contains a sub-directory called <code>sql_app</code>.</p>
+<p><code>sql_app</code> should have the following files:</p>
+<ul>
+<li>
+<p><code>sql_app/__init__.py</code>: is an empty file.</p>
+</li>
+<li>
+<p><code>sql_app/database.py</code>:</p>
+</li>
+</ul>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/database.py!}
+</code></pre>
+<ul>
+<li><code>sql_app/models.py</code>:</li>
+</ul>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/models.py!}
+</code></pre>
+<ul>
+<li><code>sql_app/schemas.py</code>:</li>
+</ul>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/schemas.py!}
+</code></pre>
+<ul>
+<li><code>sql_app/crud.py</code>:</li>
+</ul>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/crud.py!}
+</code></pre>
+<ul>
+<li><code>sql_app/main.py</code>:</li>
+</ul>
+<pre><code class="language-Python">{!../../../docs_src/sql_databases_peewee/sql_app/main.py!}
+</code></pre>
+<h2 id="technical-details">Technical Details</h2>
+<p>!!! warning
+    These are very technical details that you probably don't need.</p>
+<h3 id="the-problem">The problem</h3>
+<p>Peewee uses <a href="https://docs.python.org/3/library/threading.html#thread-local-data" class="external-link" target="_blank"><code>threading.local</code></a> by default to store it's database "state" data (connection, transactions, etc).</p>
+<p><code>threading.local</code> creates a value exclusive to the current thread, but an async framework would run all the code (e.g. for each request) in the same thread, and possibly not in order.</p>
+<p>On top of that, an async framework could run some sync code in a threadpool (using <code>asyncio.run_in_executor</code>), but belonging to the same request.</p>
+<p>This means that, with Peewee's current implementation, multiple tasks could be using the same <code>threading.local</code> variable and end up sharing the same connection and data (that they shouldn't), and at the same time, if they execute sync I/O-blocking code in a threadpool (as with normal <code>def</code> functions in FastAPI, in <em>path operations</em>  and dependencies), that code won't have access to the database state variables, even while it's part of the same request and it should be able to get access to the same database state.</p>
+<h3 id="context-variables">Context variables</h3>
+<p>Python 3.7 has <a href="https://docs.python.org/3/library/contextvars.html" class="external-link" target="_blank"><code>contextvars</code></a> that can create a local variable very similar to <code>threading.local</code>, but also supporting these async features.</p>
+<p>There are several things to have in mind.</p>
+<p>The <code>ContextVar</code> has to be created at the top of the module, like:</p>
+<pre><code class="language-Python">some_var = ContextVar(&quot;some_var&quot;, default=&quot;default value&quot;)
+</code></pre>
+<p>To set a value used in the current "context" (e.g. for the current request) use:</p>
+<pre><code class="language-Python">some_var.set(&quot;new value&quot;)
+</code></pre>
+<p>To get a value anywhere inside of the context (e.g. in any part handling the current request) use:</p>
+<pre><code class="language-Python">some_var.get()
+</code></pre>
+<h3 id="set-context-variables-in-the-async-dependency-reset_db_state">Set context variables in the <code>async</code> dependency <code>reset_db_state()</code></h3>
+<p>If some part of the async code sets the value with <code>some_var.set("updated in function")</code> (e.g. like the <code>async</code> dependency), the rest of the code in it and the code that goes after (including code inside of <code>async</code> functions called with <code>await</code>) will see that new value.</p>
+<p>So, in our case, if we set the Peewee state variable (with a default <code>dict</code>) in the <code>async</code> dependency, all the rest of the internal code in our app will see this value and will be able to reuse it for the whole request.</p>
+<p>And the context variable would be set again for the next request, even if they are concurrent.</p>
+<h3 id="set-database-state-in-the-dependency-get_db">Set database state in the dependency <code>get_db()</code></h3>
+<p>As <code>get_db()</code> is a normal <code>def</code> function, <strong>FastAPI</strong> will make it run in a threadpool, with a <em>copy</em> of the "context", holding the same value for the context variable (the <code>dict</code> with the reset database state). Then it can add database state to that <code>dict</code>, like the connection, etc.</p>
+<p>But if the value of the context variable (the default <code>dict</code>) was set in that normal <code>def</code> function, it would create a new value that would stay only in that thread of the threadpool, and the rest of the code (like the <em>path operation functions</em>) wouldn't have access to it. In <code>get_db()</code> we can only set values in the <code>dict</code>, but not the entire <code>dict</code> itself.</p>
+<p>So, we need to have the <code>async</code> dependency <code>reset_db_state()</code> to set the <code>dict</code> in the context variable. That way, all the code has access to the same <code>dict</code> for the database state for a single request.</p>
+<h3 id="connect-and-disconnect-in-the-dependency-get_db">Connect and disconnect in the dependency <code>get_db()</code></h3>
+<p>Then the next question would be, why not just connect and disconnect the database in the <code>async</code> dependency itself, instead of in <code>get_db()</code>?</p>
+<p>The <code>async</code> dependency has to be <code>async</code> for the context variable to be preserved for the rest of the request, but creating and closing the database connection is potentially blocking, so it could degrade performance if it was there.</p>
+<p>So we also need the normal <code>def</code> dependency <code>get_db()</code>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

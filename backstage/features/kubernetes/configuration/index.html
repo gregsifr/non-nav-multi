@@ -1,0 +1,3193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Configuring Kubernetes integration - Combined</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Combined</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Backstage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../FAQ/" class="dropdown-item">FAQ</a>
+</li>
+                                    
+<li>
+    <a href="../../../publishing/" class="dropdown-item">Publishing</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Accessibility</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../accessibility/" class="dropdown-item">Backstage Accessibility</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../api/deprecations/" class="dropdown-item">Deprecations</a>
+</li>
+            
+<li>
+    <a href="../../../api/utility-apis/" class="dropdown-item">Utility APIs</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture decisions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../architecture-decisions/" class="dropdown-item">Architecture Decision Records (ADR)</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr000-template/" class="dropdown-item">ADR000: [TITLE]</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr001-add-adr-log/" class="dropdown-item">ADR001: Architecture Decision Record (ADR) log</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr002-default-catalog-file-format/" class="dropdown-item">ADR002: Default Software Catalog File Format</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr003-avoid-default-exports/" class="dropdown-item">ADR003: Avoid Default Exports and Prefer Named Exports</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr004-module-export-structure/" class="dropdown-item">ADR004: Module Export Structure</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr005-catalog-core-entities/" class="dropdown-item">ADR005: Catalog Core Entities</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr006-avoid-react-fc/" class="dropdown-item">ADR006: Avoid React.FC and React.SFC</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr007-use-msw-to-mock-service-requests/" class="dropdown-item">ADR007: Use MSW to mock http requests</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr008-default-catalog-file-name/" class="dropdown-item">ADR008: Default Catalog File Name</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr009-entity-references/" class="dropdown-item">ADR009: Entity References</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr010-luxon-date-library/" class="dropdown-item">ADR010: Use the Luxon Date Library</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr011-plugin-package-structure/" class="dropdown-item">ADR011: Plugin Package Structure</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr012-use-luxon-locale-and-date-presets/" class="dropdown-item">ADR012: Use Luxon.toLocaleString and date/time presets</a>
+</li>
+            
+<li>
+    <a href="../../../architecture-decisions/adr013-use-node-fetch/" class="dropdown-item">ADR013: Proper use of HTTP fetching libraries</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Auth</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/" class="dropdown-item">Authentication in Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../auth/add-auth-provider/" class="dropdown-item">Contributing New Providers</a>
+</li>
+            
+<li>
+    <a href="../../../auth/glossary/" class="dropdown-item">Glossary</a>
+</li>
+            
+<li>
+    <a href="../../../auth/identity-resolver/" class="dropdown-item">Sign-in Identities and Resolvers</a>
+</li>
+            
+<li>
+    <a href="../../../auth/oauth/" class="dropdown-item">OAuth and OpenID Connect</a>
+</li>
+            
+<li>
+    <a href="../../../auth/oidc/" class="dropdown-item">OIDC provider from scratch</a>
+</li>
+            
+<li>
+    <a href="../../../auth/service-to-service-auth/" class="dropdown-item">Service to Service Auth</a>
+</li>
+            
+<li>
+    <a href="../../../auth/troubleshooting/" class="dropdown-item">Troubleshooting Auth</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Atlassian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/atlassian/provider/" class="dropdown-item">Atlassian Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Auth0</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/auth0/provider/" class="dropdown-item">Auth0 Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Bitbucket</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/bitbucket/provider/" class="dropdown-item">Bitbucket Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketServer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/bitbucketServer/provider/" class="dropdown-item">Bitbucket Server Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cloudflare</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/cloudflare/access/" class="dropdown-item">Cloudflare Access Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Github</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/github/provider/" class="dropdown-item">GitHub Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitlab</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/gitlab/provider/" class="dropdown-item">GitLab Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Google</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/google/gcp-iap-auth/" class="dropdown-item">Google Identity-Aware Proxy Provider</a>
+</li>
+            
+<li>
+    <a href="../../../auth/google/provider/" class="dropdown-item">Google Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Microsoft</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/microsoft/azure-easyauth/" class="dropdown-item">Azure EasyAuth Provider</a>
+</li>
+            
+<li>
+    <a href="../../../auth/microsoft/provider/" class="dropdown-item">Microsoft Azure Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Oauth2 proxy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/oauth2-proxy/provider/" class="dropdown-item">OAuth 2 Proxy Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Okta</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/okta/provider/" class="dropdown-item">Okta Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Onelogin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../auth/onelogin/provider/" class="dropdown-item">OneLogin Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Backend system</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backend-system/" class="dropdown-item">The Backend System</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backend-system/architecture/01-index/" class="dropdown-item">Backend System Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../backend-system/architecture/02-backends/" class="dropdown-item">Backend Instances</a>
+</li>
+            
+<li>
+    <a href="../../../backend-system/architecture/03-services/" class="dropdown-item">Backend Services</a>
+</li>
+            
+<li>
+    <a href="../../../backend-system/architecture/04-plugins/" class="dropdown-item">Backend Plugins</a>
+</li>
+            
+<li>
+    <a href="../../../backend-system/architecture/05-extension-points/" class="dropdown-item">Backend Plugin Extension Points</a>
+</li>
+            
+<li>
+    <a href="../../../backend-system/architecture/06-modules/" class="dropdown-item">Plugin Modules</a>
+</li>
+            
+<li>
+    <a href="../../../backend-system/architecture/07-naming-patterns/" class="dropdown-item">Backend System Naming Patterns</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Building backends</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backend-system/building-backends/01-index/" class="dropdown-item">Building Backends</a>
+</li>
+            
+<li>
+    <a href="../../../backend-system/building-backends/08-migrating/" class="dropdown-item">Migrating your Backend to the New Backend System</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Building plugins and modules</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backend-system/building-plugins-and-modules/01-index/" class="dropdown-item">Building Backend Plugins and Modules</a>
+</li>
+            
+<li>
+    <a href="../../../backend-system/building-plugins-and-modules/02-testing/" class="dropdown-item">Testing Backend Plugins and Modules</a>
+</li>
+            
+<li>
+    <a href="../../../backend-system/building-plugins-and-modules/08-migrating/" class="dropdown-item">Migrating your Backend Plugin to the New Backend System</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Core services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../backend-system/core-services/01-index/" class="dropdown-item">Core Backend Service APIs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Conf</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../conf/" class="dropdown-item">Static Configuration in Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../conf/defining/" class="dropdown-item">Defining Configuration for your Plugin</a>
+</li>
+            
+<li>
+    <a href="../../../conf/reading/" class="dropdown-item">Reading Backstage Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../conf/writing/" class="dropdown-item">Writing Backstage Configuration Files</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployment</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../deployment/" class="dropdown-item">Deploying Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../deployment/docker/" class="dropdown-item">Building a Docker image</a>
+</li>
+            
+<li>
+    <a href="../../../deployment/heroku/" class="dropdown-item">Deploying with Heroku</a>
+</li>
+            
+<li>
+    <a href="../../../deployment/k8s/" class="dropdown-item">Deploying with Kubernetes</a>
+</li>
+            
+<li>
+    <a href="../../../deployment/scaling/" class="dropdown-item">Scaling Backstage Deployments</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dls</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../dls/component-design-guidelines/" class="dropdown-item">Component Design Guidelines</a>
+</li>
+            
+<li>
+    <a href="../../../dls/contributing-to-storybook/" class="dropdown-item">Contributing to Storybook</a>
+</li>
+            
+<li>
+    <a href="../../../dls/design/" class="dropdown-item">Design</a>
+</li>
+            
+<li>
+    <a href="../../../dls/figma/" class="dropdown-item">Figma</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Features</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kubernetes</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Kubernetes</a>
+</li>
+            
+<li>
+    <a href="../authentication/" class="dropdown-item">Kubernetes Authentication</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Configuring Kubernetes integration</a>
+</li>
+            
+<li>
+    <a href="../installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../proxy/" class="dropdown-item">Kubernetes Backend Proxy Endpoint</a>
+</li>
+            
+<li>
+    <a href="../troubleshooting/" class="dropdown-item">Troubleshooting Kubernetes</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Search</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../search/" class="dropdown-item">Search Documentation</a>
+</li>
+            
+<li>
+    <a href="../../search/architecture/" class="dropdown-item">Search Architecture</a>
+</li>
+            
+<li>
+    <a href="../../search/concepts/" class="dropdown-item">Search Concepts</a>
+</li>
+            
+<li>
+    <a href="../../search/getting-started/" class="dropdown-item">Getting Started with Search</a>
+</li>
+            
+<li>
+    <a href="../../search/how-to-guides/" class="dropdown-item">Search How-To guides</a>
+</li>
+            
+<li>
+    <a href="../../search/search-engines/" class="dropdown-item">Search Engines</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software catalog</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../software-catalog/" class="dropdown-item">Backstage Software Catalog</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/api/" class="dropdown-item">API</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/catalog-customization/" class="dropdown-item">Catalog Customization</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/configuration/" class="dropdown-item">Catalog Configuration</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/descriptor-format/" class="dropdown-item">Descriptor Format of Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/extending-the-model/" class="dropdown-item">Extending the model</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/external-integrations/" class="dropdown-item">External integrations</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/life-of-an-entity/" class="dropdown-item">The Life of an Entity</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/references/" class="dropdown-item">Entity References</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/system-model/" class="dropdown-item">System Model</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/well-known-annotations/" class="dropdown-item">Well-known Annotations on Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/well-known-relations/" class="dropdown-item">Well-known Relations between Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../software-catalog/well-known-statuses/" class="dropdown-item">Well-known Status fields of Catalog Entities</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software templates</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../software-templates/" class="dropdown-item">Backstage Software Templates</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/adding-templates/" class="dropdown-item">Adding your own Templates</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/authorizing-parameters-steps-and-actions/" class="dropdown-item">Authorizing parameters, steps and actions</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/builtin-actions/" class="dropdown-item">Builtin actions</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/configuration/" class="dropdown-item">Software Template Configuration</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/input-examples/" class="dropdown-item">Input Examples</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/migrating-from-v1beta2-to-v1beta3/" class="dropdown-item">Migrating to v1beta3 templates</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/testing-scaffolder-alpha/" class="dropdown-item">Experimental: Testing out the alpha Scaffolder plugin</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/writing-custom-actions/" class="dropdown-item">Writing Custom Actions</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/writing-custom-field-extensions/" class="dropdown-item">Writing Custom Field Extensions</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/writing-custom-step-layouts/" class="dropdown-item">Writing custom step layouts</a>
+</li>
+            
+<li>
+    <a href="../../software-templates/writing-templates/" class="dropdown-item">Writing Templates</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Techdocs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../techdocs/" class="dropdown-item">TechDocs Documentation</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/FAQ/" class="dropdown-item">TechDocs FAQ</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/addons/" class="dropdown-item">TechDocs Addons</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/architecture/" class="dropdown-item">TechDocs Architecture</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/cli/" class="dropdown-item">TechDocs CLI</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/concepts/" class="dropdown-item">Concepts</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/configuration/" class="dropdown-item">TechDocs Configuration Options</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/configuring-ci-cd/" class="dropdown-item">Configuring CI/CD to generate and publish TechDocs sites</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/creating-and-publishing/" class="dropdown-item">Creating and publishing your docs</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/how-to-guides/" class="dropdown-item">TechDocs How-To guides</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/troubleshooting/" class="dropdown-item">Troubleshooting TechDocs</a>
+</li>
+            
+<li>
+    <a href="../../techdocs/using-cloud-storage/" class="dropdown-item">Using Cloud Storage for TechDocs generated files</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/app-custom-theme/" class="dropdown-item">Customize the look-and-feel of your App</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/concepts/" class="dropdown-item">Key Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/configuration/" class="dropdown-item">Getting Started, configuring Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/configure-app-with-plugins/" class="dropdown-item">Configuring App with plugins</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/contributors/" class="dropdown-item">Contributors</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/create-an-app/" class="dropdown-item">Create an App</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/getting-involved/" class="dropdown-item">Getting Involved</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/homepage/" class="dropdown-item">Backstage homepage - Setup and Customization</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/keeping-backstage-updated/" class="dropdown-item">Keeping Backstage Updated</a>
+</li>
+            
+<li>
+    <a href="../../../getting-started/project-structure/" class="dropdown-item">Backstage Project Structure</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Integrations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/" class="dropdown-item">Integrations</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Aws s3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/aws-s3/discovery/" class="dropdown-item">AWS S3 Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/aws-s3/locations/" class="dropdown-item">Amazon Web Services S3 Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Azure</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/azure/discovery/" class="dropdown-item">Azure DevOps Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/azure/locations/" class="dropdown-item">Azure DevOps Locations</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/azure/org/" class="dropdown-item">Microsoft Azure Active Directory Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketCloud</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/bitbucketCloud/discovery/" class="dropdown-item">Bitbucket Cloud Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/bitbucketCloud/locations/" class="dropdown-item">Bitbucket Cloud Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketServer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/bitbucketServer/discovery/" class="dropdown-item">Bitbucket Server Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/bitbucketServer/locations/" class="dropdown-item">Bitbucket Server Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Datadog rum</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/datadog-rum/installation/" class="dropdown-item">Datadog RUM Installation</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gerrit</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/gerrit/discovery/" class="dropdown-item">Gerrit Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/gerrit/locations/" class="dropdown-item">Gerrit Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitea</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/gitea/locations/" class="dropdown-item">Gitea Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Github</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/github/discovery/" class="dropdown-item">GitHub Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/github/github-apps/" class="dropdown-item">GitHub Apps</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/github/locations/" class="dropdown-item">GitHub Locations</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/github/org/" class="dropdown-item">GitHub Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitlab</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/gitlab/discovery/" class="dropdown-item">GitLab Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/gitlab/locations/" class="dropdown-item">GitLab Locations</a>
+</li>
+            
+<li>
+    <a href="../../../integrations/gitlab/org/" class="dropdown-item">GitLab Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Google cloud storage</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/google-cloud-storage/locations/" class="dropdown-item">Google Cloud Storage Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ldap</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../integrations/ldap/org/" class="dropdown-item">LDAP Organizational Data</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Local dev</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../local-dev/cli-build-system/" class="dropdown-item">Build System</a>
+</li>
+            
+<li>
+    <a href="../../../local-dev/cli-commands/" class="dropdown-item">Commands</a>
+</li>
+            
+<li>
+    <a href="../../../local-dev/cli-overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../../local-dev/debugging/" class="dropdown-item">Debugging Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../local-dev/linking-local-packages/" class="dropdown-item">Linking in Local Packages</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Overview</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../overview/adopting/" class="dropdown-item">Strategies for adopting</a>
+</li>
+            
+<li>
+    <a href="../../../overview/architecture-overview/" class="dropdown-item">Architecture overview</a>
+</li>
+            
+<li>
+    <a href="../../../overview/background/" class="dropdown-item">The Spotify Story</a>
+</li>
+            
+<li>
+    <a href="../../../overview/glossary/" class="dropdown-item">Backstage Glossary</a>
+</li>
+            
+<li>
+    <a href="../../../overview/logos/" class="dropdown-item">Logos</a>
+</li>
+            
+<li>
+    <a href="../../../overview/roadmap/" class="dropdown-item">Roadmap</a>
+</li>
+            
+<li>
+    <a href="../../../overview/support/" class="dropdown-item">Support and community</a>
+</li>
+            
+<li>
+    <a href="../../../overview/threat-model/" class="dropdown-item">Backstage Threat Model</a>
+</li>
+            
+<li>
+    <a href="../../../overview/versioning-policy/" class="dropdown-item">Release & Versioning Policy</a>
+</li>
+            
+<li>
+    <a href="../../../overview/vision/" class="dropdown-item">Vision</a>
+</li>
+            
+<li>
+    <a href="../../../overview/what-is-backstage/" class="dropdown-item">What is Backstage?</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Permissions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../permissions/concepts/" class="dropdown-item">Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../permissions/custom-rules/" class="dropdown-item">Defining custom permission rules</a>
+</li>
+            
+<li>
+    <a href="../../../permissions/frontend-integration/" class="dropdown-item">Frontend Integration</a>
+</li>
+            
+<li>
+    <a href="../../../permissions/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../permissions/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../../permissions/writing-a-policy/" class="dropdown-item">Writing a permission policy</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Plugin authors</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../permissions/plugin-authors/01-setup/" class="dropdown-item">1. Tutorial setup</a>
+</li>
+            
+<li>
+    <a href="../../../permissions/plugin-authors/02-adding-a-basic-permission-check/" class="dropdown-item">2. Adding a basic permission check</a>
+</li>
+            
+<li>
+    <a href="../../../permissions/plugin-authors/03-adding-a-resource-permission-check/" class="dropdown-item">3. Adding a resource permission check</a>
+</li>
+            
+<li>
+    <a href="../../../permissions/plugin-authors/04-authorizing-access-to-paginated-data/" class="dropdown-item">4. Authorizing access to paginated data</a>
+</li>
+            
+<li>
+    <a href="../../../permissions/plugin-authors/05-frontend-authorization/" class="dropdown-item">5. Frontend Components with Authorization</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../releases/v1.0.0/" class="dropdown-item">v1.0.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.1.0-changelog/" class="dropdown-item">Release v1.1.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.1.0/" class="dropdown-item">v1.1.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.10.0-changelog/" class="dropdown-item">Release v1.10.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.10.0-next.0-changelog/" class="dropdown-item">Release v1.10.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.10.0-next.1-changelog/" class="dropdown-item">Release v1.10.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.10.0-next.2-changelog/" class="dropdown-item">Release v1.10.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.10.0/" class="dropdown-item">v1.10.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.11.0-changelog/" class="dropdown-item">Release v1.11.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.11.0-next.0-changelog/" class="dropdown-item">Release v1.11.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.11.0-next.1-changelog/" class="dropdown-item">Release v1.11.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.11.0-next.2-changelog/" class="dropdown-item">Release v1.11.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.11.0/" class="dropdown-item">v1.11.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.12.0-changelog/" class="dropdown-item">Release v1.12.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.12.0-next.0-changelog/" class="dropdown-item">Release v1.12.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.12.0-next.1-changelog/" class="dropdown-item">Release v1.12.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.12.0-next.2-changelog/" class="dropdown-item">Release v1.12.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.12.0/" class="dropdown-item">v1.12.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.13.0-changelog/" class="dropdown-item">Release v1.13.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.13.0-next.0-changelog/" class="dropdown-item">Release v1.13.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.13.0-next.1-changelog/" class="dropdown-item">Release v1.13.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.13.0-next.2-changelog/" class="dropdown-item">Release v1.13.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.13.0-next.3-changelog/" class="dropdown-item">Release v1.13.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.13.0/" class="dropdown-item">v1.13.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.14.0-changelog/" class="dropdown-item">Release v1.14.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.14.0-next.0-changelog/" class="dropdown-item">Release v1.14.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.14.0-next.1-changelog/" class="dropdown-item">Release v1.14.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.14.0-next.2-changelog/" class="dropdown-item">Release v1.14.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.14.0/" class="dropdown-item">v1.14.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.2.0-changelog/" class="dropdown-item">Release v1.2.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.2.0-next.0-changelog/" class="dropdown-item">Release v1.2.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.2.0-next.1-changelog/" class="dropdown-item">Release v1.2.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.2.0-next.2-changelog/" class="dropdown-item">Release v1.2.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.2.0-next.3-changelog/" class="dropdown-item">Release v1.2.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.2.0/" class="dropdown-item">v1.2.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.3.0-changelog/" class="dropdown-item">Release v1.3.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.3.0-next.0-changelog/" class="dropdown-item">Release v1.3.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.3.0-next.1-changelog/" class="dropdown-item">Release v1.3.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.3.0-next.2-changelog/" class="dropdown-item">Release v1.3.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.3.0/" class="dropdown-item">v1.3.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.4.0-changelog/" class="dropdown-item">Release v1.4.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.4.0-next.0-changelog/" class="dropdown-item">Release v1.4.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.4.0-next.1-changelog/" class="dropdown-item">Release v1.4.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.4.0-next.2-changelog/" class="dropdown-item">Release v1.4.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.4.0-next.3-changelog/" class="dropdown-item">Release v1.4.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.4.0/" class="dropdown-item">v1.4.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.5.0-changelog/" class="dropdown-item">Release v1.5.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.5.0-next.0-changelog/" class="dropdown-item">Release v1.5.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.5.0-next.1-changelog/" class="dropdown-item">Release v1.5.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.5.0-next.2-changelog/" class="dropdown-item">Release v1.5.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.5.0-next.3-changelog/" class="dropdown-item">Release v1.5.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.5.0/" class="dropdown-item">v1.5.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.6.0-changelog/" class="dropdown-item">Release v1.6.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.6.0-next.0-changelog/" class="dropdown-item">Release v1.6.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.6.0-next.1-changelog/" class="dropdown-item">Release v1.6.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.6.0-next.2-changelog/" class="dropdown-item">Release v1.6.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.6.0-next.3-changelog/" class="dropdown-item">Release v1.6.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.6.0/" class="dropdown-item">v1.6.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.7.0-changelog/" class="dropdown-item">Release v1.7.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.7.0-next.0-changelog/" class="dropdown-item">Release v1.7.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.7.0-next.1-changelog/" class="dropdown-item">Release v1.7.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.7.0-next.2-changelog/" class="dropdown-item">Release v1.7.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.7.0/" class="dropdown-item">v1.7.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.8.0-changelog/" class="dropdown-item">Release v1.8.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.8.0-next.0-changelog/" class="dropdown-item">Release v1.8.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.8.0-next.1-changelog/" class="dropdown-item">Release v1.8.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.8.0-next.2-changelog/" class="dropdown-item">Release v1.8.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.8.0/" class="dropdown-item">v1.8.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.9.0-changelog/" class="dropdown-item">Release v1.9.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.9.0-next.0-changelog/" class="dropdown-item">Release v1.9.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.9.0-next.1-changelog/" class="dropdown-item">Release v1.9.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.9.0-next.2-changelog/" class="dropdown-item">Release v1.9.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.9.0-next.3-changelog/" class="dropdown-item">Release v1.9.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.9.0-next.4-changelog/" class="dropdown-item">Release v1.9.0-next.4</a>
+</li>
+            
+<li>
+    <a href="../../../releases/v1.9.0/" class="dropdown-item">v1.9.0</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorials</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tutorials/backend-to-backend-auth/" class="dropdown-item">Backend-to-Backend Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../tutorials/configuring-plugin-databases/" class="dropdown-item">Configuring Plugin Databases</a>
+</li>
+            
+<li>
+    <a href="../../../tutorials/journey/" class="dropdown-item">Future developer journey</a>
+</li>
+            
+<li>
+    <a href="../../../tutorials/migrating-away-from-core/" class="dropdown-item">Migrating away from @backstage/core</a>
+</li>
+            
+<li>
+    <a href="../../../tutorials/package-role-migration/" class="dropdown-item">Package Role Migration</a>
+</li>
+            
+<li>
+    <a href="../../../tutorials/quickstart-app-plugin/" class="dropdown-item">Adding Custom Plugin to Existing Monorepo App</a>
+</li>
+            
+<li>
+    <a href="../../../tutorials/react-router-stable-migration/" class="dropdown-item">React Router 6.0 Migration</a>
+</li>
+            
+<li>
+    <a href="../../../tutorials/switching-sqlite-postgres/" class="dropdown-item">Switching Backstage from SQLite to PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../../tutorials/using-backstage-proxy-within-plugin/" class="dropdown-item">Using the Backstage Proxy from Within a Plugin</a>
+</li>
+            
+<li>
+    <a href="../../../tutorials/yarn-migration/" class="dropdown-item">Migration to Yarn 3</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Monorepo <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../monorepo/" class="dropdown-item">backstage/mkdocs-monorepo-plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/CHANGELOG/" class="dropdown-item">Changelog</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/CODE-OF-CONDUCT/" class="dropdown-item">Contributor Covenant Code of Conduct</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/CONTRIBUTING/" class="dropdown-item">Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/limitations/" class="dropdown-item">Caveats / Known Design Decisions</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/philosophy/" class="dropdown-item">Philosophy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Techdocs cli <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../techdocs-cli/" class="dropdown-item">TechDocs CLI</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Fastapi <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../fastapi/" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/alternatives/" class="dropdown-item">Alternatives, Inspiration and Comparisons</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/async/" class="dropdown-item">Concurrency and async / await</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/benchmarks/" class="dropdown-item">Benchmarks</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/contributing/" class="dropdown-item">Development - Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/external-links/" class="dropdown-item">External Links and Articles</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/fastapi-people/" class="dropdown-item">FastAPI People</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/features/" class="dropdown-item">Features</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/help-fastapi/" class="dropdown-item">Help FastAPI - Get Help</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/history-design-future/" class="dropdown-item">History, Design and Future</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/newsletter/" class="dropdown-item">FastAPI and friends newsletter</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/project-generation/" class="dropdown-item">Project Generation - Template</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/python-types/" class="dropdown-item">Python Types Intro</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/advanced/" class="dropdown-item">Advanced User Guide - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/additional-responses/" class="dropdown-item">Additional Responses in OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/additional-status-codes/" class="dropdown-item">Additional Status Codes</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/advanced-dependencies/" class="dropdown-item">Advanced Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/async-sql-databases/" class="dropdown-item">Async SQL (Relational) Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/async-tests/" class="dropdown-item">Async Tests</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/behind-a-proxy/" class="dropdown-item">Behind a Proxy</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/conditional-openapi/" class="dropdown-item">Conditional OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/custom-request-and-route/" class="dropdown-item">Custom Request and APIRoute class</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/custom-response/" class="dropdown-item">Custom Response - HTML, Stream, File, others</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/dataclasses/" class="dropdown-item">Using Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/events/" class="dropdown-item">Lifespan Events</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/extending-openapi/" class="dropdown-item">Extending OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/generate-clients/" class="dropdown-item">Generate Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/graphql/" class="dropdown-item">GraphQL</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/middleware/" class="dropdown-item">Advanced Middleware</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/nosql-databases/" class="dropdown-item">NoSQL (Distributed / Big Data) Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/openapi-callbacks/" class="dropdown-item">OpenAPI Callbacks</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/path-operation-advanced-configuration/" class="dropdown-item">Path Operation Advanced Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-change-status-code/" class="dropdown-item">Response - Change Status Code</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-cookies/" class="dropdown-item">Response Cookies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-directly/" class="dropdown-item">Return a Response Directly</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-headers/" class="dropdown-item">Response Headers</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/settings/" class="dropdown-item">Settings and Environment Variables</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/sql-databases-peewee/" class="dropdown-item">SQL (Relational) Databases with Peewee</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/sub-applications/" class="dropdown-item">Sub Applications - Mounts</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/templates/" class="dropdown-item">Templates</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-database/" class="dropdown-item">Testing a Database</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-dependencies/" class="dropdown-item">Testing Dependencies with Overrides</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-events/" class="dropdown-item">Testing Events: startup - shutdown</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-websockets/" class="dropdown-item">Testing WebSockets</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/using-request-directly/" class="dropdown-item">Using the Request Directly</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/websockets/" class="dropdown-item">WebSockets</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/wsgi/" class="dropdown-item">Including WSGI - Flask, Django, others</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/advanced/security/" class="dropdown-item">Advanced Security - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/security/http-basic-auth/" class="dropdown-item">HTTP Basic Auth</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/security/oauth2-scopes/" class="dropdown-item">OAuth2 scopes</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployment</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/deployment/" class="dropdown-item">Deployment - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/concepts/" class="dropdown-item">Deployments Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/deta/" class="dropdown-item">Deploy FastAPI on Deta Space</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/docker/" class="dropdown-item">FastAPI in Containers - Docker</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/https/" class="dropdown-item">About HTTPS</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/manually/" class="dropdown-item">Run a Server Manually - Uvicorn</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/server-workers/" class="dropdown-item">Server Workers - Gunicorn with Uvicorn</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/versions/" class="dropdown-item">About FastAPI versions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorial</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/tutorial/" class="dropdown-item">Tutorial - User Guide - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/background-tasks/" class="dropdown-item">Background Tasks</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/bigger-applications/" class="dropdown-item">Bigger Applications - Multiple Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-fields/" class="dropdown-item">Body - Fields</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-multiple-params/" class="dropdown-item">Body - Multiple Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-nested-models/" class="dropdown-item">Body - Nested Models</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-updates/" class="dropdown-item">Body - Updates</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body/" class="dropdown-item">Request Body</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/cookie-params/" class="dropdown-item">Cookie Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/cors/" class="dropdown-item">CORS (Cross-Origin Resource Sharing)</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/debugging/" class="dropdown-item">Debugging</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/encoder/" class="dropdown-item">JSON Compatible Encoder</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/extra-data-types/" class="dropdown-item">Extra Data Types</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/extra-models/" class="dropdown-item">Extra Models</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/first-steps/" class="dropdown-item">First Steps</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/handling-errors/" class="dropdown-item">Handling Errors</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/header-params/" class="dropdown-item">Header Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/metadata/" class="dropdown-item">Metadata and Docs URLs</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/middleware/" class="dropdown-item">Middleware</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/path-operation-configuration/" class="dropdown-item">Path Operation Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/path-params-numeric-validations/" class="dropdown-item">Path Parameters and Numeric Validations</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/path-params/" class="dropdown-item">Path Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/query-params-str-validations/" class="dropdown-item">Query Parameters and String Validations</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/query-params/" class="dropdown-item">Query Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/request-files/" class="dropdown-item">Request Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/request-forms-and-files/" class="dropdown-item">Request Forms and Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/request-forms/" class="dropdown-item">Form Data</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/response-model/" class="dropdown-item">Response Model - Return Type</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/response-status-code/" class="dropdown-item">Response Status Code</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/schema-extra-example/" class="dropdown-item">Declare Request Example Data</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/sql-databases/" class="dropdown-item">SQL (Relational) Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/static-files/" class="dropdown-item">Static Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/testing/" class="dropdown-item">Testing</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dependencies</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/" class="dropdown-item">Dependencies - First Steps</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/classes-as-dependencies/" class="dropdown-item">Classes as Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/dependencies-in-path-operation-decorators/" class="dropdown-item">Dependencies in path operation decorators</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/dependencies-with-yield/" class="dropdown-item">Dependencies with yield</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/global-dependencies/" class="dropdown-item">Global Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/sub-dependencies/" class="dropdown-item">Sub-dependencies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/" class="dropdown-item">Security Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/first-steps/" class="dropdown-item">Security - First Steps</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/get-current-user/" class="dropdown-item">Get Current User</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/oauth2-jwt/" class="dropdown-item">OAuth2 with Password (and hashing), Bearer with JWT tokens</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/simple-oauth2/" class="dropdown-item">Simple OAuth2 with Password and Bearer</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Monorepo multi docs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sample docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/" class="dropdown-item">Welcome to our Developer Platform</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/authentication/" class="dropdown-item">Authentication</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Components</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">A</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/a/" class="dropdown-item">Docs for A</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">B</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/b/" class="dropdown-item">Docs for B</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">C</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/c/" class="dropdown-item">Docs for C</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">D</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/d/" class="dropdown-item">Component D</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">E</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/d/e/" class="dropdown-item">Docs for E</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v1/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v1/reference/" class="dropdown-item">v1 API reference</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v2/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v2/migrating/" class="dropdown-item">Migration Guide to v2</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v2/reference/" class="dropdown-item">v2 API reference</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v3/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v3/migrating/" class="dropdown-item">Migration Guide to v3</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v3/reference/" class="dropdown-item">v3 API reference</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Django rest</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/django-rest/" class="dropdown-item">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api guide</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/authentication/" class="dropdown-item">Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/caching/" class="dropdown-item">Caching</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/content-negotiation/" class="dropdown-item">Content negotiation</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/exceptions/" class="dropdown-item">Exceptions</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/fields/" class="dropdown-item">Serializer fields</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/filtering/" class="dropdown-item">Filtering</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/format-suffixes/" class="dropdown-item">Format suffixes</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/generic-views/" class="dropdown-item">Generic views</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/pagination/" class="dropdown-item">Pagination</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/parsers/" class="dropdown-item">Parsers</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/permissions/" class="dropdown-item">Permissions</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/relations/" class="dropdown-item">Serializer relations</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/renderers/" class="dropdown-item">Renderers</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/requests/" class="dropdown-item">Requests</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/responses/" class="dropdown-item">Responses</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/reverse/" class="dropdown-item">Returning URLs</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/routers/" class="dropdown-item">Routers</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/schemas/" class="dropdown-item">Schema</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/serializers/" class="dropdown-item">Serializers</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/settings/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/status-codes/" class="dropdown-item">Status Codes</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/testing/" class="dropdown-item">Testing</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/throttling/" class="dropdown-item">Throttling</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/validators/" class="dropdown-item">Validators</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/versioning/" class="dropdown-item">Versioning</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/views/" class="dropdown-item">Class-based Views</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/api-guide/viewsets/" class="dropdown-item">ViewSets</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Community</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.0-announcement/" class="dropdown-item">Django REST framework 3.0</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.1-announcement/" class="dropdown-item">Django REST framework 3.1</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.10-announcement/" class="dropdown-item">3.10 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.11-announcement/" class="dropdown-item">3.11 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.12-announcement/" class="dropdown-item">3.12 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.13-announcement/" class="dropdown-item">3.13 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.14-announcement/" class="dropdown-item">3.14 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.2-announcement/" class="dropdown-item">Django REST framework 3.2</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.3-announcement/" class="dropdown-item">Django REST framework 3.3</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.4-announcement/" class="dropdown-item">3.4 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.5-announcement/" class="dropdown-item">3.5 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.6-announcement/" class="dropdown-item">3.6 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.7-announcement/" class="dropdown-item">3.7 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.8-announcement/" class="dropdown-item">3.8 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/3.9-announcement/" class="dropdown-item">3.9 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/contributing/" class="dropdown-item">Contributing to REST framework</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/funding/" class="dropdown-item">Funding</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/jobs/" class="dropdown-item">Jobs</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/kickstarter-announcement/" class="dropdown-item">Kickstarting Django REST framework 3</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/mozilla-grant/" class="dropdown-item">Mozilla Grant</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/project-management/" class="dropdown-item">Project management</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/third-party-packages/" class="dropdown-item">Third Party Packages</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/community/tutorials-and-resources/" class="dropdown-item">Tutorials and Resources</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Topics</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/django-rest/topics/ajax-csrf-cors/" class="dropdown-item">Working with AJAX, CSRF & CORS</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/topics/browsable-api/" class="dropdown-item">The Browsable API</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/topics/browser-enhancements/" class="dropdown-item">Browser enhancements</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/topics/documenting-your-api/" class="dropdown-item">Documenting your API</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/topics/html-and-forms/" class="dropdown-item">HTML & Forms</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/topics/internationalization/" class="dropdown-item">Internationalization</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/topics/rest-hypermedia-hateoas/" class="dropdown-item">REST, Hypermedia & HATEOAS</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/topics/writable-nested-serializers/" class="dropdown-item">Writable nested serializers</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorial</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/django-rest/tutorial/1-serialization/" class="dropdown-item">Tutorial 1: Serialization</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/tutorial/2-requests-and-responses/" class="dropdown-item">Tutorial 2: Requests and Responses</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/tutorial/3-class-based-views/" class="dropdown-item">Tutorial 3: Class-based Views</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/tutorial/4-authentication-and-permissions/" class="dropdown-item">Tutorial 4: Authentication & Permissions</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/tutorial/5-relationships-and-hyperlinked-apis/" class="dropdown-item">Tutorial 5: Relationships & Hyperlinked APIs</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/tutorial/6-viewsets-and-routers/" class="dropdown-item">Tutorial 6: ViewSets & Routers</a>
+</li>
+            
+<li>
+    <a href="../../../../python/django-rest/tutorial/quickstart/" class="dropdown-item">Quickstart</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pydantic</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/pydantic/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/contributing/" class="dropdown-item">Contributing</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/install/" class="dropdown-item">Install</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/migration/" class="dropdown-item">Migration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/pydantic/api/alias_generators/" class="dropdown-item">Alias generators</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/color/" class="dropdown-item">Color</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/config/" class="dropdown-item">Config</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/dataclasses/" class="dropdown-item">Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/errors/" class="dropdown-item">Errors</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/fields/" class="dropdown-item">Fields</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/functional_serializers/" class="dropdown-item">Functional serializers</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/functional_validators/" class="dropdown-item">Functional validators</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/json_schema/" class="dropdown-item">Json schema</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/main/" class="dropdown-item">Main</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/mypy/" class="dropdown-item">Mypy</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/networks/" class="dropdown-item">Networks</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/pydantic_core_init/" class="dropdown-item">Pydantic core init</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/pydantic_core_schema/" class="dropdown-item">Pydantic core schema</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/type_adapter/" class="dropdown-item">Type adapter</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/types/" class="dropdown-item">Types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/validate_call/" class="dropdown-item">Validate call</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/api/version/" class="dropdown-item">Version</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Blog</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/pydantic/blog/pydantic-v2-alpha/" class="dropdown-item">Pydantic V2 Pre Release</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/blog/pydantic-v2/" class="dropdown-item">Pydantic V2 Plan</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Integrations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/pydantic/integrations/datamodel_code_generator/" class="dropdown-item">Code Generation with datamodel-code-generator</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/integrations/devtools/" class="dropdown-item">Devtools</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/integrations/hypothesis/" class="dropdown-item">Hypothesis</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/integrations/mypy/" class="dropdown-item">Mypy</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/integrations/pycharm/" class="dropdown-item">Pycharm</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/integrations/rich/" class="dropdown-item">Rich</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/integrations/visual_studio_code/" class="dropdown-item">Visual studio code</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Usage</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/pydantic/usage/computed_fields/" class="dropdown-item">Computed fields</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/conversion_table/" class="dropdown-item">Conversion table</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/dataclasses/" class="dropdown-item">Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/errors/" class="dropdown-item">Errors</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/exporting_models/" class="dropdown-item">Exporting models</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/model_config/" class="dropdown-item">Model config</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/models/" class="dropdown-item">Models</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/postponed_annotations/" class="dropdown-item">Postponed annotations</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/pydantic_settings/" class="dropdown-item">Settings Management</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/schema/" class="dropdown-item">Schema</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/validation_decorator/" class="dropdown-item">Validation decorator</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/validation_errors/" class="dropdown-item">Validation errors</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/validators/" class="dropdown-item">Validators</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Types</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/booleans/" class="dropdown-item">Booleans</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/bytesize/" class="dropdown-item">Bytes and ByteSize</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/callables/" class="dropdown-item">Callables</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/color_types/" class="dropdown-item">Color types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/custom/" class="dropdown-item">Custom</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/datetime/" class="dropdown-item">Datetime</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/dicts_mapping/" class="dropdown-item">Dicts and Mapping Types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/encoded/" class="dropdown-item">Encoded</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/enums/" class="dropdown-item">Enums</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/file_types/" class="dropdown-item">File types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/json/" class="dropdown-item">Json</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/list_types/" class="dropdown-item">List types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/number_types/" class="dropdown-item">Number types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/payment_cards/" class="dropdown-item">Payment cards</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/secrets/" class="dropdown-item">Secrets</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/sequence_iterable/" class="dropdown-item">Sequence iterable</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/set_types/" class="dropdown-item">Set types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/standard_types/" class="dropdown-item">Standard types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/string_types/" class="dropdown-item">String types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/types/" class="dropdown-item">Types</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/types_fields/" class="dropdown-item">Types fields</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/typevars/" class="dropdown-item">Typevars</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/unions/" class="dropdown-item">Unions</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/urls/" class="dropdown-item">Urls</a>
+</li>
+            
+<li>
+    <a href="../../../../python/pydantic/usage/types/uuids/" class="dropdown-item">Uuids</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../authentication/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../installation/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/backstage/backstage/blob/master/features/kubernetes/configuration.md" class="nav-link">
+                                        Edit</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#configuring-kubernetes-clusters" class="nav-link">Configuring Kubernetes Clusters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#surfacing-your-kubernetes-components-as-part-of-an-entity" class="nav-link">Surfacing your Kubernetes components as part of an entity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Configuring the Backstage Kubernetes integration involves two steps:</p>
+<ol>
+<li>Enabling the backend to collect objects from your Kubernetes cluster(s).</li>
+<li>Surfacing your Kubernetes objects in catalog entities</li>
+</ol>
+<h2 id="configuring-kubernetes-clusters">Configuring Kubernetes Clusters</h2>
+<p>The following is a full example entry in <code>app-config.yaml</code>:</p>
+<pre><code class="language-yaml">kubernetes:
+  serviceLocatorMethod:
+    type: 'multiTenant'
+  clusterLocatorMethods:
+    - type: 'config'
+      clusters:
+        - url: http://127.0.0.1:9999
+          name: minikube
+          authProvider: 'serviceAccount'
+          skipTLSVerify: false
+          skipMetricsLookup: true
+          serviceAccountToken: ${K8S_MINIKUBE_TOKEN}
+          dashboardUrl: http://127.0.0.1:64713 # url copied from running the command: minikube service kubernetes-dashboard -n kubernetes-dashboard
+          dashboardApp: standard
+          caData: ${K8S_CONFIG_CA_DATA}
+          caFile: '' # local path to CA file
+          customResources:
+            - group: 'argoproj.io'
+              apiVersion: 'v1alpha1'
+              plural: 'rollouts'
+        - url: http://127.0.0.2:9999
+          name: aws-cluster-1
+          authProvider: 'aws'
+    - type: 'gke'
+      projectId: 'gke-clusters'
+      region: 'europe-west1'
+      skipTLSVerify: true
+      skipMetricsLookup: true
+      exposeDashboard: true
+</code></pre>
+<h3 id="servicelocatormethod"><code>serviceLocatorMethod</code></h3>
+<p>This configures how to determine which clusters a component is running in.</p>
+<p>Currently, the only valid value is:</p>
+<ul>
+<li><code>multiTenant</code> - This configuration assumes that all components run on all the
+  provided clusters.</li>
+</ul>
+<h3 id="clusterlocatormethods"><code>clusterLocatorMethods</code></h3>
+<p>This is an array used to determine where to retrieve cluster configuration from.</p>
+<p>Valid cluster locator methods are:</p>
+<ul>
+<li><a href="#catalog"><code>catalog</code></a></li>
+<li><a href="#localkubectlproxy"><code>localKubectlProxy</code></a></li>
+<li><a href="#config"><code>config</code></a></li>
+<li><a href="#gke"><code>gke</code></a></li>
+<li><a href="#custom-kubernetesclusterssupplier">custom <code>KubernetesClustersSupplier</code></a></li>
+</ul>
+<h4 id="catalog"><code>catalog</code></h4>
+<p>This cluster locator method will read cluster information from the catalog.</p>
+<h4 id="localkubectlproxy"><code>localKubectlProxy</code></h4>
+<p>This cluster locator method will assume a locally running <a href="https://kubernetes.io/docs/tasks/extend-kubernetes/http-proxy-access-api/#using-kubectl-to-start-a-proxy-server"><code>kubectl proxy</code></a> process using the default port (8001).</p>
+<p>NOTE: This cluster locator method is for local development only and should not be used in production.</p>
+<h4 id="config"><code>config</code></h4>
+<p>This cluster locator method will read cluster information from your app-config
+(see below).</p>
+<h5 id="clusters"><code>clusters</code></h5>
+<p>Used by the <code>config</code> cluster locator method to construct Kubernetes clients.</p>
+<h5 id="clustersurl"><code>clusters.\*.url</code></h5>
+<p>The base URL to the Kubernetes control plane. Can be found by using the
+"Kubernetes master" result from running the <code>kubectl cluster-info</code> command.</p>
+<h5 id="clustersname"><code>clusters.\*.name</code></h5>
+<p>A name to represent this cluster, this must be unique within the <code>clusters</code>
+array. Users will see this value in the Software Catalog Kubernetes plugin.</p>
+<h5 id="clustersauthprovider"><code>clusters.\*.authProvider</code></h5>
+<p>This determines how the Kubernetes client authenticates with the Kubernetes
+cluster. Valid values are:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aks</code></td>
+<td>This will use a user's AKS access token from the <a href="https://backstage.io/docs/auth/microsoft/provider">Microsoft auth provider</a> to access the Kubernetes API on AKS clusters.</td>
+</tr>
+<tr>
+<td><code>aws</code></td>
+<td>This will use AWS credentials to access resources in EKS clusters</td>
+</tr>
+<tr>
+<td><code>azure</code></td>
+<td>This will use <a href="https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview">Azure Identity</a> to access resources in clusters</td>
+</tr>
+<tr>
+<td><code>google</code></td>
+<td>This will use a user's Google access token from the <a href="https://backstage.io/docs/auth/google/provider">Google auth provider</a> to access the Kubernetes API on GKE clusters.</td>
+</tr>
+<tr>
+<td><code>googleServiceAccount</code></td>
+<td>This will use the Google Cloud service account credentials to access resources in clusters</td>
+</tr>
+<tr>
+<td><code>oidc</code></td>
+<td>This will use <a href="https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens">Oidc Tokens</a> to authenticate to the Kubernetes API. When this is used the <code>oidcTokenProvider</code> field should also be set. Please note the cluster must support OIDC, at the time of writing AKS clusters do not support OIDC.</td>
+</tr>
+<tr>
+<td><code>serviceAccount</code></td>
+<td>This will use a Kubernetes <a href="https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/">service account</a> to access the Kubernetes API. When this is used the <code>serviceAccountToken</code> field should also be set.</td>
+</tr>
+</tbody>
+</table>
+<p>Check the <a href="https://backstage.io/docs/features/kubernetes/authentication">Kubernetes Authentication</a> section for additional explanation.</p>
+<h5 id="clustersskiptlsverify"><code>clusters.\*.skipTLSVerify</code></h5>
+<p>This determines whether the Kubernetes client verifies the TLS certificate
+presented by the API server. Defaults to <code>false</code>.</p>
+<h5 id="clustersskipmetricslookup"><code>clusters.\*.skipMetricsLookup</code></h5>
+<p>This determines whether the Kubernetes client looks up resource metrics
+CPU/Memory for pods returned by the API server. Defaults to <code>false</code>.</p>
+<h5 id="clustersserviceaccounttoken-optional"><code>clusters.\*.serviceAccountToken</code> (optional)</h5>
+<p>The service account token to be used when using the <code>serviceAccount</code> auth
+provider. You could get the service account token with:</p>
+<pre><code class="language-sh">kubectl -n &lt;NAMESPACE&gt; get secret $(kubectl -n &lt;NAMESPACE&gt; get sa &lt;SERVICE_ACCOUNT_NAME&gt; -o=json \
+| jq -r '.secrets[0].name') -o=json \
+| jq -r '.data[&quot;token&quot;]' \
+| base64 --decode
+</code></pre>
+<h5 id="clustersoidctokenprovider-optional"><code>clusters.\*.oidcTokenProvider</code> (optional)</h5>
+<p>This field is to be used when using the <code>oidc</code> auth provider. It will use the id tokens
+from a configured <a href="https://backstage.io/docs/auth/">backstage auth provider</a> to
+authenticate to the cluster. The selected <code>oidcTokenProvider</code> needs to be properly
+configured under <code>auth</code> for this to work.</p>
+<pre><code class="language-yaml">kubernetes:
+  clusterLocatorMethods:
+    - type: 'config'
+      clusters:
+        - name: test-cluster
+          url: http://localhost:8080
+          authProvider: oidc
+          oidcTokenProvider: okta # This value needs to match a config under auth.providers
+auth:
+  providers:
+    okta:
+      development:
+        clientId: ${AUTH_OKTA_CLIENT_ID}
+        clientSecret: ${AUTH_OKTA_CLIENT_SECRET}
+        audience: ${AUTH_OKTA_AUDIENCE}
+</code></pre>
+<p>The following values are supported out-of-the-box by the frontend: <code>gitlab</code> (the
+application whose <code>clientId</code> is used by the auth provider should be granted the
+<code>openid</code> scope), <code>google</code>, <code>microsoft</code>, <code>okta</code>, <code>onelogin</code>.</p>
+<p>Take note that <code>oidcTokenProvider</code> is just the issuer for the token, you can use any
+of these with an OIDC enabled cluster, like using <code>microsoft</code> as the issuer for a EKS
+cluster.</p>
+<h5 id="clustersdashboardurl-optional"><code>clusters.\*.dashboardUrl</code> (optional)</h5>
+<p>Specifies the link to the Kubernetes dashboard managing this cluster.</p>
+<p>Note that you should specify the app used for the dashboard using the
+<code>dashboardApp</code> property, in order to properly format links to kubernetes
+resources, otherwise it will assume that you're running the standard one.</p>
+<p>Note also that this attribute is optional for some kinds of dashboards, such as
+GKE, which requires additional parameters specified in the <code>dashboardParameters</code>
+option.</p>
+<h5 id="clustersdashboardapp-optional"><code>clusters.\*.dashboardApp</code> (optional)</h5>
+<p>Specifies the app that provides the Kubernetes dashboard.</p>
+<p>This will be used for formatting links to kubernetes objects inside the
+dashboard.</p>
+<p>The supported dashboards are: <code>standard</code>, <code>rancher</code>, <code>openshift</code>, <code>gke</code>, <code>aks</code>,
+<code>eks</code>. However, not all of them are implemented yet, so please contribute!</p>
+<p>Note that it will default to the regular dashboard provided by the Kubernetes
+project (<code>standard</code>), that can run in any Kubernetes cluster.</p>
+<p>Note that for the <code>gke</code> app, you must provide additional information in the
+<code>dashboardParameters</code> option.</p>
+<p>Note that you can add your own formatter by registering it to the
+<code>clusterLinksFormatters</code> dictionary, in the app project.</p>
+<p>Example:</p>
+<pre><code class="language-ts">import { clusterLinksFormatters } from '@backstage/plugin-kubernetes';
+clusterLinksFormatters.myDashboard = (options) =&gt; ...;
+</code></pre>
+<p>See also
+https://github.com/backstage/backstage/tree/master/plugins/kubernetes/src/utils/clusterLinks/formatters
+for real examples.</p>
+<h5 id="clustersdashboardparameters-optional"><code>clusters.\*.dashboardParameters</code> (optional)</h5>
+<p>Specifies additional information for the selected <code>dashboardApp</code> formatter.</p>
+<p>Note that, even though <code>dashboardParameters</code> is optional, it might be mandatory
+for some dashboards, such as GKE.</p>
+<h6 id="required-parameters-for-gke">required parameters for GKE</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>projectId</code></td>
+<td>the ID of the GCP project containing your Kubernetes clusters</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td>the region of GCP containing your Kubernetes clusters</td>
+</tr>
+<tr>
+<td><code>clusterName</code></td>
+<td>the name of your kubernetes cluster, within your <code>projectId</code> GCP project</td>
+</tr>
+</tbody>
+</table>
+<p>Note that the GKE cluster locator can automatically provide the values for the
+<code>dashboardApp</code> and <code>dashboardParameters</code> options if you set the
+<code>exposeDashboard</code> property to <code>true</code>.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">kubernetes:
+  serviceLocatorMethod:
+    type: 'multiTenant'
+  clusterLocatorMethods:
+    - type: 'config'
+      clusters:
+        - url: http://127.0.0.1:9999
+          name: my-cluster
+          dashboardApp: gke
+          dashboardParameters:
+            projectId: my-project
+            region: us-east1
+            clusterName: my-cluster
+</code></pre>
+<h5 id="clusterscadata-optional"><code>clusters.\*.caData</code> (optional)</h5>
+<p>Base64-encoded certificate authority bundle in PEM format. The Kubernetes client
+will verify that the TLS certificate presented by the API server is signed by
+this CA.</p>
+<p>This value could be obtained via inspecting the kubeconfig file (usually
+at <code>~/.kube/config</code>) under <code>clusters[*].cluster.certificate-authority-data</code>. For
+GKE, execute the following command to obtain the value</p>
+<pre><code>gcloud container clusters describe &lt;YOUR_CLUSTER_NAME&gt; \
+    --zone=&lt;YOUR_COMPUTE_ZONE&gt; \
+    --format=&quot;value(masterAuth.clusterCaCertificate)&quot;
+</code></pre>
+<p>See also
+https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication#environments-without-gcloud
+for complete docs about GKE without <code>gcloud</code>.</p>
+<h5 id="clusterscafile-optional"><code>clusters.\*.caFile</code> (optional)</h5>
+<p>Filesystem path (on the host where the Backstage process is running) to a
+certificate authority bundle in PEM format. The Kubernetes client will verify
+that the TLS certificate presented by the API server is signed by this CA. Note
+that only clusters defined in the app-config via the <a href="#config"><code>config</code></a>
+cluster locator method can be configured in this way.</p>
+<h5 id="clusterscustomresources-optional"><code>clusters.\*.customResources</code> (optional)</h5>
+<p>Configures which <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/">custom resources</a> to look for when returning an entity's
+Kubernetes resources belonging to the cluster. Same specification as <a href="#customresources-optional"><code>customResources</code></a></p>
+<h4 id="gke"><code>gke</code></h4>
+<p>This cluster locator is designed to work with Kubernetes clusters running in
+<a href="https://cloud.google.com/kubernetes-engine">GKE</a>. It will configure the Kubernetes backend plugin to make requests to
+clusters running within a Google Cloud project.</p>
+<p>This cluster locator method will use the <code>google</code> authentication mechanism.</p>
+<p>The Google Cloud service account to use can be configured through the
+<code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable. Consult the <a href="https://cloud.google.com/docs/authentication/production#linux-or-macos">Google Cloud
+docs</a> for more information.</p>
+<p>For example:</p>
+<pre><code class="language-yaml">- type: 'gke'
+  projectId: 'gke-clusters'
+  region: 'europe-west1' # optional
+  skipTLSVerify: false # optional
+  skipMetricsLookup: false # optional
+  exposeDashboard: false # optional
+  matchingResourceLabels: # optional
+    - key: 'environment'
+      value: 'production'
+</code></pre>
+<p>Will configure the Kubernetes plugin to connect to all GKE clusters in the
+project <code>gke-clusters</code> in the region <code>europe-west1</code>.</p>
+<p>Note that the GKE cluster locator can automatically provide the values for the
+<code>dashboardApp</code> and <code>dashboardParameters</code> options if you enable the
+<code>exposeDashboard</code> option.</p>
+<h5 id="projectid"><code>projectId</code></h5>
+<p>The Google Cloud project to look for Kubernetes clusters in.</p>
+<h5 id="region-optional"><code>region</code> (optional)</h5>
+<p>The Google Cloud region to look for Kubernetes clusters in. Defaults to all
+regions.</p>
+<h5 id="skiptlsverify-optional"><code>skipTLSVerify</code> (optional)</h5>
+<p>This determines whether the Kubernetes client verifies the TLS certificate
+presented by the API server. Defaults to <code>false</code>.</p>
+<h5 id="skipmetricslookup-optional"><code>skipMetricsLookup</code> (optional)</h5>
+<p>This determines whether the Kubernetes client looks up resource metrics
+CPU/Memory for pods returned by the API server. Defaults to <code>false</code>.</p>
+<h5 id="exposedashboard-optional"><code>exposeDashboard</code> (optional)</h5>
+<p>This determines whether the <code>dashboardApp</code> and <code>dashboardParameters</code> should be
+automatically configured in order to expose the GKE dashboard from the
+Kubernetes plugin.</p>
+<p>Defaults to <code>false</code>.</p>
+<h5 id="matchingresourcelabels-optional"><code>matchingResourceLabels</code> (optional)</h5>
+<p>Array of key value labels used to filter out clusters which don't have the matching
+<a href="https://cloud.google.com/resource-manager/docs/creating-managing-labels">resource labels</a>.</p>
+<h4 id="custom-kubernetesclusterssupplier">Custom <code>KubernetesClustersSupplier</code></h4>
+<p>If the configuration-based cluster locators do not work for your use-case,
+it is also possible to implement a
+<a href="../installation/#custom-cluster-discovery">custom <code>KubernetesClustersSupplier</code></a>.</p>
+<h3 id="customresources-optional"><code>customResources</code> (optional)</h3>
+<p>Configures which <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/">custom resources</a> to look for by default when returning an entity's
+Kubernetes resources.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>The optional <code>kubernetes.customResources</code> property is overrode by <code>customResources</code> at the <a href="#clusterscustomresources-optional">clusters level</a>.</li>
+</ul>
+<p>Defaults to empty array. Example:</p>
+<pre><code class="language-yaml">---
+kubernetes:
+  customResources:
+    - group: 'argoproj.io'
+      apiVersion: 'v1alpha1'
+      plural: 'rollouts'
+</code></pre>
+<h4 id="customresourcesgroup"><code>customResources.\*.group</code></h4>
+<p>The custom resource's group.</p>
+<h4 id="customresourcesapiversion"><code>customResources.\*.apiVersion</code></h4>
+<p>The custom resource's apiVersion.</p>
+<h4 id="customresourcesplural"><code>customResources.\*.plural</code></h4>
+<p>The plural representing the custom resource.</p>
+<h3 id="apiversionoverrides-optional"><code>apiVersionOverrides</code> (optional)</h3>
+<p>Overrides for the API versions used to make requests for the corresponding
+objects. If using a legacy Kubernetes version, you may use this config to
+override the default API versions to ones that are supported by your cluster.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">---
+kubernetes:
+  apiVersionOverrides:
+    cronjobs: 'v1beta1'
+</code></pre>
+<p>For more information on which API versions are supported by your cluster, please
+view the Kubernetes API docs for your Kubernetes version (e.g.
+<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.22/#-strong-api-groups-strong-">API Groups for v1.22</a>
+)</p>
+<h3 id="objecttypes-optional"><code>objectTypes</code> (optional)</h3>
+<p>Overrides for the Kubernetes object types fetched from the cluster. The default object types are:</p>
+<ul>
+<li>pods</li>
+<li>services</li>
+<li>configmaps</li>
+<li>limitranges</li>
+<li>deployments</li>
+<li>replicasets</li>
+<li>horizontalpodautoscalers</li>
+<li>jobs</li>
+<li>cronjobs</li>
+<li>ingresses</li>
+<li>statefulsets</li>
+<li>daemonsets</li>
+</ul>
+<p>You may use this config to override the default object types if you only want a subset of
+the default ones. However, it's currently not supported to fetch object types other
+than the ones specified in the default types.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">---
+kubernetes:
+  objectTypes:
+    - configmaps
+    - deployments
+    - limitranges
+    - pods
+    - services
+    - statefulsets
+</code></pre>
+<h3 id="role-based-access-control">Role Based Access Control</h3>
+<p>The current RBAC permissions required are read-only cluster wide, the below
+Kubernetes manifest describes which objects are required and will ensure
+the plugin functions correctly:</p>
+<pre><code class="language-yaml">---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: backstage-read-only
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - pods
+      - configmaps
+      - services
+      - deployments
+      - replicasets
+      - horizontalpodautoscalers
+      - ingresses
+      - statefulsets
+      - limitranges
+      - daemonsets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - batch
+    resources:
+      - jobs
+      - cronjobs
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - metrics.k8s.io
+    resources:
+      - pods
+    verbs:
+      - get
+      - list
+</code></pre>
+<h2 id="surfacing-your-kubernetes-components-as-part-of-an-entity">Surfacing your Kubernetes components as part of an entity</h2>
+<p>There are two ways to surface your Kubernetes components as part of an entity.
+The label selector takes precedence over the annotation/service id.</p>
+<h3 id="common-backstageiokubernetes-id-label">Common <code>backstage.io/kubernetes-id</code> label</h3>
+<h4 id="adding-the-entity-annotation">Adding the entity annotation</h4>
+<p>In order for Backstage to detect that an entity has Kubernetes components, the
+following annotation should be added to the entity's <code>catalog-info.yaml</code>:</p>
+<pre><code class="language-yaml">annotations:
+  'backstage.io/kubernetes-id': dice-roller
+</code></pre>
+<h4 id="adding-the-namespace-annotation">Adding the namespace annotation</h4>
+<p>Entities can have the <code>backstage.io/kubernetes-namespace</code> annotation, this will cause the entity's Kubernetes resources
+to by looked up via that namespace.</p>
+<pre><code class="language-yaml">annotations:
+  'backstage.io/kubernetes-namespace': dice-space
+</code></pre>
+<h4 id="labeling-kubernetes-components">Labeling Kubernetes components</h4>
+<p>In order for Kubernetes components to show up in the software catalog as a part
+of an entity, Kubernetes components themselves can have the following label:</p>
+<pre><code class="language-yaml">'backstage.io/kubernetes-id': &lt;BACKSTAGE_ENTITY_NAME&gt;
+</code></pre>
+<h3 id="label-selector-query-annotation">Label selector query annotation</h3>
+<p>You can write your own custom label selector query that Backstage will use to
+lookup the objects (similar to <code>kubectl --selector="your query here"</code>). Review
+the
+<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/">labels and selectors Kubernetes documentation</a>
+for more info.</p>
+<pre><code class="language-yaml">'backstage.io/kubernetes-label-selector': 'app=my-app,component=front-end'
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

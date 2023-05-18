@@ -1,0 +1,4111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Models - Combined</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Combined</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Backstage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../backstage/FAQ/" class="dropdown-item">FAQ</a>
+</li>
+                                    
+<li>
+    <a href="../../../../backstage/publishing/" class="dropdown-item">Publishing</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Accessibility</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/accessibility/" class="dropdown-item">Backstage Accessibility</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/api/deprecations/" class="dropdown-item">Deprecations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/api/utility-apis/" class="dropdown-item">Utility APIs</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture decisions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/" class="dropdown-item">Architecture Decision Records (ADR)</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr000-template/" class="dropdown-item">ADR000: [TITLE]</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr001-add-adr-log/" class="dropdown-item">ADR001: Architecture Decision Record (ADR) log</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr002-default-catalog-file-format/" class="dropdown-item">ADR002: Default Software Catalog File Format</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr003-avoid-default-exports/" class="dropdown-item">ADR003: Avoid Default Exports and Prefer Named Exports</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr004-module-export-structure/" class="dropdown-item">ADR004: Module Export Structure</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr005-catalog-core-entities/" class="dropdown-item">ADR005: Catalog Core Entities</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr006-avoid-react-fc/" class="dropdown-item">ADR006: Avoid React.FC and React.SFC</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr007-use-msw-to-mock-service-requests/" class="dropdown-item">ADR007: Use MSW to mock http requests</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr008-default-catalog-file-name/" class="dropdown-item">ADR008: Default Catalog File Name</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr009-entity-references/" class="dropdown-item">ADR009: Entity References</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr010-luxon-date-library/" class="dropdown-item">ADR010: Use the Luxon Date Library</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr011-plugin-package-structure/" class="dropdown-item">ADR011: Plugin Package Structure</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr012-use-luxon-locale-and-date-presets/" class="dropdown-item">ADR012: Use Luxon.toLocaleString and date/time presets</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/architecture-decisions/adr013-use-node-fetch/" class="dropdown-item">ADR013: Proper use of HTTP fetching libraries</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Auth</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/" class="dropdown-item">Authentication in Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/add-auth-provider/" class="dropdown-item">Contributing New Providers</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/glossary/" class="dropdown-item">Glossary</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/identity-resolver/" class="dropdown-item">Sign-in Identities and Resolvers</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/oauth/" class="dropdown-item">OAuth and OpenID Connect</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/oidc/" class="dropdown-item">OIDC provider from scratch</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/service-to-service-auth/" class="dropdown-item">Service to Service Auth</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/troubleshooting/" class="dropdown-item">Troubleshooting Auth</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Atlassian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/atlassian/provider/" class="dropdown-item">Atlassian Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Auth0</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/auth0/provider/" class="dropdown-item">Auth0 Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Bitbucket</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/bitbucket/provider/" class="dropdown-item">Bitbucket Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketServer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/bitbucketServer/provider/" class="dropdown-item">Bitbucket Server Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cloudflare</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/cloudflare/access/" class="dropdown-item">Cloudflare Access Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Github</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/github/provider/" class="dropdown-item">GitHub Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitlab</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/gitlab/provider/" class="dropdown-item">GitLab Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Google</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/google/gcp-iap-auth/" class="dropdown-item">Google Identity-Aware Proxy Provider</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/google/provider/" class="dropdown-item">Google Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Microsoft</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/microsoft/azure-easyauth/" class="dropdown-item">Azure EasyAuth Provider</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/auth/microsoft/provider/" class="dropdown-item">Microsoft Azure Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Oauth2 proxy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/oauth2-proxy/provider/" class="dropdown-item">OAuth 2 Proxy Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Okta</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/okta/provider/" class="dropdown-item">Okta Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Onelogin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/auth/onelogin/provider/" class="dropdown-item">OneLogin Authentication Provider</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Backend system</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/" class="dropdown-item">The Backend System</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/01-index/" class="dropdown-item">Backend System Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/02-backends/" class="dropdown-item">Backend Instances</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/03-services/" class="dropdown-item">Backend Services</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/04-plugins/" class="dropdown-item">Backend Plugins</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/05-extension-points/" class="dropdown-item">Backend Plugin Extension Points</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/06-modules/" class="dropdown-item">Plugin Modules</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/architecture/07-naming-patterns/" class="dropdown-item">Backend System Naming Patterns</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Building backends</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-backends/01-index/" class="dropdown-item">Building Backends</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-backends/08-migrating/" class="dropdown-item">Migrating your Backend to the New Backend System</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Building plugins and modules</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-plugins-and-modules/01-index/" class="dropdown-item">Building Backend Plugins and Modules</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-plugins-and-modules/02-testing/" class="dropdown-item">Testing Backend Plugins and Modules</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/backend-system/building-plugins-and-modules/08-migrating/" class="dropdown-item">Migrating your Backend Plugin to the New Backend System</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Core services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/backend-system/core-services/01-index/" class="dropdown-item">Core Backend Service APIs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Conf</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/conf/" class="dropdown-item">Static Configuration in Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/conf/defining/" class="dropdown-item">Defining Configuration for your Plugin</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/conf/reading/" class="dropdown-item">Reading Backstage Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/conf/writing/" class="dropdown-item">Writing Backstage Configuration Files</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployment</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/deployment/" class="dropdown-item">Deploying Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/deployment/docker/" class="dropdown-item">Building a Docker image</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/deployment/heroku/" class="dropdown-item">Deploying with Heroku</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/deployment/k8s/" class="dropdown-item">Deploying with Kubernetes</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/deployment/scaling/" class="dropdown-item">Scaling Backstage Deployments</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dls</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/dls/component-design-guidelines/" class="dropdown-item">Component Design Guidelines</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/dls/contributing-to-storybook/" class="dropdown-item">Contributing to Storybook</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/dls/design/" class="dropdown-item">Design</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/dls/figma/" class="dropdown-item">Figma</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Features</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kubernetes</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/" class="dropdown-item">Kubernetes</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/authentication/" class="dropdown-item">Kubernetes Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/configuration/" class="dropdown-item">Configuring Kubernetes integration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/proxy/" class="dropdown-item">Kubernetes Backend Proxy Endpoint</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/kubernetes/troubleshooting/" class="dropdown-item">Troubleshooting Kubernetes</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Search</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/search/" class="dropdown-item">Search Documentation</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/architecture/" class="dropdown-item">Search Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/concepts/" class="dropdown-item">Search Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/getting-started/" class="dropdown-item">Getting Started with Search</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/how-to-guides/" class="dropdown-item">Search How-To guides</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/search/search-engines/" class="dropdown-item">Search Engines</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software catalog</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/" class="dropdown-item">Backstage Software Catalog</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/api/" class="dropdown-item">API</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/catalog-customization/" class="dropdown-item">Catalog Customization</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/configuration/" class="dropdown-item">Catalog Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/descriptor-format/" class="dropdown-item">Descriptor Format of Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/extending-the-model/" class="dropdown-item">Extending the model</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/external-integrations/" class="dropdown-item">External integrations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/life-of-an-entity/" class="dropdown-item">The Life of an Entity</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/references/" class="dropdown-item">Entity References</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/system-model/" class="dropdown-item">System Model</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/well-known-annotations/" class="dropdown-item">Well-known Annotations on Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/well-known-relations/" class="dropdown-item">Well-known Relations between Catalog Entities</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-catalog/well-known-statuses/" class="dropdown-item">Well-known Status fields of Catalog Entities</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software templates</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/" class="dropdown-item">Backstage Software Templates</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/adding-templates/" class="dropdown-item">Adding your own Templates</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/authorizing-parameters-steps-and-actions/" class="dropdown-item">Authorizing parameters, steps and actions</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/builtin-actions/" class="dropdown-item">Builtin actions</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/configuration/" class="dropdown-item">Software Template Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/input-examples/" class="dropdown-item">Input Examples</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/migrating-from-v1beta2-to-v1beta3/" class="dropdown-item">Migrating to v1beta3 templates</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/testing-scaffolder-alpha/" class="dropdown-item">Experimental: Testing out the alpha Scaffolder plugin</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/writing-custom-actions/" class="dropdown-item">Writing Custom Actions</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/writing-custom-field-extensions/" class="dropdown-item">Writing Custom Field Extensions</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/writing-custom-step-layouts/" class="dropdown-item">Writing custom step layouts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/software-templates/writing-templates/" class="dropdown-item">Writing Templates</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Techdocs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/" class="dropdown-item">TechDocs Documentation</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/FAQ/" class="dropdown-item">TechDocs FAQ</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/addons/" class="dropdown-item">TechDocs Addons</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/architecture/" class="dropdown-item">TechDocs Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/cli/" class="dropdown-item">TechDocs CLI</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/concepts/" class="dropdown-item">Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/configuration/" class="dropdown-item">TechDocs Configuration Options</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/configuring-ci-cd/" class="dropdown-item">Configuring CI/CD to generate and publish TechDocs sites</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/creating-and-publishing/" class="dropdown-item">Creating and publishing your docs</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/how-to-guides/" class="dropdown-item">TechDocs How-To guides</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/troubleshooting/" class="dropdown-item">Troubleshooting TechDocs</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/features/techdocs/using-cloud-storage/" class="dropdown-item">Using Cloud Storage for TechDocs generated files</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/app-custom-theme/" class="dropdown-item">Customize the look-and-feel of your App</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/concepts/" class="dropdown-item">Key Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/configuration/" class="dropdown-item">Getting Started, configuring Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/configure-app-with-plugins/" class="dropdown-item">Configuring App with plugins</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/contributors/" class="dropdown-item">Contributors</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/create-an-app/" class="dropdown-item">Create an App</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/getting-involved/" class="dropdown-item">Getting Involved</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/homepage/" class="dropdown-item">Backstage homepage - Setup and Customization</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/keeping-backstage-updated/" class="dropdown-item">Keeping Backstage Updated</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/getting-started/project-structure/" class="dropdown-item">Backstage Project Structure</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Integrations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/" class="dropdown-item">Integrations</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Aws s3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/aws-s3/discovery/" class="dropdown-item">AWS S3 Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/aws-s3/locations/" class="dropdown-item">Amazon Web Services S3 Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Azure</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/azure/discovery/" class="dropdown-item">Azure DevOps Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/azure/locations/" class="dropdown-item">Azure DevOps Locations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/azure/org/" class="dropdown-item">Microsoft Azure Active Directory Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketCloud</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/bitbucketCloud/discovery/" class="dropdown-item">Bitbucket Cloud Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/bitbucketCloud/locations/" class="dropdown-item">Bitbucket Cloud Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">bitbucketServer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/bitbucketServer/discovery/" class="dropdown-item">Bitbucket Server Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/bitbucketServer/locations/" class="dropdown-item">Bitbucket Server Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Datadog rum</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/datadog-rum/installation/" class="dropdown-item">Datadog RUM Installation</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gerrit</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/gerrit/discovery/" class="dropdown-item">Gerrit Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/gerrit/locations/" class="dropdown-item">Gerrit Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitea</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/gitea/locations/" class="dropdown-item">Gitea Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Github</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/github/discovery/" class="dropdown-item">GitHub Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/github/github-apps/" class="dropdown-item">GitHub Apps</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/github/locations/" class="dropdown-item">GitHub Locations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/github/org/" class="dropdown-item">GitHub Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gitlab</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/gitlab/discovery/" class="dropdown-item">GitLab Discovery</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/gitlab/locations/" class="dropdown-item">GitLab Locations</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/integrations/gitlab/org/" class="dropdown-item">GitLab Organizational Data</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Google cloud storage</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/google-cloud-storage/locations/" class="dropdown-item">Google Cloud Storage Locations</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ldap</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/integrations/ldap/org/" class="dropdown-item">LDAP Organizational Data</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Local dev</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/local-dev/cli-build-system/" class="dropdown-item">Build System</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/local-dev/cli-commands/" class="dropdown-item">Commands</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/local-dev/cli-overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/local-dev/debugging/" class="dropdown-item">Debugging Backstage</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/local-dev/linking-local-packages/" class="dropdown-item">Linking in Local Packages</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Overview</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/overview/adopting/" class="dropdown-item">Strategies for adopting</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/architecture-overview/" class="dropdown-item">Architecture overview</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/background/" class="dropdown-item">The Spotify Story</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/glossary/" class="dropdown-item">Backstage Glossary</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/logos/" class="dropdown-item">Logos</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/roadmap/" class="dropdown-item">Roadmap</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/support/" class="dropdown-item">Support and community</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/threat-model/" class="dropdown-item">Backstage Threat Model</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/versioning-policy/" class="dropdown-item">Release & Versioning Policy</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/vision/" class="dropdown-item">Vision</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/overview/what-is-backstage/" class="dropdown-item">What is Backstage?</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Permissions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/permissions/concepts/" class="dropdown-item">Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/custom-rules/" class="dropdown-item">Defining custom permission rules</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/frontend-integration/" class="dropdown-item">Frontend Integration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/getting-started/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/writing-a-policy/" class="dropdown-item">Writing a permission policy</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Plugin authors</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/01-setup/" class="dropdown-item">1. Tutorial setup</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/02-adding-a-basic-permission-check/" class="dropdown-item">2. Adding a basic permission check</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/03-adding-a-resource-permission-check/" class="dropdown-item">3. Adding a resource permission check</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/04-authorizing-access-to-paginated-data/" class="dropdown-item">4. Authorizing access to paginated data</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/permissions/plugin-authors/05-frontend-authorization/" class="dropdown-item">5. Frontend Components with Authorization</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/releases/v1.0.0/" class="dropdown-item">v1.0.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.1.0-changelog/" class="dropdown-item">Release v1.1.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.1.0/" class="dropdown-item">v1.1.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0-changelog/" class="dropdown-item">Release v1.10.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0-next.0-changelog/" class="dropdown-item">Release v1.10.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0-next.1-changelog/" class="dropdown-item">Release v1.10.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0-next.2-changelog/" class="dropdown-item">Release v1.10.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.10.0/" class="dropdown-item">v1.10.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0-changelog/" class="dropdown-item">Release v1.11.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0-next.0-changelog/" class="dropdown-item">Release v1.11.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0-next.1-changelog/" class="dropdown-item">Release v1.11.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0-next.2-changelog/" class="dropdown-item">Release v1.11.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.11.0/" class="dropdown-item">v1.11.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0-changelog/" class="dropdown-item">Release v1.12.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0-next.0-changelog/" class="dropdown-item">Release v1.12.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0-next.1-changelog/" class="dropdown-item">Release v1.12.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0-next.2-changelog/" class="dropdown-item">Release v1.12.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.12.0/" class="dropdown-item">v1.12.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-changelog/" class="dropdown-item">Release v1.13.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-next.0-changelog/" class="dropdown-item">Release v1.13.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-next.1-changelog/" class="dropdown-item">Release v1.13.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-next.2-changelog/" class="dropdown-item">Release v1.13.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0-next.3-changelog/" class="dropdown-item">Release v1.13.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.13.0/" class="dropdown-item">v1.13.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0-changelog/" class="dropdown-item">Release v1.14.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0-next.0-changelog/" class="dropdown-item">Release v1.14.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0-next.1-changelog/" class="dropdown-item">Release v1.14.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0-next.2-changelog/" class="dropdown-item">Release v1.14.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.14.0/" class="dropdown-item">v1.14.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-changelog/" class="dropdown-item">Release v1.2.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-next.0-changelog/" class="dropdown-item">Release v1.2.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-next.1-changelog/" class="dropdown-item">Release v1.2.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-next.2-changelog/" class="dropdown-item">Release v1.2.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0-next.3-changelog/" class="dropdown-item">Release v1.2.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.2.0/" class="dropdown-item">v1.2.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0-changelog/" class="dropdown-item">Release v1.3.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0-next.0-changelog/" class="dropdown-item">Release v1.3.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0-next.1-changelog/" class="dropdown-item">Release v1.3.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0-next.2-changelog/" class="dropdown-item">Release v1.3.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.3.0/" class="dropdown-item">v1.3.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-changelog/" class="dropdown-item">Release v1.4.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-next.0-changelog/" class="dropdown-item">Release v1.4.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-next.1-changelog/" class="dropdown-item">Release v1.4.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-next.2-changelog/" class="dropdown-item">Release v1.4.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0-next.3-changelog/" class="dropdown-item">Release v1.4.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.4.0/" class="dropdown-item">v1.4.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-changelog/" class="dropdown-item">Release v1.5.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-next.0-changelog/" class="dropdown-item">Release v1.5.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-next.1-changelog/" class="dropdown-item">Release v1.5.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-next.2-changelog/" class="dropdown-item">Release v1.5.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0-next.3-changelog/" class="dropdown-item">Release v1.5.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.5.0/" class="dropdown-item">v1.5.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-changelog/" class="dropdown-item">Release v1.6.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-next.0-changelog/" class="dropdown-item">Release v1.6.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-next.1-changelog/" class="dropdown-item">Release v1.6.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-next.2-changelog/" class="dropdown-item">Release v1.6.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0-next.3-changelog/" class="dropdown-item">Release v1.6.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.6.0/" class="dropdown-item">v1.6.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0-changelog/" class="dropdown-item">Release v1.7.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0-next.0-changelog/" class="dropdown-item">Release v1.7.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0-next.1-changelog/" class="dropdown-item">Release v1.7.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0-next.2-changelog/" class="dropdown-item">Release v1.7.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.7.0/" class="dropdown-item">v1.7.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0-changelog/" class="dropdown-item">Release v1.8.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0-next.0-changelog/" class="dropdown-item">Release v1.8.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0-next.1-changelog/" class="dropdown-item">Release v1.8.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0-next.2-changelog/" class="dropdown-item">Release v1.8.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.8.0/" class="dropdown-item">v1.8.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-changelog/" class="dropdown-item">Release v1.9.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.0-changelog/" class="dropdown-item">Release v1.9.0-next.0</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.1-changelog/" class="dropdown-item">Release v1.9.0-next.1</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.2-changelog/" class="dropdown-item">Release v1.9.0-next.2</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.3-changelog/" class="dropdown-item">Release v1.9.0-next.3</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0-next.4-changelog/" class="dropdown-item">Release v1.9.0-next.4</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/releases/v1.9.0/" class="dropdown-item">v1.9.0</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorials</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../backstage/tutorials/backend-to-backend-auth/" class="dropdown-item">Backend-to-Backend Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/configuring-plugin-databases/" class="dropdown-item">Configuring Plugin Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/journey/" class="dropdown-item">Future developer journey</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/migrating-away-from-core/" class="dropdown-item">Migrating away from @backstage/core</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/package-role-migration/" class="dropdown-item">Package Role Migration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/quickstart-app-plugin/" class="dropdown-item">Adding Custom Plugin to Existing Monorepo App</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/react-router-stable-migration/" class="dropdown-item">React Router 6.0 Migration</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/switching-sqlite-postgres/" class="dropdown-item">Switching Backstage from SQLite to PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/using-backstage-proxy-within-plugin/" class="dropdown-item">Using the Backstage Proxy from Within a Plugin</a>
+</li>
+            
+<li>
+    <a href="../../../../backstage/tutorials/yarn-migration/" class="dropdown-item">Migration to Yarn 3</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Monorepo <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../monorepo/" class="dropdown-item">backstage/mkdocs-monorepo-plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/CHANGELOG/" class="dropdown-item">Changelog</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/CODE-OF-CONDUCT/" class="dropdown-item">Contributor Covenant Code of Conduct</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/CONTRIBUTING/" class="dropdown-item">Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/limitations/" class="dropdown-item">Caveats / Known Design Decisions</a>
+</li>
+                                    
+<li>
+    <a href="../../../../monorepo/philosophy/" class="dropdown-item">Philosophy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Techdocs cli <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../techdocs-cli/" class="dropdown-item">TechDocs CLI</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Fastapi <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../fastapi/" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/alternatives/" class="dropdown-item">Alternatives, Inspiration and Comparisons</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/async/" class="dropdown-item">Concurrency and async / await</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/benchmarks/" class="dropdown-item">Benchmarks</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/contributing/" class="dropdown-item">Development - Contributing</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/external-links/" class="dropdown-item">External Links and Articles</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/fastapi-people/" class="dropdown-item">FastAPI People</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/features/" class="dropdown-item">Features</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/help-fastapi/" class="dropdown-item">Help FastAPI - Get Help</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/history-design-future/" class="dropdown-item">History, Design and Future</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/newsletter/" class="dropdown-item">FastAPI and friends newsletter</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/project-generation/" class="dropdown-item">Project Generation - Template</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/python-types/" class="dropdown-item">Python Types Intro</a>
+</li>
+                                    
+<li>
+    <a href="../../../../fastapi/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/advanced/" class="dropdown-item">Advanced User Guide - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/additional-responses/" class="dropdown-item">Additional Responses in OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/additional-status-codes/" class="dropdown-item">Additional Status Codes</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/advanced-dependencies/" class="dropdown-item">Advanced Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/async-sql-databases/" class="dropdown-item">Async SQL (Relational) Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/async-tests/" class="dropdown-item">Async Tests</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/behind-a-proxy/" class="dropdown-item">Behind a Proxy</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/conditional-openapi/" class="dropdown-item">Conditional OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/custom-request-and-route/" class="dropdown-item">Custom Request and APIRoute class</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/custom-response/" class="dropdown-item">Custom Response - HTML, Stream, File, others</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/dataclasses/" class="dropdown-item">Using Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/events/" class="dropdown-item">Lifespan Events</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/extending-openapi/" class="dropdown-item">Extending OpenAPI</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/generate-clients/" class="dropdown-item">Generate Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/graphql/" class="dropdown-item">GraphQL</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/middleware/" class="dropdown-item">Advanced Middleware</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/nosql-databases/" class="dropdown-item">NoSQL (Distributed / Big Data) Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/openapi-callbacks/" class="dropdown-item">OpenAPI Callbacks</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/path-operation-advanced-configuration/" class="dropdown-item">Path Operation Advanced Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-change-status-code/" class="dropdown-item">Response - Change Status Code</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-cookies/" class="dropdown-item">Response Cookies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-directly/" class="dropdown-item">Return a Response Directly</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/response-headers/" class="dropdown-item">Response Headers</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/settings/" class="dropdown-item">Settings and Environment Variables</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/sql-databases-peewee/" class="dropdown-item">SQL (Relational) Databases with Peewee</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/sub-applications/" class="dropdown-item">Sub Applications - Mounts</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/templates/" class="dropdown-item">Templates</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-database/" class="dropdown-item">Testing a Database</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-dependencies/" class="dropdown-item">Testing Dependencies with Overrides</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-events/" class="dropdown-item">Testing Events: startup - shutdown</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/testing-websockets/" class="dropdown-item">Testing WebSockets</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/using-request-directly/" class="dropdown-item">Using the Request Directly</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/websockets/" class="dropdown-item">WebSockets</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/wsgi/" class="dropdown-item">Including WSGI - Flask, Django, others</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/advanced/security/" class="dropdown-item">Advanced Security - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/security/http-basic-auth/" class="dropdown-item">HTTP Basic Auth</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/advanced/security/oauth2-scopes/" class="dropdown-item">OAuth2 scopes</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployment</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/deployment/" class="dropdown-item">Deployment - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/concepts/" class="dropdown-item">Deployments Concepts</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/deta/" class="dropdown-item">Deploy FastAPI on Deta Space</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/docker/" class="dropdown-item">FastAPI in Containers - Docker</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/https/" class="dropdown-item">About HTTPS</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/manually/" class="dropdown-item">Run a Server Manually - Uvicorn</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/server-workers/" class="dropdown-item">Server Workers - Gunicorn with Uvicorn</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/deployment/versions/" class="dropdown-item">About FastAPI versions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorial</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/tutorial/" class="dropdown-item">Tutorial - User Guide - Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/background-tasks/" class="dropdown-item">Background Tasks</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/bigger-applications/" class="dropdown-item">Bigger Applications - Multiple Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-fields/" class="dropdown-item">Body - Fields</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-multiple-params/" class="dropdown-item">Body - Multiple Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-nested-models/" class="dropdown-item">Body - Nested Models</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body-updates/" class="dropdown-item">Body - Updates</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/body/" class="dropdown-item">Request Body</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/cookie-params/" class="dropdown-item">Cookie Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/cors/" class="dropdown-item">CORS (Cross-Origin Resource Sharing)</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/debugging/" class="dropdown-item">Debugging</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/encoder/" class="dropdown-item">JSON Compatible Encoder</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/extra-data-types/" class="dropdown-item">Extra Data Types</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/extra-models/" class="dropdown-item">Extra Models</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/first-steps/" class="dropdown-item">First Steps</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/handling-errors/" class="dropdown-item">Handling Errors</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/header-params/" class="dropdown-item">Header Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/metadata/" class="dropdown-item">Metadata and Docs URLs</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/middleware/" class="dropdown-item">Middleware</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/path-operation-configuration/" class="dropdown-item">Path Operation Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/path-params-numeric-validations/" class="dropdown-item">Path Parameters and Numeric Validations</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/path-params/" class="dropdown-item">Path Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/query-params-str-validations/" class="dropdown-item">Query Parameters and String Validations</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/query-params/" class="dropdown-item">Query Parameters</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/request-files/" class="dropdown-item">Request Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/request-forms-and-files/" class="dropdown-item">Request Forms and Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/request-forms/" class="dropdown-item">Form Data</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/response-model/" class="dropdown-item">Response Model - Return Type</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/response-status-code/" class="dropdown-item">Response Status Code</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/schema-extra-example/" class="dropdown-item">Declare Request Example Data</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/sql-databases/" class="dropdown-item">SQL (Relational) Databases</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/static-files/" class="dropdown-item">Static Files</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/testing/" class="dropdown-item">Testing</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dependencies</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/" class="dropdown-item">Dependencies - First Steps</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/classes-as-dependencies/" class="dropdown-item">Classes as Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/dependencies-in-path-operation-decorators/" class="dropdown-item">Dependencies in path operation decorators</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/dependencies-with-yield/" class="dropdown-item">Dependencies with yield</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/global-dependencies/" class="dropdown-item">Global Dependencies</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/dependencies/sub-dependencies/" class="dropdown-item">Sub-dependencies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/" class="dropdown-item">Security Intro</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/first-steps/" class="dropdown-item">Security - First Steps</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/get-current-user/" class="dropdown-item">Get Current User</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/oauth2-jwt/" class="dropdown-item">OAuth2 with Password (and hashing), Bearer with JWT tokens</a>
+</li>
+            
+<li>
+    <a href="../../../../fastapi/tutorial/security/simple-oauth2/" class="dropdown-item">Simple OAuth2 with Password and Bearer</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Monorepo multi docs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sample docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/" class="dropdown-item">Welcome to our Developer Platform</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/authentication/" class="dropdown-item">Authentication</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Components</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">A</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/a/" class="dropdown-item">Docs for A</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">B</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/b/" class="dropdown-item">Docs for B</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">C</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/c/" class="dropdown-item">Docs for C</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">D</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/d/" class="dropdown-item">Component D</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">E</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/components/d/e/" class="dropdown-item">Docs for E</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v1/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v1/reference/" class="dropdown-item">v1 API reference</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v2/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v2/migrating/" class="dropdown-item">Migration Guide to v2</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v2/reference/" class="dropdown-item">v2 API reference</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">V3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v3/changelog/" class="dropdown-item">Changelog</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v3/migrating/" class="dropdown-item">Migration Guide to v3</a>
+</li>
+            
+<li>
+    <a href="../../../../monorepo-multi-docs/sample-docs/v3/reference/" class="dropdown-item">v3 API reference</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Django rest</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../django-rest/" class="dropdown-item">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api guide</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../django-rest/api-guide/authentication/" class="dropdown-item">Authentication</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/caching/" class="dropdown-item">Caching</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/content-negotiation/" class="dropdown-item">Content negotiation</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/exceptions/" class="dropdown-item">Exceptions</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/fields/" class="dropdown-item">Serializer fields</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/filtering/" class="dropdown-item">Filtering</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/format-suffixes/" class="dropdown-item">Format suffixes</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/generic-views/" class="dropdown-item">Generic views</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/pagination/" class="dropdown-item">Pagination</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/parsers/" class="dropdown-item">Parsers</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/permissions/" class="dropdown-item">Permissions</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/relations/" class="dropdown-item">Serializer relations</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/renderers/" class="dropdown-item">Renderers</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/requests/" class="dropdown-item">Requests</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/responses/" class="dropdown-item">Responses</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/reverse/" class="dropdown-item">Returning URLs</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/routers/" class="dropdown-item">Routers</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/schemas/" class="dropdown-item">Schema</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/serializers/" class="dropdown-item">Serializers</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/settings/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/status-codes/" class="dropdown-item">Status Codes</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/testing/" class="dropdown-item">Testing</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/throttling/" class="dropdown-item">Throttling</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/validators/" class="dropdown-item">Validators</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/versioning/" class="dropdown-item">Versioning</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/views/" class="dropdown-item">Class-based Views</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/api-guide/viewsets/" class="dropdown-item">ViewSets</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Community</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../django-rest/community/3.0-announcement/" class="dropdown-item">Django REST framework 3.0</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.1-announcement/" class="dropdown-item">Django REST framework 3.1</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.10-announcement/" class="dropdown-item">3.10 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.11-announcement/" class="dropdown-item">3.11 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.12-announcement/" class="dropdown-item">3.12 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.13-announcement/" class="dropdown-item">3.13 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.14-announcement/" class="dropdown-item">3.14 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.2-announcement/" class="dropdown-item">Django REST framework 3.2</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.3-announcement/" class="dropdown-item">Django REST framework 3.3</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.4-announcement/" class="dropdown-item">3.4 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.5-announcement/" class="dropdown-item">3.5 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.6-announcement/" class="dropdown-item">3.6 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.7-announcement/" class="dropdown-item">3.7 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.8-announcement/" class="dropdown-item">3.8 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/3.9-announcement/" class="dropdown-item">3.9 announcement</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/contributing/" class="dropdown-item">Contributing to REST framework</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/funding/" class="dropdown-item">Funding</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/jobs/" class="dropdown-item">Jobs</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/kickstarter-announcement/" class="dropdown-item">Kickstarting Django REST framework 3</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/mozilla-grant/" class="dropdown-item">Mozilla Grant</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/project-management/" class="dropdown-item">Project management</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/third-party-packages/" class="dropdown-item">Third Party Packages</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/community/tutorials-and-resources/" class="dropdown-item">Tutorials and Resources</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Topics</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../django-rest/topics/ajax-csrf-cors/" class="dropdown-item">Working with AJAX, CSRF & CORS</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/topics/browsable-api/" class="dropdown-item">The Browsable API</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/topics/browser-enhancements/" class="dropdown-item">Browser enhancements</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/topics/documenting-your-api/" class="dropdown-item">Documenting your API</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/topics/html-and-forms/" class="dropdown-item">HTML & Forms</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/topics/internationalization/" class="dropdown-item">Internationalization</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/topics/rest-hypermedia-hateoas/" class="dropdown-item">REST, Hypermedia & HATEOAS</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/topics/writable-nested-serializers/" class="dropdown-item">Writable nested serializers</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tutorial</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../django-rest/tutorial/1-serialization/" class="dropdown-item">Tutorial 1: Serialization</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/tutorial/2-requests-and-responses/" class="dropdown-item">Tutorial 2: Requests and Responses</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/tutorial/3-class-based-views/" class="dropdown-item">Tutorial 3: Class-based Views</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/tutorial/4-authentication-and-permissions/" class="dropdown-item">Tutorial 4: Authentication & Permissions</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/tutorial/5-relationships-and-hyperlinked-apis/" class="dropdown-item">Tutorial 5: Relationships & Hyperlinked APIs</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/tutorial/6-viewsets-and-routers/" class="dropdown-item">Tutorial 6: ViewSets & Routers</a>
+</li>
+            
+<li>
+    <a href="../../../django-rest/tutorial/quickstart/" class="dropdown-item">Quickstart</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pydantic</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../contributing/" class="dropdown-item">Contributing</a>
+</li>
+            
+<li>
+    <a href="../../install/" class="dropdown-item">Install</a>
+</li>
+            
+<li>
+    <a href="../../migration/" class="dropdown-item">Migration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../api/alias_generators/" class="dropdown-item">Alias generators</a>
+</li>
+            
+<li>
+    <a href="../../api/color/" class="dropdown-item">Color</a>
+</li>
+            
+<li>
+    <a href="../../api/config/" class="dropdown-item">Config</a>
+</li>
+            
+<li>
+    <a href="../../api/dataclasses/" class="dropdown-item">Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../../api/errors/" class="dropdown-item">Errors</a>
+</li>
+            
+<li>
+    <a href="../../api/fields/" class="dropdown-item">Fields</a>
+</li>
+            
+<li>
+    <a href="../../api/functional_serializers/" class="dropdown-item">Functional serializers</a>
+</li>
+            
+<li>
+    <a href="../../api/functional_validators/" class="dropdown-item">Functional validators</a>
+</li>
+            
+<li>
+    <a href="../../api/json_schema/" class="dropdown-item">Json schema</a>
+</li>
+            
+<li>
+    <a href="../../api/main/" class="dropdown-item">Main</a>
+</li>
+            
+<li>
+    <a href="../../api/mypy/" class="dropdown-item">Mypy</a>
+</li>
+            
+<li>
+    <a href="../../api/networks/" class="dropdown-item">Networks</a>
+</li>
+            
+<li>
+    <a href="../../api/pydantic_core_init/" class="dropdown-item">Pydantic core init</a>
+</li>
+            
+<li>
+    <a href="../../api/pydantic_core_schema/" class="dropdown-item">Pydantic core schema</a>
+</li>
+            
+<li>
+    <a href="../../api/type_adapter/" class="dropdown-item">Type adapter</a>
+</li>
+            
+<li>
+    <a href="../../api/types/" class="dropdown-item">Types</a>
+</li>
+            
+<li>
+    <a href="../../api/validate_call/" class="dropdown-item">Validate call</a>
+</li>
+            
+<li>
+    <a href="../../api/version/" class="dropdown-item">Version</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Blog</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../blog/pydantic-v2-alpha/" class="dropdown-item">Pydantic V2 Pre Release</a>
+</li>
+            
+<li>
+    <a href="../../blog/pydantic-v2/" class="dropdown-item">Pydantic V2 Plan</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Integrations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../integrations/datamodel_code_generator/" class="dropdown-item">Code Generation with datamodel-code-generator</a>
+</li>
+            
+<li>
+    <a href="../../integrations/devtools/" class="dropdown-item">Devtools</a>
+</li>
+            
+<li>
+    <a href="../../integrations/hypothesis/" class="dropdown-item">Hypothesis</a>
+</li>
+            
+<li>
+    <a href="../../integrations/mypy/" class="dropdown-item">Mypy</a>
+</li>
+            
+<li>
+    <a href="../../integrations/pycharm/" class="dropdown-item">Pycharm</a>
+</li>
+            
+<li>
+    <a href="../../integrations/rich/" class="dropdown-item">Rich</a>
+</li>
+            
+<li>
+    <a href="../../integrations/visual_studio_code/" class="dropdown-item">Visual studio code</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Usage</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../computed_fields/" class="dropdown-item">Computed fields</a>
+</li>
+            
+<li>
+    <a href="../conversion_table/" class="dropdown-item">Conversion table</a>
+</li>
+            
+<li>
+    <a href="../dataclasses/" class="dropdown-item">Dataclasses</a>
+</li>
+            
+<li>
+    <a href="../errors/" class="dropdown-item">Errors</a>
+</li>
+            
+<li>
+    <a href="../exporting_models/" class="dropdown-item">Exporting models</a>
+</li>
+            
+<li>
+    <a href="../model_config/" class="dropdown-item">Model config</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Models</a>
+</li>
+            
+<li>
+    <a href="../postponed_annotations/" class="dropdown-item">Postponed annotations</a>
+</li>
+            
+<li>
+    <a href="../pydantic_settings/" class="dropdown-item">Settings Management</a>
+</li>
+            
+<li>
+    <a href="../schema/" class="dropdown-item">Schema</a>
+</li>
+            
+<li>
+    <a href="../validation_decorator/" class="dropdown-item">Validation decorator</a>
+</li>
+            
+<li>
+    <a href="../validation_errors/" class="dropdown-item">Validation errors</a>
+</li>
+            
+<li>
+    <a href="../validators/" class="dropdown-item">Validators</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Types</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../types/booleans/" class="dropdown-item">Booleans</a>
+</li>
+            
+<li>
+    <a href="../types/bytesize/" class="dropdown-item">Bytes and ByteSize</a>
+</li>
+            
+<li>
+    <a href="../types/callables/" class="dropdown-item">Callables</a>
+</li>
+            
+<li>
+    <a href="../types/color_types/" class="dropdown-item">Color types</a>
+</li>
+            
+<li>
+    <a href="../types/custom/" class="dropdown-item">Custom</a>
+</li>
+            
+<li>
+    <a href="../types/datetime/" class="dropdown-item">Datetime</a>
+</li>
+            
+<li>
+    <a href="../types/dicts_mapping/" class="dropdown-item">Dicts and Mapping Types</a>
+</li>
+            
+<li>
+    <a href="../types/encoded/" class="dropdown-item">Encoded</a>
+</li>
+            
+<li>
+    <a href="../types/enums/" class="dropdown-item">Enums</a>
+</li>
+            
+<li>
+    <a href="../types/file_types/" class="dropdown-item">File types</a>
+</li>
+            
+<li>
+    <a href="../types/json/" class="dropdown-item">Json</a>
+</li>
+            
+<li>
+    <a href="../types/list_types/" class="dropdown-item">List types</a>
+</li>
+            
+<li>
+    <a href="../types/number_types/" class="dropdown-item">Number types</a>
+</li>
+            
+<li>
+    <a href="../types/payment_cards/" class="dropdown-item">Payment cards</a>
+</li>
+            
+<li>
+    <a href="../types/secrets/" class="dropdown-item">Secrets</a>
+</li>
+            
+<li>
+    <a href="../types/sequence_iterable/" class="dropdown-item">Sequence iterable</a>
+</li>
+            
+<li>
+    <a href="../types/set_types/" class="dropdown-item">Set types</a>
+</li>
+            
+<li>
+    <a href="../types/standard_types/" class="dropdown-item">Standard types</a>
+</li>
+            
+<li>
+    <a href="../types/string_types/" class="dropdown-item">String types</a>
+</li>
+            
+<li>
+    <a href="../types/types/" class="dropdown-item">Types</a>
+</li>
+            
+<li>
+    <a href="../types/types_fields/" class="dropdown-item">Types fields</a>
+</li>
+            
+<li>
+    <a href="../types/typevars/" class="dropdown-item">Typevars</a>
+</li>
+            
+<li>
+    <a href="../types/unions/" class="dropdown-item">Unions</a>
+</li>
+            
+<li>
+    <a href="../types/urls/" class="dropdown-item">Urls</a>
+</li>
+            
+<li>
+    <a href="../types/uuids/" class="dropdown-item">Uuids</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../model_config/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../postponed_annotations/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/samuelcolvin/pydantic/edit/main/usage/models.md" class="nav-link">
+                                        Edit</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#basic-model-usage" class="nav-link">Basic model usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#note-that-123-was-coerced-to-an-int-and-its-value-is-123" class="nav-link">Note that '123' was coerced to an int and its value is 123</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#arbitrary-class-instances" class="nav-link">Arbitrary class instances</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#error-handling" class="nav-link">Error Handling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#helper-functions" class="nav-link">Helper Functions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#generic-models" class="nav-link">Generic Models</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dynamic-model-creation" class="nav-link">Dynamic model creation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#usernamescolvin" class="nav-link">&gt; username='scolvin'</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#custom-root-types" class="nav-link">Custom Root Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#abstract-base-classes" class="nav-link">Abstract Base Classes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#field-ordering" class="nav-link">Field Ordering</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#required-fields" class="nav-link">Required fields</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#field-with-dynamic-default-value" class="nav-link">Field with dynamic default value</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#automatically-excluded-attributes" class="nav-link">Automatically excluded attributes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#private-model-attributes" class="nav-link">Private model attributes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#data-conversion" class="nav-link">Data Conversion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#model-signature" class="nav-link">Model signature</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#structural-pattern-matching" class="nav-link">Structural pattern matching</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bones-is-a-dog" class="nav-link">&gt; Bones is a dog</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>The primary means of defining objects in Pydantic is via models. Models are simply classes which inherit from
+<code>BaseModel</code>.</p>
+<p>You can think of models as similar to types in strictly typed languages, or as the requirements of a single endpoint
+in an API.</p>
+<p>Untrusted data can be passed to a model and, after parsing and validation, Pydantic guarantees that the fields
+of the resultant model instance will conform to the field types defined on the model.</p>
+<p>!!! note
+    Pydantic is primarily a parsing and transformation library, <strong>not a validation library</strong>.
+    Validation is a means to an end: building a model which conforms to the types and constraints provided.</p>
+<pre><code>In other words, Pydantic guarantees the types and constraints of the output model, not the input data.
+
+This might sound like an esoteric distinction, but it is not. If you're unsure what this means or
+how it might affect your usage you should read the section about [Data Conversion](#data-conversion) below.
+
+Although validation is not the main purpose of Pydantic, you **can** use this library for custom [validation](validators.md).
+</code></pre>
+<h2 id="basic-model-usage">Basic model usage</h2>
+<p>```py group="basic-model"
+from pydantic import BaseModel</p>
+<p>class User(BaseModel):
+    id: int
+    name: str = 'Jane Doe'</p>
+<pre><code>
+In this example, `User` is a model with two fields:
+
+* `id`, which is an integer and is required
+* `name`, which is a string and is not required (it has a default value).
+
+
+```py group=&quot;basic-model&quot;
+user = User(id='123')
+</code></pre>
+<p>In this example, <code>user</code> is an instance of <code>User</code>.
+Initialisation of the object will perform all parsing and validation.
+If no <code>ValidationError</code> is raised, you know the resulting model instance is valid.</p>
+<p>```py group="basic-model"
+assert user.id == 123
+assert isinstance(user.id, int)</p>
+<h1 id="note-that-123-was-coerced-to-an-int-and-its-value-is-123">Note that '123' was coerced to an int and its value is 123</h1>
+<pre><code>
+More details on pydantic's coercion logic can be found in [Data Conversion](#data-conversion).
+Fields of a model can be accessed as normal attributes of the user object.
+The string '123' has been cast to an int as per the field type.
+
+```py group=&quot;basic-model&quot;
+assert user.name == 'Jane Doe'
+</code></pre>
+<p><code>name</code> wasn't set when <code>user</code> was initialised, so it has the default value.</p>
+<p>```py group="basic-model"
+assert user.model_fields_set == {'id'}</p>
+<pre><code>
+The fields which were supplied when user was initialised.
+
+```py group=&quot;basic-model&quot;
+assert user.model_dump() == {'id': 123, 'name': 'Jane Doe'}
+</code></pre>
+<p>Either <code>.model_dump()</code> or <code>dict(user)</code> will provide a dict of fields, but <code>.model_dump()</code> can take numerous other arguments.</p>
+<p>```py group="basic-model"
+user.id = 321
+assert user.id == 321</p>
+<pre><code>
+This model is mutable so field values can be changed.
+
+### Model methods and properties
+
+The example above only shows the tip of the iceberg of what models can do.
+Models possess the following methods and attributes:
+
+- `model_computed_fields`: a dictionary of the computed fields of this model instance.
+- `model_construct()`: a class method for creating models without running validation. See
+    [Creating models without validation](#creating-models-without-validation).
+- `model_copy()`: returns a copy (by default, shallow copy) of the model. See
+    [exporting models](exporting_models.md#modelcopy).
+- `model_dump()`: returns a dictionary of the model's fields and values. See
+    [exporting models](exporting_models.md#modeldump).
+- `model_dump_json()`: returns a JSON string representation of `model_dump()`. See
+    [exporting models](exporting_models.md#modeldumpjson).
+- `model_extra`: get extra fields set during validation.
+- `model_fields_set`: set of fields which were set when the model instance was initialised.
+- `model_json_schema()`: returns a dictionary representing the model as JSON Schema. See [schema](schema.md).
+- `model_modify_json_schema()`: a method for how the &quot;generic&quot; properties of the JSON schema are populated.
+    See [schema](schema.md).
+- `model_parameterized_name()`: compute the class name for parametrizations of generic classes.
+- `model_post_init()`: perform additional initialization after the model is initialised.
+- `model_rebuild()`: rebuild the model schema.
+- `model_validate()`: a utility for loading any object into a model with error handling if the object is not a
+    dictionary. See [helper functions](#helper-functions).
+- `model_validate_json()`: a utility for validating the given JSON data against the Pydantic model. See
+    [helper functions](#helper-functions).
+
+## Recursive models
+
+More complex hierarchical data structures can be defined using models themselves as types in annotations.
+
+```py
+from typing import List, Optional
+
+from pydantic import BaseModel
+
+
+class Foo(BaseModel):
+    count: int
+    size: Optional[float] = None
+
+
+class Bar(BaseModel):
+    apple: str = 'x'
+    banana: str = 'y'
+
+
+class Spam(BaseModel):
+    foo: Foo
+    bars: List[Bar]
+
+
+m = Spam(foo={'count': 4}, bars=[{'apple': 'x1'}, {'apple': 'x2'}])
+print(m)
+&quot;&quot;&quot;
+foo=Foo(count=4, size=None) bars=[Bar(apple='x1', banana='y'), Bar(apple='x2', banana='y')]
+&quot;&quot;&quot;
+print(m.model_dump())
+&quot;&quot;&quot;
+{
+    'foo': {'count': 4, 'size': None},
+    'bars': [{'apple': 'x1', 'banana': 'y'}, {'apple': 'x2', 'banana': 'y'}],
+}
+&quot;&quot;&quot;
+</code></pre>
+<p>For self-referencing models, see <a href="../postponed_annotations/#self-referencing-models">postponed annotations</a>.</p>
+<h2 id="arbitrary-class-instances">Arbitrary class instances</h2>
+<p>(Formerly known as "ORM Mode"/<code>from_orm</code>.)</p>
+<p>Pydantic models can also be created from arbitrary class instances by reading the instance attributes corresponding
+to the model field names. One common application of this functionality is integration with object-relational mappings
+(ORMs).</p>
+<p>To do this, use the <code>model_config</code> property on the model with <code>from_attributes</code> set to <code>True</code>. See
+<a href="../model_config/">Model Config</a> and <a href="../../api/config/">ConfigDict</a> for more information.</p>
+<p>The example here uses <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>, but the same approach should work for any ORM.</p>
+<pre><code class="language-py">from typing import List
+
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.dialects.postgresql import ARRAY
+from sqlalchemy.ext.declarative import declarative_base
+
+from pydantic import BaseModel, constr
+
+Base = declarative_base()
+
+
+class CompanyOrm(Base):
+    __tablename__ = 'companies'
+    id = Column(Integer, primary_key=True, nullable=False)
+    public_key = Column(String(20), index=True, nullable=False, unique=True)
+    name = Column(String(63), unique=True)
+    domains = Column(ARRAY(String(255)))
+
+
+class CompanyModel(BaseModel):
+    model_config = dict(from_attributes=True)
+    id: int
+    public_key: constr(max_length=20)
+    name: constr(max_length=63)
+    domains: List[constr(max_length=255)]
+
+
+co_orm = CompanyOrm(
+    id=123,
+    public_key='foobar',
+    name='Testing',
+    domains=['example.com', 'foobar.com'],
+)
+print(co_orm)
+#&gt; &lt;__main__.CompanyOrm object at 0x0123456789ab&gt;
+co_model = CompanyModel.model_validate(co_orm)
+print(co_model)
+#&gt; id=123 public_key='foobar' name='Testing' domains=['example.com', 'foobar.com']
+</code></pre>
+<h3 id="reserved-names">Reserved names</h3>
+<p>You may want to name a <code>Column</code> after a reserved SQLAlchemy field. In that case, <code>Field</code> aliases will be
+convenient:</p>
+<pre><code class="language-py">import typing
+
+import sqlalchemy as sa
+from sqlalchemy.ext.declarative import declarative_base
+
+from pydantic import BaseModel, Field
+
+
+class MyModel(BaseModel):
+    model_config = dict(from_attributes=True)
+    metadata: typing.Dict[str, str] = Field(alias='metadata_')
+
+
+Base = declarative_base()
+
+
+class SQLModel(Base):
+    __tablename__ = 'my_table'
+    id = sa.Column('id', sa.Integer, primary_key=True)
+    # 'metadata' is reserved by SQLAlchemy, hence the '_'
+    metadata_ = sa.Column('metadata', sa.JSON)
+
+
+sql_model = SQLModel(metadata_={'key': 'val'}, id=1)
+
+pydantic_model = MyModel.model_validate(sql_model)
+
+print(pydantic_model.model_dump())
+#&gt; {'metadata': {'key': 'val'}}
+print(pydantic_model.model_dump(by_alias=True))
+#&gt; {'metadata_': {'key': 'val'}}
+</code></pre>
+<p>!!! note
+    The example above works because aliases have priority over field names for
+    field population. Accessing <code>SQLModel</code>'s <code>metadata</code> attribute would lead to a <code>ValidationError</code>.</p>
+<h3 id="recursive-models">Recursive models</h3>
+<p>Model instances will be parsed recursively as well as at the top level.</p>
+<p>Here a vanilla class is used to demonstrate the principle, but any class could be used instead.</p>
+<pre><code class="language-py">from typing import List
+
+from pydantic import BaseModel
+
+
+class PetCls:
+    def __init__(self, *, name: str, species: str):
+        self.name = name
+        self.species = species
+
+
+class PersonCls:
+    def __init__(self, *, name: str, age: float = None, pets: List[PetCls]):
+        self.name = name
+        self.age = age
+        self.pets = pets
+
+
+class Pet(BaseModel):
+    model_config = dict(from_attributes=True)
+    name: str
+    species: str
+
+
+class Person(BaseModel):
+    model_config = dict(from_attributes=True)
+    name: str
+    age: float = None
+    pets: List[Pet]
+
+
+bones = PetCls(name='Bones', species='dog')
+orion = PetCls(name='Orion', species='cat')
+anna = PersonCls(name='Anna', age=20, pets=[bones, orion])
+anna_model = Person.model_validate(anna)
+print(anna_model)
+&quot;&quot;&quot;
+name='Anna' age=20.0 pets=[Pet(name='Bones', species='dog'), Pet(name='Orion', species='cat')]
+&quot;&quot;&quot;
+</code></pre>
+<h2 id="error-handling">Error Handling</h2>
+<p><em>pydantic</em> will raise <code>ValidationError</code> whenever it finds an error in the data it's validating.</p>
+<p>!!! note
+    Validation code should not raise <code>ValidationError</code> itself, but rather raise <code>ValueError</code>, <code>TypeError</code> or
+    <code>AssertionError</code> (or subclasses of <code>ValueError</code> or <code>TypeError</code>) which will be caught and used to populate
+    <code>ValidationError</code>.</p>
+<p>One exception will be raised regardless of the number of errors found, that <code>ValidationError</code> will
+contain information about all the errors and how they happened.</p>
+<p>You can access these errors in several ways:</p>
+<p><code>e.errors()</code>
+: method will return list of errors found in the input data.</p>
+<p><code>e.json()</code>
+: method will return a JSON representation of <code>errors</code>.</p>
+<p><code>str(e)</code>
+: method will return a human readable representation of the errors.</p>
+<p>Each error object contains:</p>
+<p><code>loc</code>
+: the error's location as a list. The first item in the list will be the field where the error occurred,
+  and if the field is a <a href="./#recursive-models">sub-model</a>, subsequent items will be present to indicate
+  the nested location of the error.</p>
+<p><code>type</code>
+: a computer-readable identifier of the error type.</p>
+<p><code>msg</code>
+: a human readable explanation of the error.</p>
+<p><code>ctx</code>
+: an optional object which contains values required to render the error message.</p>
+<p>As a demonstration:</p>
+<pre><code class="language-py">from typing import List
+
+from pydantic import BaseModel, ValidationError, conint
+
+
+class Location(BaseModel):
+    lat: float = 0.1
+    lng: float = 10.1
+
+
+class Model(BaseModel):
+    is_required: float
+    gt_int: conint(gt=42)
+    list_of_ints: List[int] = None
+    a_float: float = None
+    recursive_model: Location = None
+
+
+data = dict(
+    list_of_ints=['1', 2, 'bad'],
+    a_float='not a float',
+    recursive_model={'lat': 4.2, 'lng': 'New York'},
+    gt_int=21,
+)
+
+try:
+    Model(**data)
+except ValidationError as e:
+    print(e)
+    &quot;&quot;&quot;
+    5 validation errors for Model
+    is_required
+      Field required [type=missing, input_value={'list_of_ints': ['1', 2,...ew York'}, 'gt_int': 21}, input_type=dict]
+    gt_int
+      Input should be greater than 42 [type=greater_than, input_value=21, input_type=int]
+    list_of_ints.2
+      Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='bad', input_type=str]
+    a_float
+      Input should be a valid number, unable to parse string as an number [type=float_parsing, input_value='not a float', input_type=str]
+    recursive_model.lng
+      Input should be a valid number, unable to parse string as an number [type=float_parsing, input_value='New York', input_type=str]
+    &quot;&quot;&quot;
+
+try:
+    Model(**data)
+except ValidationError as e:
+    # print(e.json())
+    # TODO set back to .json() once we add it
+    print(e.errors())
+    &quot;&quot;&quot;
+    [
+        {
+            'type': 'missing',
+            'loc': ('is_required',),
+            'msg': 'Field required',
+            'input': {
+                'list_of_ints': ['1', 2, 'bad'],
+                'a_float': 'not a float',
+                'recursive_model': {'lat': 4.2, 'lng': 'New York'},
+                'gt_int': 21,
+            },
+            'url': 'https://errors.pydantic.dev/2/v/missing',
+        },
+        {
+            'type': 'greater_than',
+            'loc': ('gt_int',),
+            'msg': 'Input should be greater than 42',
+            'input': 21,
+            'ctx': {'gt': 42},
+            'url': 'https://errors.pydantic.dev/2/v/greater_than',
+        },
+        {
+            'type': 'int_parsing',
+            'loc': ('list_of_ints', 2),
+            'msg': 'Input should be a valid integer, unable to parse string as an integer',
+            'input': 'bad',
+            'url': 'https://errors.pydantic.dev/2/v/int_parsing',
+        },
+        {
+            'type': 'float_parsing',
+            'loc': ('a_float',),
+            'msg': 'Input should be a valid number, unable to parse string as an number',
+            'input': 'not a float',
+            'url': 'https://errors.pydantic.dev/2/v/float_parsing',
+        },
+        {
+            'type': 'float_parsing',
+            'loc': ('recursive_model', 'lng'),
+            'msg': 'Input should be a valid number, unable to parse string as an number',
+            'input': 'New York',
+            'url': 'https://errors.pydantic.dev/2/v/float_parsing',
+        },
+    ]
+    &quot;&quot;&quot;
+</code></pre>
+<h3 id="custom-errors">Custom Errors</h3>
+<p>In your custom data types or validators you should use <code>ValueError</code>, <code>TypeError</code> or <code>AssertionError</code> to raise errors.</p>
+<p>See <a href="../validators/">validators</a> for more details on use of the <code>@validator</code> decorator.</p>
+<pre><code class="language-py">from pydantic import BaseModel, ValidationError, field_validator
+
+
+class Model(BaseModel):
+    foo: str
+
+    @field_validator('foo')
+    def value_must_equal_bar(cls, v):
+        if v != 'bar':
+            raise ValueError('value must be &quot;bar&quot;')
+
+        return v
+
+
+try:
+    Model(foo='ber')
+except ValidationError as e:
+    print(e.errors())
+    &quot;&quot;&quot;
+    [
+        {
+            'type': 'value_error',
+            'loc': ('foo',),
+            'msg': 'Value error, value must be &quot;bar&quot;',
+            'input': 'ber',
+            'ctx': {'error': 'value must be &quot;bar&quot;'},
+            'url': 'https://errors.pydantic.dev/2/v/value_error',
+        }
+    ]
+    &quot;&quot;&quot;
+</code></pre>
+<p>You can also define your own error classes, which can specify a custom error code, message template, and context:</p>
+<pre><code class="language-py">from pydantic_core import PydanticCustomError
+
+from pydantic import BaseModel, ValidationError, field_validator
+
+
+class Model(BaseModel):
+    foo: str
+
+    @field_validator('foo')
+    def value_must_equal_bar(cls, v):
+        if v != 'bar':
+            raise PydanticCustomError(
+                'not_a_bar',
+                'value is not &quot;bar&quot;, got &quot;{wrong_value}&quot;',
+                dict(wrong_value=v),
+            )
+        return v
+
+
+try:
+    Model(foo='ber')
+except ValidationError as e:
+    print(e.errors())
+    &quot;&quot;&quot;
+    [
+        {
+            'type': 'not_a_bar',
+            'loc': ('foo',),
+            'msg': 'value is not &quot;bar&quot;, got &quot;ber&quot;',
+            'input': 'ber',
+            'ctx': {'wrong_value': 'ber'},
+        }
+    ]
+    &quot;&quot;&quot;
+</code></pre>
+<h2 id="helper-functions">Helper Functions</h2>
+<p><em>Pydantic</em> provides three <code>classmethod</code> helper functions on models for parsing data:</p>
+<ul>
+<li><strong><code>model_validate</code></strong>: this is very similar to the <code>__init__</code> method of the model, except it takes a dict
+  rather than keyword arguments. If the object passed is not a dict a <code>ValidationError</code> will be raised.</li>
+<li><strong><code>model_validate_json</code></strong>: this takes a <em>str</em> or <em>bytes</em> and parses it as <em>json</em>, then passes the result to <code>model_validate</code>.
+  Parsing <em>pickle</em> data is also supported by setting the <code>content_type</code> argument appropriately.</li>
+</ul>
+<pre><code class="language-py">from datetime import datetime
+
+from pydantic import BaseModel, ValidationError
+
+
+class User(BaseModel):
+    id: int
+    name: str = 'John Doe'
+    signup_ts: datetime = None
+
+
+m = User.model_validate({'id': 123, 'name': 'James'})
+print(m)
+#&gt; id=123 name='James' signup_ts=None
+
+try:
+    User.model_validate(['not', 'a', 'dict'])
+except ValidationError as e:
+    print(e)
+    &quot;&quot;&quot;
+    1 validation error for User
+      Input should be a valid dictionary [type=dict_type, input_value=['not', 'a', 'dict'], input_type=list]
+    &quot;&quot;&quot;
+
+# assumes json as no content type passed
+m = User.model_validate_json('{&quot;id&quot;: 123, &quot;name&quot;: &quot;James&quot;}')
+print(m)
+#&gt; id=123 name='James' signup_ts=None
+</code></pre>
+<p>!!! warning
+    To quote the <a href="https://docs.python.org/3/library/pickle.html">official <code>pickle</code> docs</a>,
+    "The pickle module is not secure against erroneous or maliciously constructed data.
+    Never unpickle data received from an untrusted or unauthenticated source."</p>
+<p>!!! info
+    Because it can result in arbitrary code execution, as a security measure, you need
+    to explicitly pass <code>allow_pickle</code> to the parsing function in order to load <code>pickle</code> data.</p>
+<h3 id="creating-models-without-validation">Creating models without validation</h3>
+<p><em>pydantic</em> also provides the <code>model_construct()</code> method which allows models to be created <strong>without validation</strong> this
+can be useful when data has already been validated or comes from a trusted source and you want to create a model
+as efficiently as possible (<code>model_construct()</code> is generally around 30x faster than creating a model with full validation).</p>
+<p>!!! warning
+    <code>model_construct()</code> does not do any validation, meaning it can create models which are invalid. <strong>You should only
+    ever use the <code>model_construct()</code> method with data which has already been validated, or you trust.</strong></p>
+<pre><code class="language-py">from pydantic import BaseModel
+
+
+class User(BaseModel):
+    id: int
+    age: int
+    name: str = 'John Doe'
+
+
+original_user = User(id=123, age=32)
+
+user_data = original_user.model_dump()
+print(user_data)
+#&gt; {'id': 123, 'age': 32, 'name': 'John Doe'}
+fields_set = original_user.model_fields_set
+print(fields_set)
+#&gt; {'age', 'id'}
+
+# ...
+# pass user_data and fields_set to RPC or save to the database etc.
+# ...
+
+# you can then create a new instance of User without
+# re-running validation which would be unnecessary at this point:
+new_user = User.model_construct(_fields_set=fields_set, **user_data)
+print(repr(new_user))
+#&gt; User(id=123, age=32, name='John Doe')
+print(new_user.model_fields_set)
+#&gt; {'age', 'id'}
+
+# construct can be dangerous, only use it with validated data!:
+bad_user = User.model_construct(id='dog')
+print(repr(bad_user))
+#&gt; User(id='dog', name='John Doe')
+</code></pre>
+<p>The <code>_fields_set</code> keyword argument to <code>model_construct()</code> is optional, but allows you to be more precise about
+which fields were originally set and which weren't. If it's omitted <code>model_fields_set</code> will just be the keys
+of the data provided.</p>
+<p>For example, in the example above, if <code>_fields_set</code> was not provided,
+<code>new_user.model_fields_set</code> would be <code>{'id', 'age', 'name'}</code>.</p>
+<h2 id="generic-models">Generic Models</h2>
+<p>Pydantic supports the creation of generic models to make it easier to reuse a common model structure.</p>
+<p>In order to declare a generic model, you perform the following steps:</p>
+<ul>
+<li>Declare one or more <code>typing.TypeVar</code> instances to use to parameterize your model.</li>
+<li>Declare a pydantic model that inherits from <code>pydantic.generics.GenericModel</code> and <code>typing.Generic</code>,
+  where you pass the <code>TypeVar</code> instances as parameters to <code>typing.Generic</code>.</li>
+<li>Use the <code>TypeVar</code> instances as annotations where you will want to replace them with other types or
+  pydantic models.</li>
+</ul>
+<p>Here is an example using <code>GenericModel</code> to create an easily-reused HTTP response payload wrapper:</p>
+<pre><code class="language-py">from typing import Generic, List, Optional, TypeVar
+
+from pydantic import BaseModel, ValidationError
+
+DataT = TypeVar('DataT')
+
+
+class Error(BaseModel):
+    code: int
+    message: str
+
+
+class DataModel(BaseModel):
+    numbers: List[int]
+    people: List[str]
+
+
+class Response(BaseModel, Generic[DataT]):
+    data: Optional[DataT] = None
+
+
+data = DataModel(numbers=[1, 2, 3], people=[])
+error = Error(code=404, message='Not found')
+
+print(Response[int](data=1))
+#&gt; data=1
+print(Response[str](data='value'))
+#&gt; data='value'
+print(Response[str](data='value').model_dump())
+#&gt; {'data': 'value'}
+print(Response[DataModel](data=data).model_dump())
+#&gt; {'data': {'numbers': [1, 2, 3], 'people': []}}
+try:
+    Response[int](data='value')
+except ValidationError as e:
+    print(e)
+    &quot;&quot;&quot;
+    1 validation error for Response[int]
+    data
+      Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='value', input_type=str]
+    &quot;&quot;&quot;
+</code></pre>
+<p>If you set <code>Config</code> or make use of <code>validator</code> in your generic model definition, it is applied
+to concrete subclasses in the same way as when inheriting from <code>BaseModel</code>. Any methods defined on
+your generic class will also be inherited.</p>
+<p>Pydantic's generics also integrate properly with mypy, so you get all the type checking
+you would expect mypy to provide if you were to declare the type without using <code>GenericModel</code>.</p>
+<p>!!! note
+    Internally, pydantic uses <code>create_model</code> to generate a (cached) concrete <code>BaseModel</code> at runtime,
+    so there is essentially zero overhead introduced by making use of <code>GenericModel</code>.</p>
+<p>To inherit from a GenericModel without replacing the <code>TypeVar</code> instance, a class must also inherit from
+<code>typing.Generic</code>:</p>
+<pre><code class="language-py">from typing import Generic, TypeVar
+
+from pydantic import BaseModel
+
+TypeX = TypeVar('TypeX')
+
+
+class BaseClass(BaseModel, Generic[TypeX]):
+    X: TypeX
+
+
+class ChildClass(BaseClass[TypeX], Generic[TypeX]):
+    # Inherit from Generic[TypeX]
+    pass
+
+
+# Replace TypeX by int
+print(ChildClass[int](X=1))
+#&gt; X=1
+</code></pre>
+<p>You can also create a generic subclass of a <code>GenericModel</code> that partially or fully replaces the type
+parameters in the superclass.</p>
+<pre><code class="language-py">from typing import Generic, TypeVar
+
+from pydantic import BaseModel
+
+TypeX = TypeVar('TypeX')
+TypeY = TypeVar('TypeY')
+TypeZ = TypeVar('TypeZ')
+
+
+class BaseClass(BaseModel, Generic[TypeX, TypeY]):
+    x: TypeX
+    y: TypeY
+
+
+class ChildClass(BaseClass[int, TypeY], Generic[TypeY, TypeZ]):
+    z: TypeZ
+
+
+# Replace TypeY by str
+print(ChildClass[str, int](x='1', y='y', z='3'))
+#&gt; x=1 y='y' z=3
+</code></pre>
+<p>If the name of the concrete subclasses is important, you can also override the default behavior:</p>
+<pre><code class="language-py">from typing import Any, Generic, Tuple, Type, TypeVar
+
+from pydantic import BaseModel
+
+DataT = TypeVar('DataT')
+
+
+class Response(BaseModel, Generic[DataT]):
+    data: DataT
+
+    @classmethod
+    def __concrete_name__(cls: Type[Any], params: Tuple[Type[Any], ...]) -&gt; str:
+        return f'{params[0].__name__.title()}Response'
+
+
+print(repr(Response[int](data=1)))
+#&gt; Response[int](data=1)
+print(repr(Response[str](data='a')))
+#&gt; Response[str](data='a')
+</code></pre>
+<p>Using the same TypeVar in nested models allows you to enforce typing relationships at different points in your model:</p>
+<pre><code class="language-py">from typing import Generic, TypeVar
+
+from pydantic import BaseModel, ValidationError
+
+T = TypeVar('T')
+
+
+class InnerT(BaseModel, Generic[T]):
+    inner: T
+
+
+class OuterT(BaseModel, Generic[T]):
+    outer: T
+    nested: InnerT[T]
+
+
+nested = InnerT[int](inner=1)
+print(OuterT[int](outer=1, nested=nested))
+#&gt; outer=1 nested=InnerT[int](inner=1)
+try:
+    nested = InnerT[str](inner='a')
+    print(OuterT[int](outer='a', nested=nested))
+except ValidationError as e:
+    print(e)
+    &quot;&quot;&quot;
+    2 validation errors for OuterT[int]
+    outer
+      Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='a', input_type=str]
+    nested
+      Input should be a valid dictionary [type=dict_type, input_value=InnerT[str](inner='a'), input_type=InnerT[str]]
+    &quot;&quot;&quot;
+</code></pre>
+<p>Pydantic also treats <code>GenericModel</code> similarly to how it treats built-in generic types like <code>List</code> and <code>Dict</code> when it
+comes to leaving them unparameterized, or using bounded <code>TypeVar</code> instances:</p>
+<ul>
+<li>If you don't specify parameters before instantiating the generic model, they will be treated as <code>Any</code></li>
+<li>You can parametrize models with one or more <em>bounded</em> parameters to add subclass checks</li>
+</ul>
+<p>Also, like <code>List</code> and <code>Dict</code>, any parameters specified using a <code>TypeVar</code> can later be substituted with concrete types.</p>
+<pre><code class="language-py">from typing import Generic, TypeVar
+
+from pydantic import BaseModel, ValidationError
+
+AT = TypeVar('AT')
+BT = TypeVar('BT')
+
+
+class Model(BaseModel, Generic[AT, BT]):
+    a: AT
+    b: BT
+
+
+print(Model(a='a', b='a'))
+#&gt; a='a' b='a'
+
+IntT = TypeVar('IntT', bound=int)
+typevar_model = Model[int, IntT]
+print(typevar_model(a=1, b=1))
+#&gt; a=1 b=1
+try:
+    typevar_model(a='a', b='a')
+except ValidationError as exc:
+    print(exc)
+    &quot;&quot;&quot;
+    2 validation errors for Model[int, ~IntT]
+    a
+      Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='a', input_type=str]
+    b
+      Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='a', input_type=str]
+    &quot;&quot;&quot;
+
+concrete_model = typevar_model[int]
+print(concrete_model(a=1, b=1))
+#&gt; a=1 b=1
+</code></pre>
+<h2 id="dynamic-model-creation">Dynamic model creation</h2>
+<p>There are some occasions where the shape of a model is not known until runtime. For this <em>pydantic</em> provides
+the <code>create_model</code> method to allow models to be created on the fly.</p>
+<pre><code class="language-py">from pydantic import BaseModel, create_model
+
+DynamicFoobarModel = create_model('DynamicFoobarModel', foo=(str, ...), bar=(int, 123))
+
+
+class StaticFoobarModel(BaseModel):
+    foo: str
+    bar: int = 123
+</code></pre>
+<p>Here <code>StaticFoobarModel</code> and <code>DynamicFoobarModel</code> are identical.</p>
+<p>!!! warning
+    See the note in <a href="#required-optional-fields">Required Optional Fields</a> for the distinction between an ellipsis as a
+    field default and annotation-only fields.
+    See <a href="https://github.com/pydantic/pydantic/issues/1047">pydantic/pydantic#1047</a> for more details.</p>
+<p>Fields are defined by either a tuple of the form <code>(&lt;type&gt;, &lt;default value&gt;)</code> or just a default value. The
+special key word arguments <code>__config__</code> and <code>__base__</code> can be used to customise the new model. This includes
+extending a base model with extra fields.</p>
+<pre><code class="language-py">from pydantic import BaseModel, create_model
+
+
+class FooModel(BaseModel):
+    foo: str
+    bar: int = 123
+
+
+BarModel = create_model(
+    'BarModel',
+    apple=(str, 'russet'),
+    banana=(str, 'yellow'),
+    __base__=FooModel,
+)
+print(BarModel)
+#&gt; &lt;class 'pydantic.main.BarModel'&gt;
+print(BarModel.model_fields.keys())
+#&gt; dict_keys(['foo', 'bar', 'apple', 'banana'])
+</code></pre>
+<p>You can also add validators by passing a dict to the <code>__validators__</code> argument.</p>
+<p>```py rewrite_assert="false"
+from pydantic import ValidationError, create_model, field_validator</p>
+<p>def username_alphanumeric(cls, v):
+    assert v.isalnum(), 'must be alphanumeric'
+    return v</p>
+<p>validators = {'username_validator': field_validator('username')(username_alphanumeric)}</p>
+<p>UserModel = create_model('UserModel', username=(str, ...), <strong>validators</strong>=validators)</p>
+<p>user = UserModel(username='scolvin')
+print(user)</p>
+<h1 id="usernamescolvin">&gt; username='scolvin'</h1>
+<p>try:
+    UserModel(username='scolvi%n')
+except ValidationError as e:
+    print(e)
+    """
+    1 validation error for UserModel
+    username
+      Assertion failed, must be alphanumeric [type=assertion_error, input_value='scolvi%n', input_type=str]
+    """</p>
+<pre><code>
+## Using Pydantic without creating a BaseModel
+
+You may have types that are not `BaseModel`s that you want to validate data against.
+Or you may want to validate a `List[SomeModel]`, or dump it to JSON.
+
+To do this Pydantic provides `TypeAdapter`. A `TypeAdapter` instance behaves nearly the same as a `BaseModel` instance, with the difference that `TypeAdapter` is not an actual type so you cannot use it in type annotations and such.
+
+```py
+from typing import List
+
+from typing_extensions import TypedDict
+
+from pydantic import TypeAdapter, ValidationError
+
+
+class User(TypedDict):
+    name: str
+    id: int
+
+
+UserListValidator = TypeAdapter(List[User])
+print(repr(UserListValidator.validate_python([{'name': 'Fred', 'id': '3'}])))
+#&gt; [{'name': 'Fred', 'id': 3}]
+
+try:
+    UserListValidator.validate_python([{'name': 'Fred', 'id': 'wrong', 'other': 'no'}])
+except ValidationError as e:
+    print(e)
+    &quot;&quot;&quot;
+    2 validation errors for list[typed-dict]
+    0.id
+      Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='wrong', input_type=str]
+    0.other
+      Extra inputs are not permitted [type=extra_forbidden, input_value='no', input_type=str]
+    &quot;&quot;&quot;
+</code></pre>
+<p>For many use cases <code>TypeAdapter</code> can replace BaseModels with a <code>__root__</code> field in Pydantic V1.</p>
+<h2 id="custom-root-types">Custom Root Types</h2>
+<p>Pydantic models can be defined with a custom root type by declaring the <code>__root__</code> field.</p>
+<p>The root type can be any type supported by pydantic, and is specified by the type hint on the <code>__root__</code> field.
+The root value can be passed to the model <code>__init__</code> via the <code>__root__</code> keyword argument, or as
+the first and only argument to <code>model_validate</code>.</p>
+<p>```py test="xfail support/replace <strong>root</strong>"
+import json
+from typing import List</p>
+<p>from pydantic import BaseModel
+from pydantic.json_schema import models_json_schema</p>
+<p>class Pets(BaseModel):
+    <strong>root</strong>: List[str]</p>
+<p>print(Pets(<strong>root</strong>=['dog', 'cat']))
+print(Pets(<strong>root</strong>=['dog', 'cat']).model_dump_json())
+print(Pets.model_validate(['dog', 'cat']))
+print(Pets.model_json_schema())
+pets_schema = models_json_schema([Pets])
+print(json.dumps(pets_schema, indent=2))</p>
+<pre><code>
+If you call the `model_validate` method for a model with a custom root type with a *dict* as the first argument,
+the following logic is used:
+
+* If the custom root type is a mapping type (eg., `Dict` or `Mapping`),
+  the argument itself is always validated against the custom root type.
+* For other custom root types, if the dict has precisely one key with the value `__root__`,
+  the corresponding value will be validated against the custom root type.
+* Otherwise, the dict itself is validated against the custom root type.
+
+This is demonstrated in the following example:
+
+```py test=&quot;xfail support/replace __root__&quot;
+from typing import Dict, List
+
+from pydantic import BaseModel, ValidationError
+
+
+class Pets(BaseModel):
+    __root__: List[str]
+
+
+print(Pets.model_validate(['dog', 'cat']))
+print(Pets.model_validate({'__root__': ['dog', 'cat']}))  # not recommended
+
+
+class PetsByName(BaseModel):
+    __root__: Dict[str, str]
+
+
+print(PetsByName.model_validate({'Otis': 'dog', 'Milo': 'cat'}))
+try:
+    PetsByName.model_validate({'__root__': {'Otis': 'dog', 'Milo': 'cat'}})
+except ValidationError as e:
+    print(e)
+</code></pre>
+<p>!!! warning
+    Calling the <code>model_validate</code> method on a dict with the single key <code>"__root__"</code> for non-mapping custom root types
+    is currently supported for backwards compatibility, but is not recommended and may be dropped in a future version.</p>
+<p>If you want to access items in the <code>__root__</code> field directly or to iterate over the items, you can implement custom <code>__iter__</code> and <code>__getitem__</code> functions, as shown in the following example.</p>
+<p>```py test="xfail support/replace <strong>root</strong>"
+from typing import List</p>
+<p>from pydantic import BaseModel</p>
+<p>class Pets(BaseModel):
+    <strong>root</strong>: List[str]</p>
+<pre><code>def __iter__(self):
+    return iter(self.__root__)
+
+def __getitem__(self, item):
+    return self.__root__[item]
+</code></pre>
+<p>pets = Pets.model_validate(['dog', 'cat'])
+print(pets[0])
+print([pet for pet in pets])</p>
+<pre><code>
+## Faux Immutability
+
+Models can be configured to be immutable via `allow_mutation = False`. When this is set, attempting to change the
+values of instance attributes will raise errors. See [model config](model_config.md) for more details on `Config`.
+
+!!! warning
+    Immutability in Python is never strict. If developers are determined/stupid they can always
+    modify a so-called &quot;immutable&quot; object.
+
+```py
+from pydantic import BaseModel, ValidationError
+
+
+class FooBarModel(BaseModel):
+    model_config = dict(frozen=True)
+    a: str
+    b: dict
+
+
+foobar = FooBarModel(a='hello', b={'apple': 'pear'})
+
+try:
+    foobar.a = 'different'
+except ValidationError as e:
+    print(e)
+    &quot;&quot;&quot;
+    1 validation error for FooBarModel
+    a
+      Instance is frozen [type=frozen_instance, input_value='different', input_type=str]
+    &quot;&quot;&quot;
+
+print(foobar.a)
+#&gt; hello
+print(foobar.b)
+#&gt; {'apple': 'pear'}
+foobar.b['apple'] = 'grape'
+print(foobar.b)
+#&gt; {'apple': 'grape'}
+</code></pre>
+<p>Trying to change <code>a</code> caused an error, and <code>a</code> remains unchanged. However, the dict <code>b</code> is mutable, and the
+immutability of <code>foobar</code> doesn't stop <code>b</code> from being changed.</p>
+<h2 id="abstract-base-classes">Abstract Base Classes</h2>
+<p>Pydantic models can be used alongside Python's
+<a href="https://docs.python.org/3/library/abc.html">Abstract Base Classes</a> (ABCs).</p>
+<pre><code class="language-py">import abc
+
+from pydantic import BaseModel
+
+
+class FooBarModel(BaseModel, abc.ABC):
+    a: str
+    b: int
+
+    @abc.abstractmethod
+    def my_abstract_method(self):
+        pass
+</code></pre>
+<h2 id="field-ordering">Field Ordering</h2>
+<p>Field order is important in models for the following reasons:</p>
+<ul>
+<li>validation is performed in the order fields are defined; <a href="../validators/">fields validators</a>
+  can access the values of earlier fields, but not later ones</li>
+<li>field order is preserved in the model <a href="../schema/">schema</a></li>
+<li>field order is preserved in <a href="#error-handling">validation errors</a></li>
+<li>field order is preserved by <a href="../exporting_models/#modeldict"><code>.model_dump()</code> and <code>.model_dump_json()</code> etc.</a></li>
+</ul>
+<p>As of <strong>v1.0</strong> all fields with annotations (whether annotation-only or with a default value) will precede
+all fields without an annotation. Within their respective groups, fields remain in the order they were defined.</p>
+<pre><code class="language-py">from pydantic import BaseModel, ValidationError
+
+
+class Model(BaseModel):
+    a: int
+    b: int = 2
+    c: int = 1
+    d: int = 0
+    e: float
+
+
+print(Model.model_fields.keys())
+#&gt; dict_keys(['a', 'b', 'c', 'd', 'e'])
+m = Model(e=2, a=1)
+print(m.model_dump())
+#&gt; {'a': 1, 'b': 2, 'c': 1, 'd': 0, 'e': 2.0}
+try:
+    Model(a='x', b='x', c='x', d='x', e='x')
+except ValidationError as err:
+    error_locations = [e['loc'] for e in err.errors()]
+
+print(error_locations)
+#&gt; [('a',), ('b',), ('c',), ('d',), ('e',)]
+</code></pre>
+<p>!!! warning
+    As demonstrated by the example above, combining the use of annotated and non-annotated fields
+    in the same model can result in surprising field orderings. (This is due to limitations of Python)</p>
+<pre><code>Therefore, **we recommend adding type annotations to all fields**, even when a default value
+would determine the type by itself to guarantee field order is preserved.
+</code></pre>
+<h2 id="required-fields">Required fields</h2>
+<p>To declare a field as required, you may declare it using just an annotation, or you may use an ellipsis (<code>...</code>)
+as the value:</p>
+<pre><code class="language-py">from pydantic import BaseModel, Field
+
+
+class Model(BaseModel):
+    a: int
+    b: int = ...
+    c: int = Field(...)
+</code></pre>
+<p>Where <code>Field</code> refers to the <a href="../schema/#field-customization">field function</a>.</p>
+<p>Here <code>a</code>, <code>b</code> and <code>c</code> are all required. However, use of the ellipses in <code>b</code> will not work well
+with <a href="/mypy_plugin/">mypy</a>, and as of <strong>v1.0</strong> should be avoided in most cases.</p>
+<h3 id="required-optional-fields">Required Optional fields</h3>
+<p>!!! warning
+    Since version <strong>v1.2</strong> annotation only nullable (<code>Optional[...]</code>, <code>Union[None, ...]</code> and <code>Any</code>) fields and nullable
+    fields with an ellipsis (<code>...</code>) as the default value, no longer mean the same thing.</p>
+<pre><code>In some situations this may cause **v1.2** to not be entirely backwards compatible with earlier **v1.*** releases.
+</code></pre>
+<p>If you want to specify a field that can take a <code>None</code> value while still being required,
+you can use <code>Optional</code> with <code>...</code>:</p>
+<pre><code class="language-py">from typing import Optional
+
+from pydantic import BaseModel, ValidationError
+
+
+class Model(BaseModel):
+    a: Optional[int]
+    b: Optional[int] = None
+
+
+print(Model(a=1))
+#&gt; a=1 b=None
+try:
+    Model(b=2)
+except ValidationError as e:
+    print(e)
+    &quot;&quot;&quot;
+    1 validation error for Model
+    a
+      Field required [type=missing, input_value={'b': 2}, input_type=dict]
+    &quot;&quot;&quot;
+</code></pre>
+<p>In this model, <code>a</code>, <code>b</code>, and <code>c</code> can take <code>None</code> as a value. But <code>a</code> is optional, while <code>b</code> and <code>c</code> are required.
+<code>b</code> and <code>c</code> require a value, even if the value is <code>None</code>.</p>
+<h2 id="field-with-dynamic-default-value">Field with dynamic default value</h2>
+<p>When declaring a field with a default value, you may want it to be dynamic (i.e. different for each model).
+To do this, you may want to use a <code>default_factory</code>.</p>
+<p>!!! info "In Beta"
+    The <code>default_factory</code> argument is in <strong>beta</strong>, it has been added to <em>pydantic</em> in <strong>v1.5</strong> on a
+    <strong>provisional basis</strong>. It may change significantly in future releases and its signature or behaviour will not
+    be concrete until <strong>v2</strong>. Feedback from the community while it's still provisional would be extremely useful;
+    either comment on <a href="https://github.com/pydantic/pydantic/issues/866">#866</a> or create a new issue.</p>
+<p>Example of usage:</p>
+<pre><code class="language-py">from datetime import datetime
+from uuid import UUID, uuid4
+
+from pydantic import BaseModel, Field
+
+
+class Model(BaseModel):
+    uid: UUID = Field(default_factory=uuid4)
+    updated: datetime = Field(default_factory=datetime.utcnow)
+
+
+m1 = Model()
+m2 = Model()
+assert m1.uid != m2.uid
+assert m1.updated != m2.updated
+</code></pre>
+<p>Where <code>Field</code> refers to the <a href="../schema/#field-customization">field function</a>.</p>
+<p>!!! warning
+    The <code>default_factory</code> expects the field type to be set.</p>
+<h2 id="automatically-excluded-attributes">Automatically excluded attributes</h2>
+<p>Class variables which begin with an underscore and attributes annotated with <code>typing.ClassVar</code> will be
+automatically excluded from the model.</p>
+<h2 id="private-model-attributes">Private model attributes</h2>
+<p>If you need to vary or manipulate internal attributes on instances of the model, you can declare them
+using <code>PrivateAttr</code>:</p>
+<pre><code class="language-py">from datetime import datetime
+from random import randint
+
+from pydantic import BaseModel, PrivateAttr
+
+
+class TimeAwareModel(BaseModel):
+    _processed_at: datetime = PrivateAttr(default_factory=datetime.now)
+    _secret_value: str = PrivateAttr()
+
+    def __init__(self, **data):
+        super().__init__(**data)
+        # this could also be done with default_factory
+        self._secret_value = randint(1, 5)
+
+
+m = TimeAwareModel()
+print(m._processed_at)
+#&gt; 2032-01-02 03:04:05.000006
+print(m._secret_value)
+#&gt; 3
+</code></pre>
+<p>Private attribute names must start with underscore to prevent conflicts with model fields: both <code>_attr</code> and <code>__attr__</code>
+are supported.</p>
+<p>If <code>Config.underscore_attrs_are_private</code> is <code>True</code>, any non-ClassVar underscore attribute will be treated as private:
+```py test="xfail what the hell is underscore_attrs_are_private?"
+from typing import ClassVar</p>
+<p>from pydantic import BaseModel</p>
+<p>class Model(BaseModel):
+    _class_var: ClassVar[str] = 'class var value'
+    _private_attr: str = 'private attr value'</p>
+<pre><code>class Config:
+    underscore_attrs_are_private = True
+</code></pre>
+<p>print(Model._class_var)
+print(Model._private_attr)
+print(Model()._private_attr)</p>
+<pre><code>
+Upon class creation pydantic constructs `__slots__` filled with private attributes.
+
+## Parsing data into a specified type
+
+Pydantic includes a standalone utility function `parse_obj_as` that can be used to apply the parsing
+logic used to populate pydantic models in a more ad-hoc way. This function behaves similarly to
+`BaseModel.model_validate`, but works with arbitrary pydantic-compatible types.
+
+This is especially useful when you want to parse results into a type that is not a direct subclass of `BaseModel`.
+For example:
+
+```py
+from typing import List
+
+from pydantic import BaseModel, parse_obj_as
+
+
+class Item(BaseModel):
+    id: int
+    name: str
+
+
+# `item_data` could come from an API call, eg., via something like:
+# item_data = requests.get('https://my-api.com/items').json()
+item_data = [{'id': 1, 'name': 'My Item'}]
+
+items = parse_obj_as(List[Item], item_data)
+print(items)
+#&gt; [Item(id=1, name='My Item')]
+</code></pre>
+<p>This function is capable of parsing data into any of the types pydantic can handle as fields of a <code>BaseModel</code>.</p>
+<p>Pydantic also includes two similar standalone functions called <code>parse_file_as</code> and <code>parse_raw_as</code>,
+which are analogous to <code>BaseModel.parse_file</code> and <code>BaseModel.parse_raw</code>.</p>
+<h2 id="data-conversion">Data Conversion</h2>
+<p><em>pydantic</em> may cast input data to force it to conform to model field types,
+and in some cases this may result in a loss of information.
+For example:</p>
+<pre><code class="language-py">from pydantic import BaseModel
+
+
+class Model(BaseModel):
+    a: int
+    b: float
+    c: str
+
+
+print(Model(a=3.000, b='2.72', c=b'binary data').model_dump())
+#&gt; {'a': 3, 'b': 2.72, 'c': 'binary data'}
+</code></pre>
+<p>This is a deliberate decision of <em>pydantic</em>, and in general it's the most useful approach. See
+<a href="https://github.com/pydantic/pydantic/issues/578">here</a> for a longer discussion on the subject.</p>
+<p>Nevertheless, <a href="../types/types/#strict-types">strict type checking</a> is partially supported.</p>
+<h2 id="model-signature">Model signature</h2>
+<p>All <em>pydantic</em> models will have their signature generated based on their fields:</p>
+<pre><code class="language-py">import inspect
+
+from pydantic import BaseModel, Field
+
+
+class FooModel(BaseModel):
+    id: int
+    name: str = None
+    description: str = 'Foo'
+    apple: int = Field(..., alias='pear')
+
+
+print(inspect.signature(FooModel))
+#&gt; (*, id: int, name: str = None, description: str = 'Foo', pear: int) -&gt; None
+</code></pre>
+<p>An accurate signature is useful for introspection purposes and libraries like <code>FastAPI</code> or <code>hypothesis</code>.</p>
+<p>The generated signature will also respect custom <code>__init__</code> functions:</p>
+<pre><code class="language-py">import inspect
+
+from pydantic import BaseModel
+
+
+class MyModel(BaseModel):
+    id: int
+    info: str = 'Foo'
+
+    def __init__(self, id: int = 1, *, bar: str, **data) -&gt; None:
+        &quot;&quot;&quot;My custom init!&quot;&quot;&quot;
+        super().__init__(id=id, bar=bar, **data)
+
+
+print(inspect.signature(MyModel))
+#&gt; (id: int = 1, *, bar: str, info: str = 'Foo') -&gt; None
+</code></pre>
+<p>To be included in the signature, a field's alias or name must be a valid Python identifier.
+<em>pydantic</em> prefers aliases over names, but may use field names if the alias is not a valid Python identifier.</p>
+<p>If a field's alias and name are both invalid identifiers, a <code>**data</code> argument will be added.
+In addition, the <code>**data</code> argument will always be present in the signature if <code>Config.extra</code> is <code>Extra.allow</code>.</p>
+<p>!!! note
+    Types in the model signature are the same as declared in model annotations,
+    not necessarily all the types that can actually be provided to that field.
+    This may be fixed one day once <a href="https://github.com/pydantic/pydantic/issues/1055">#1055</a> is solved.</p>
+<h2 id="structural-pattern-matching">Structural pattern matching</h2>
+<p><em>pydantic</em> supports structural pattern matching for models, as introduced by <a href="https://peps.python.org/pep-0636/">PEP 636</a> in Python 3.10.</p>
+<p>```py requires="3.10" lint="skip"
+from pydantic import BaseModel</p>
+<p>class Pet(BaseModel):
+    name: str
+    species: str</p>
+<p>a = Pet(name='Bones', species='dog')</p>
+<p>match a:
+    # match <code>species</code> to 'dog', declare and initialize <code>dog_name</code>
+    case Pet(species='dog', name=dog_name):
+        print(f'{dog_name} is a dog')</p>
+<h1 id="bones-is-a-dog">&gt; Bones is a dog</h1>
+<pre><code># default case
+case _:
+    print('No dog matched')
+</code></pre>
+<pre><code>
+!!! note
+    A match-case statement may seem as if it creates a new model, but don't be fooled;
+    it is just syntactic sugar for getting an attribute and either comparing it or declaring and initializing it.
+
+## Attribute copies
+
+In many cases arguments passed to the constructor will be copied in order to perform validation and, where necessary, coercion. When constructing classes with data attributes, Pydantic copies the attributes in order to efficiently iterate over its elements for validation.
+
+In this example, note that the ID of the list changes after the class is constructed because it has been copied for validation.
+
+```py
+from typing import List
+
+from pydantic import BaseModel
+
+
+class C1:
+    arr = []
+
+    def __init__(self, in_arr):
+        self.arr = in_arr
+
+
+class C2(BaseModel):
+    arr: List[int]
+
+
+arr_orig = [1, 9, 10, 3]
+
+
+c1 = C1(arr_orig)
+c2 = C2(arr=arr_orig)
+print('id(c1.arr) == id(c2.arr)  ', id(c1.arr) == id(c2.arr))
+#&gt; id(c1.arr) == id(c2.arr)   False
+</code></pre>
+<p>!!! note
+    There are some situations where Pydantic does not copy attributes, such as when passing models &mdash; we use the model as is. You can override this behaviour by setting <a href="/api/config/"><code>config.revalidate_instances='always'</code></a> in your model.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
